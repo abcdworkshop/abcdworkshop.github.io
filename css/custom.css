@@ -1,0 +1,50 @@
+/* your styles go here */
+
+.heading h1 i.fa,
+.heading h2 i.fa,
+.heading h3 i.fa,
+.heading h4 i.fa,
+.heading h5 i.fa {
+  display: inline-block;
+  background: #38a7bb;
+  width: 30px;
+  height: 30px;
+  vertical-align: middle;
+  text-align: center;
+  color: #fff;
+  font-size: 14px;
+  line-height: 30px;
+  border-radius: 15px;
+}
+
+.icon.icon-lg {
+  font-size: 30px;
+  border-width: 0px;
+}
+
+.navbar ul.nav > li > a {
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 0.08em;
+  border-top: solid 5px transparent;
+}
+
+.home-carousel {
+  position: relative;
+  background: url('../img/') center center repeat;
+  background-size: cover;
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+
+.customers .item {
+  list-style-type: none;
+  text-align: center;
+  margin: 0 20px;
+  width: 200%;
+}
+p {
+  margin: 0 0 10px;
+  font-size: 18px;
+}
