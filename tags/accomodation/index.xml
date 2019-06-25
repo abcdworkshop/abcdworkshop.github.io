@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Accomodation on ABCD Workshop</title>
-    <link>/tags/accomodation/</link>
+    <link>https://abcdworkshop.github.io/tags/accomodation/</link>
     <description>Recent content in Accomodation on ABCD Workshop</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     
-	<atom:link href="/tags/accomodation/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://abcdworkshop.github.io/tags/accomodation/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Information for participants</title>
-      <link>/info/</link>
+      <link>https://abcdworkshop.github.io/info/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/info/</guid>
+      <guid>https://abcdworkshop.github.io/info/</guid>
       <description>Communication Slack will be the main communication platform during the workshop. If you have not joined the Slack workshop, please do so asap! If you need another email invitation, please contact us.
 Location Address White Stag Building
 70 NW Couch St

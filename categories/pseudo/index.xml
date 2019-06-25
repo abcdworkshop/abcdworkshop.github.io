@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Pseudo on ABCD Workshop</title>
-    <link>/categories/pseudo/</link>
+    <link>https://abcdworkshop.github.io/categories/pseudo/</link>
     <description>Recent content in Pseudo on ABCD Workshop</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 03 Aug 2015 13:39:46 +0200</lastBuildDate>
     
-	<atom:link href="/categories/pseudo/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://abcdworkshop.github.io/categories/pseudo/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Hugo is for lovers</title>
-      <link>/blog/2015/08/03/hugo-is-for-lovers/</link>
+      <link>https://abcdworkshop.github.io/blog/2015/08/03/hugo-is-for-lovers/</link>
       <pubDate>Mon, 03 Aug 2015 13:39:46 +0200</pubDate>
       
-      <guid>/blog/2015/08/03/hugo-is-for-lovers/</guid>
+      <guid>https://abcdworkshop.github.io/blog/2015/08/03/hugo-is-for-lovers/</guid>
       <description>Step 1. Install Hugo Goto hugo releases and download the appropriate version for your os and architecture.
 Save it somewhere specific as we will be using it in the next step.
 More complete instructions are available at installing hugo
