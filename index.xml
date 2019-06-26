@@ -78,6 +78,16 @@ We&amp;rsquo;ll start with creating a new site with a very basic template.</desc
     </item>
     
     <item>
+      <title>Children and families</title>
+      <link>https://abcdworkshop.github.io/families/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://abcdworkshop.github.io/families/</guid>
+      <description>Child care If you forsee needing child care support, please contact us asap so that we can arrange child care based on your needs.
+Location resources There are baby changing tables in every bathroom on all five floors of the White Stag Block and a lactation room on second floor.</description>
+    </item>
+    
+    <item>
       <title>Code of conduct</title>
       <link>https://abcdworkshop.github.io/code-of-conduct/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -92,7 +102,7 @@ We&amp;rsquo;ll start with creating a new site with a very basic template.</desc
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://abcdworkshop.github.io/contact/</guid>
-      <description>If you&amp;rsquo;d like to contact us, please fill out this form.</description>
+      <description>If you&amp;rsquo;d like to contact us, please fill out this form or email us directly at abcdworkshop@gmail.com</description>
     </item>
     
     <item>
@@ -111,7 +121,8 @@ We&amp;rsquo;ll start with creating a new site with a very basic template.</desc
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://abcdworkshop.github.io/access-abcd/</guid>
-      <description>Please check back soon for instructions.</description>
+      <description>Please check back soon for instructions.
+For troubleshooting help, post in the #nda-access channel on Slack.</description>
     </item>
     
     <item>
