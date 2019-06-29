@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Lorem on ABCD Workshop</title>
+    <title>lorem on ABCD Workshop</title>
     <link>https://abcdworkshop.github.io/categories/lorem/</link>
-    <description>Recent content in Lorem on ABCD Workshop</description>
+    <description>Recent content in lorem on ABCD Workshop</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 10 Oct 2015 13:07:31 +0200</lastBuildDate>

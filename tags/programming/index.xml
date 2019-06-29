@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Programming on ABCD Workshop</title>
+    <title>programming on ABCD Workshop</title>
     <link>https://abcdworkshop.github.io/tags/programming/</link>
-    <description>Recent content in Programming on ABCD Workshop</description>
+    <description>Recent content in programming on ABCD Workshop</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 02 Oct 2015 21:49:20 +0200</lastBuildDate>

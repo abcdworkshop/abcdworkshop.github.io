@@ -6,67 +6,13 @@
     <description>Recent content in Tags on ABCD Workshop</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 17 Sep 2015 13:47:08 +0200</lastBuildDate>
+    <lastBuildDate>Sat, 10 Oct 2015 13:07:31 +0200</lastBuildDate>
     
 	<atom:link href="https://abcdworkshop.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Accomodation</title>
-      <link>https://abcdworkshop.github.io/tags/accomodation/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://abcdworkshop.github.io/tags/accomodation/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Code of Conduct</title>
-      <link>https://abcdworkshop.github.io/tags/code-of-conduct/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://abcdworkshop.github.io/tags/code-of-conduct/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Go</title>
-      <link>https://abcdworkshop.github.io/tags/go/</link>
-      <pubDate>Thu, 17 Sep 2015 13:47:08 +0200</pubDate>
-      
-      <guid>https://abcdworkshop.github.io/tags/go/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Golang</title>
-      <link>https://abcdworkshop.github.io/tags/golang/</link>
-      <pubDate>Fri, 02 Oct 2015 21:49:20 +0200</pubDate>
-      
-      <guid>https://abcdworkshop.github.io/tags/golang/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Hugo</title>
-      <link>https://abcdworkshop.github.io/tags/hugo/</link>
-      <pubDate>Fri, 02 Oct 2015 21:49:20 +0200</pubDate>
-      
-      <guid>https://abcdworkshop.github.io/tags/hugo/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Info</title>
-      <link>https://abcdworkshop.github.io/tags/info/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://abcdworkshop.github.io/tags/info/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Ipsum</title>
+      <title>ipsum</title>
       <link>https://abcdworkshop.github.io/tags/ipsum/</link>
       <pubDate>Sat, 10 Oct 2015 13:07:31 +0200</pubDate>
       
@@ -75,29 +21,47 @@
     </item>
     
     <item>
-      <title>Location</title>
-      <link>https://abcdworkshop.github.io/tags/location/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <title>golang</title>
+      <link>https://abcdworkshop.github.io/tags/golang/</link>
+      <pubDate>Fri, 02 Oct 2015 21:49:20 +0200</pubDate>
       
-      <guid>https://abcdworkshop.github.io/tags/location/</guid>
+      <guid>https://abcdworkshop.github.io/tags/golang/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Plot</title>
-      <link>https://abcdworkshop.github.io/tags/plot/</link>
-      <pubDate>Thu, 23 Jul 2015 21:13:14 -0500</pubDate>
+      <title>hugo</title>
+      <link>https://abcdworkshop.github.io/tags/hugo/</link>
+      <pubDate>Fri, 02 Oct 2015 21:49:20 +0200</pubDate>
       
-      <guid>https://abcdworkshop.github.io/tags/plot/</guid>
+      <guid>https://abcdworkshop.github.io/tags/hugo/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Programming</title>
+      <title>programming</title>
       <link>https://abcdworkshop.github.io/tags/programming/</link>
       <pubDate>Fri, 02 Oct 2015 21:49:20 +0200</pubDate>
       
       <guid>https://abcdworkshop.github.io/tags/programming/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>theme</title>
+      <link>https://abcdworkshop.github.io/tags/theme/</link>
+      <pubDate>Fri, 02 Oct 2015 21:49:20 +0200</pubDate>
+      
+      <guid>https://abcdworkshop.github.io/tags/theme/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>go</title>
+      <link>https://abcdworkshop.github.io/tags/go/</link>
+      <pubDate>Thu, 17 Sep 2015 13:47:08 +0200</pubDate>
+      
+      <guid>https://abcdworkshop.github.io/tags/go/</guid>
       <description></description>
     </item>
     
@@ -111,7 +75,16 @@
     </item>
     
     <item>
-      <title>Regression</title>
+      <title>plot</title>
+      <link>https://abcdworkshop.github.io/tags/plot/</link>
+      <pubDate>Thu, 23 Jul 2015 21:13:14 -0500</pubDate>
+      
+      <guid>https://abcdworkshop.github.io/tags/plot/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>regression</title>
       <link>https://abcdworkshop.github.io/tags/regression/</link>
       <pubDate>Thu, 23 Jul 2015 21:13:14 -0500</pubDate>
       
@@ -120,11 +93,38 @@
     </item>
     
     <item>
-      <title>Theme</title>
-      <link>https://abcdworkshop.github.io/tags/theme/</link>
-      <pubDate>Fri, 02 Oct 2015 21:49:20 +0200</pubDate>
+      <title>accomodation</title>
+      <link>https://abcdworkshop.github.io/tags/accomodation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://abcdworkshop.github.io/tags/theme/</guid>
+      <guid>https://abcdworkshop.github.io/tags/accomodation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>code of conduct</title>
+      <link>https://abcdworkshop.github.io/tags/code-of-conduct/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://abcdworkshop.github.io/tags/code-of-conduct/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>info</title>
+      <link>https://abcdworkshop.github.io/tags/info/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://abcdworkshop.github.io/tags/info/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>location</title>
+      <link>https://abcdworkshop.github.io/tags/location/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://abcdworkshop.github.io/tags/location/</guid>
       <description></description>
     </item>
     

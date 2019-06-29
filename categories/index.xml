@@ -6,12 +6,13 @@
     <description>Recent content in Categories on ABCD Workshop</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <lastBuildDate>Sat, 10 Oct 2015 13:07:31 +0200</lastBuildDate>
     
 	<atom:link href="https://abcdworkshop.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Lorem</title>
+      <title>lorem</title>
       <link>https://abcdworkshop.github.io/categories/lorem/</link>
       <pubDate>Sat, 10 Oct 2015 13:07:31 +0200</pubDate>
       
@@ -20,7 +21,7 @@
     </item>
     
     <item>
-      <title>Programming</title>
+      <title>programming</title>
       <link>https://abcdworkshop.github.io/categories/programming/</link>
       <pubDate>Fri, 02 Oct 2015 21:49:20 +0200</pubDate>
       
@@ -29,7 +30,7 @@
     </item>
     
     <item>
-      <title>Pseudo</title>
+      <title>pseudo</title>
       <link>https://abcdworkshop.github.io/categories/pseudo/</link>
       <pubDate>Mon, 03 Aug 2015 13:39:46 +0200</pubDate>
       
@@ -47,7 +48,7 @@
     </item>
     
     <item>
-      <title>Starting</title>
+      <title>starting</title>
       <link>https://abcdworkshop.github.io/categories/starting/</link>
       <pubDate>Wed, 24 Jun 2015 13:50:46 +0200</pubDate>
       

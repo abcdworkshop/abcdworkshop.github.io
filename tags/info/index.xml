@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Info on ABCD Workshop</title>
+    <title>info on ABCD Workshop</title>
     <link>https://abcdworkshop.github.io/tags/info/</link>
-    <description>Recent content in Info on ABCD Workshop</description>
+    <description>Recent content in info on ABCD Workshop</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     
@@ -16,11 +16,8 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://abcdworkshop.github.io/info/</guid>
-      <description>Communication Slack will be the main communication platform during the workshop. If you have not joined the Slack workshop, please do so asap! If you need another email invitation, please contact us.
-Location Address White Stag Block
-70 NW Couch St
-Portland, OR 97209
-Transportation and parking Portland public transportation is relatively good, but road traffic can be pretty bad, so if you find an airbnb that seems a bit further out (e.</description>
+      <description>Accessing ABCD data Prior to the workshop, you will need to apply to access the ABCD data. This process requires insitutional approval and can take weeks to months depending in your university. Please see the How To Access ABCD Data page for instructions.
+Communication Slack will be the main communication platform during the workshop. If you have not joined the Slack workshop, please do so asap! If you need another email invitation, please contact us.</description>
     </item>
     
   </channel>
