@@ -2,129 +2,129 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on ABCD Workshop</title>
-    <link>/tags/</link>
+    <link>https://abcdworkshop.github.io/tags/</link>
     <description>Recent content in Tags on ABCD Workshop</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 10 Oct 2015 13:07:31 +0200</lastBuildDate>
     
-	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://abcdworkshop.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>ipsum</title>
-      <link>/tags/ipsum/</link>
+      <link>https://abcdworkshop.github.io/tags/ipsum/</link>
       <pubDate>Sat, 10 Oct 2015 13:07:31 +0200</pubDate>
       
-      <guid>/tags/ipsum/</guid>
+      <guid>https://abcdworkshop.github.io/tags/ipsum/</guid>
       <description></description>
     </item>
     
     <item>
       <title>golang</title>
-      <link>/tags/golang/</link>
+      <link>https://abcdworkshop.github.io/tags/golang/</link>
       <pubDate>Fri, 02 Oct 2015 21:49:20 +0200</pubDate>
       
-      <guid>/tags/golang/</guid>
+      <guid>https://abcdworkshop.github.io/tags/golang/</guid>
       <description></description>
     </item>
     
     <item>
       <title>hugo</title>
-      <link>/tags/hugo/</link>
+      <link>https://abcdworkshop.github.io/tags/hugo/</link>
       <pubDate>Fri, 02 Oct 2015 21:49:20 +0200</pubDate>
       
-      <guid>/tags/hugo/</guid>
+      <guid>https://abcdworkshop.github.io/tags/hugo/</guid>
       <description></description>
     </item>
     
     <item>
       <title>programming</title>
-      <link>/tags/programming/</link>
+      <link>https://abcdworkshop.github.io/tags/programming/</link>
       <pubDate>Fri, 02 Oct 2015 21:49:20 +0200</pubDate>
       
-      <guid>/tags/programming/</guid>
+      <guid>https://abcdworkshop.github.io/tags/programming/</guid>
       <description></description>
     </item>
     
     <item>
       <title>theme</title>
-      <link>/tags/theme/</link>
+      <link>https://abcdworkshop.github.io/tags/theme/</link>
       <pubDate>Fri, 02 Oct 2015 21:49:20 +0200</pubDate>
       
-      <guid>/tags/theme/</guid>
+      <guid>https://abcdworkshop.github.io/tags/theme/</guid>
       <description></description>
     </item>
     
     <item>
       <title>go</title>
-      <link>/tags/go/</link>
+      <link>https://abcdworkshop.github.io/tags/go/</link>
       <pubDate>Thu, 17 Sep 2015 13:47:08 +0200</pubDate>
       
-      <guid>/tags/go/</guid>
+      <guid>https://abcdworkshop.github.io/tags/go/</guid>
       <description></description>
     </item>
     
     <item>
       <title>R Markdown</title>
-      <link>/tags/r-markdown/</link>
+      <link>https://abcdworkshop.github.io/tags/r-markdown/</link>
       <pubDate>Thu, 23 Jul 2015 21:13:14 -0500</pubDate>
       
-      <guid>/tags/r-markdown/</guid>
+      <guid>https://abcdworkshop.github.io/tags/r-markdown/</guid>
       <description></description>
     </item>
     
     <item>
       <title>plot</title>
-      <link>/tags/plot/</link>
+      <link>https://abcdworkshop.github.io/tags/plot/</link>
       <pubDate>Thu, 23 Jul 2015 21:13:14 -0500</pubDate>
       
-      <guid>/tags/plot/</guid>
+      <guid>https://abcdworkshop.github.io/tags/plot/</guid>
       <description></description>
     </item>
     
     <item>
       <title>regression</title>
-      <link>/tags/regression/</link>
+      <link>https://abcdworkshop.github.io/tags/regression/</link>
       <pubDate>Thu, 23 Jul 2015 21:13:14 -0500</pubDate>
       
-      <guid>/tags/regression/</guid>
+      <guid>https://abcdworkshop.github.io/tags/regression/</guid>
       <description></description>
     </item>
     
     <item>
       <title>accomodation</title>
-      <link>/tags/accomodation/</link>
+      <link>https://abcdworkshop.github.io/tags/accomodation/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/tags/accomodation/</guid>
+      <guid>https://abcdworkshop.github.io/tags/accomodation/</guid>
       <description></description>
     </item>
     
     <item>
       <title>code of conduct</title>
-      <link>/tags/code-of-conduct/</link>
+      <link>https://abcdworkshop.github.io/tags/code-of-conduct/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/tags/code-of-conduct/</guid>
+      <guid>https://abcdworkshop.github.io/tags/code-of-conduct/</guid>
       <description></description>
     </item>
     
     <item>
       <title>info</title>
-      <link>/tags/info/</link>
+      <link>https://abcdworkshop.github.io/tags/info/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/tags/info/</guid>
+      <guid>https://abcdworkshop.github.io/tags/info/</guid>
       <description></description>
     </item>
     
     <item>
       <title>location</title>
-      <link>/tags/location/</link>
+      <link>https://abcdworkshop.github.io/tags/location/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/tags/location/</guid>
+      <guid>https://abcdworkshop.github.io/tags/location/</guid>
       <description></description>
     </item>
     
