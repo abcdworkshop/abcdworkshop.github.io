@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>ABCD Workshop</title>
@@ -19,7 +19,7 @@
       <guid>https://abcdworkshop.github.io/blog/2015/10/10/migrate-from-jekyll/</guid>
       <description>Move static content to static Jekyll has a rule that any directory not starting with _ will be copied as-is to the _site output. Hugo keeps all static content under static. You should therefore move it all there. With Jekyll, something that looked like
 ▾ &amp;lt;root&amp;gt;/ ▾ images/ logo.png  should become
-▾ &amp;lt;root&amp;gt;/ ▾ static/ ▾ images/ logo.png  Additionally, you&amp;rsquo;ll want any files that should reside at the root (such as CNAME) to be moved to static.</description>
+▾ &amp;lt;root&amp;gt;/ ▾ static/ ▾ images/ logo.png  Additionally, you&#39;ll want any files that should reside at the root (such as CNAME) to be moved to static.</description>
     </item>
     
     <item>
@@ -28,7 +28,7 @@
       <pubDate>Fri, 02 Oct 2015 21:49:20 +0200</pubDate>
       
       <guid>https://abcdworkshop.github.io/blog/2015/10/02/linked-post/</guid>
-      <description>I&amp;rsquo;m a linked post in the menu. You can add other posts by adding the following line to the frontmatter:
+      <description>I&#39;m a linked post in the menu. You can add other posts by adding the following line to the frontmatter:
 menu = &amp;quot;main&amp;quot;  Lorem ipsum dolor sit amet, consectetur adipiscing elit. In mauris nulla, vestibulum vel auctor sed, posuere eu lorem. Aliquam consequat augue ut accumsan mollis. Suspendisse malesuada sodales tincidunt. Vivamus sed erat ac augue bibendum porta sed id ipsum. Ut mollis mauris eget ligula sagittis cursus. Aliquam id pharetra tellus.</description>
     </item>
     
@@ -62,9 +62,9 @@ Follow the following steps:
       <pubDate>Thu, 23 Jul 2015 21:13:14 -0500</pubDate>
       
       <guid>https://abcdworkshop.github.io/blog/2015/07/23/2015-07-23-r-rmarkdown/</guid>
-      <description>R Markdown This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see http://rmarkdown.rstudio.com.
+      <description>R MarkdownThis is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see http://rmarkdown.rstudio.com.
 You can embed an R code chunk like this:
-summary(cars) ## speed dist ## Min. : 4.0 Min. : 2.00 ## 1st Qu.:12.0 1st Qu.: 26.00 ## Median :15.0 Median : 36.00 ## Mean :15.4 Mean : 42.98 ## 3rd Qu.</description>
+summary(cars)## speed dist ## Min. : 4.0 Min. : 2.00 ## 1st Qu.:12.0 1st Qu.: 26.00 ## Median :15.0 Median : 36.00 ## Mean :15.4 Mean : 42.98 ## 3rd Qu.</description>
     </item>
     
     <item>
@@ -73,8 +73,17 @@ summary(cars) ## speed dist ## Min. : 4.0 Min. : 2.00 ## 1st Qu.:12.0 1st Qu.: 2
       <pubDate>Wed, 24 Jun 2015 13:50:46 +0200</pubDate>
       
       <guid>https://abcdworkshop.github.io/blog/2015/06/24/creating-a-new-theme/</guid>
-      <description>Introduction This tutorial will show you how to create a simple theme in Hugo. I assume that you are familiar with HTML, the bash command line, and that you are comfortable using Markdown to format content. I&amp;rsquo;ll explain how Hugo uses templates and how you can organize your templates to create a theme. I won&amp;rsquo;t cover using CSS to style your theme.
-We&amp;rsquo;ll start with creating a new site with a very basic template.</description>
+      <description>Introduction This tutorial will show you how to create a simple theme in Hugo. I assume that you are familiar with HTML, the bash command line, and that you are comfortable using Markdown to format content. I&#39;ll explain how Hugo uses templates and how you can organize your templates to create a theme. I won&#39;t cover using CSS to style your theme.
+We&#39;ll start with creating a new site with a very basic template.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://abcdworkshop.github.io/resources/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://abcdworkshop.github.io/resources/</guid>
+      <description>code{white-space: pre;}pre:not([class]) {background-color: white;}if (window.hljs) {hljs.configure({languages: []});hljs.initHighlightingOnLoad();if (document.readyState &amp;&amp; document.readyState === &#34;complete&#34;) {window.setTimeout(function() { hljs.initHighlighting(); }, 0);}}h1 {font-size: 34px;}h1.title {font-size: 38px;}h2 {font-size: 30px;}h3 {font-size: 24px;}h4 {font-size: 18px;}h5 {font-size: 16px;}h6 {font-size: 12px;}.</description>
     </item>
     
     <item>
@@ -102,7 +111,7 @@ In either case, please contact us as soon as possible. We would like to make a g
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://abcdworkshop.github.io/contact/</guid>
-      <description>If you&amp;rsquo;d like to contact us, please fill out this form or email us directly at abcdworkshop@gmail.com</description>
+      <description>If you&#39;d like to contact us, please fill out this form or email us directly at abcdworkshop@gmail.com</description>
     </item>
     
     <item>
@@ -121,9 +130,8 @@ In either case, please contact us as soon as possible. We would like to make a g
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://abcdworkshop.github.io/access-abcd/</guid>
-      <description>NDA Data Access Instructions for ABCD Workshop Requesting access to ABCD data  Create an account with the NIMH Data Archive (NDA). If you already have an account, proceed to the next step.
- Navigate to this link: https://nda.nih.gov/
- Click the “My Dashboard button in the top right corner of the screen.  Click the “Request Account” button within the pop-up screen and follow the prompts to create an account.</description>
+      <description>NDA Data Access Instructions for ABCD Workshop Requesting access to ABCD data  Create an account with the NIMH Data Archive (NDA). If you already have an account, proceed to the next step.    Navigate to this link: https://nda.nih.gov/
+  Click the “My Dashboard button in the top right corner of the screen.   Click the “Request Account” button within the pop-up screen and follow the prompts to create an account.</description>
     </item>
     
     <item>
@@ -132,8 +140,31 @@ In either case, please contact us as soon as possible. We would like to make a g
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://abcdworkshop.github.io/info/</guid>
-      <description>Accessing ABCD data Prior to the workshop, you will need to apply to access the ABCD data. This process requires insitutional approval and can take weeks to months depending in your university. Please see the How To Access ABCD Data page for instructions.
-Communication Slack will be the main communication platform during the workshop. If you have not joined the Slack workshop, please do so asap! If you need another email invitation, please contact us.</description>
+      <description>Communication Slack will be the main communication platform during the workshop. If you have not joined the Slack workshop, please do so asap! If you need another email invitation, please contact us.
+Location Address White Stag Block
+70 NW Couch St
+Portland, OR 97209
+Transportation Portland public transportation is relatively good, but road traffic can be pretty bad, so if you find an airbnb that seems a bit further out (e.</description>
+    </item>
+    
+    <item>
+      <title>Resources and Workshop Products</title>
+      <link>https://abcdworkshop.github.io/resources/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://abcdworkshop.github.io/resources/</guid>
+      <description>Lecture Slides NDA Access and Responsible Data Use pdf
+Welcome and Orientation pdf
+Introduction to ABCD Dataset pdf
+Introduction to ABCD Resources pdf
+Adolescent Brain Development and Mental Health pdf
+Puberty and Brain Development pdf
+Conducting Rigorous Research on Large, Open-Access Developmental Datasets pdf
+Theory Behind Predictive Modeling pdf
+Data Science Tools for Reproducible Neuroimaging Research https://slides.com/ericearl/abcdworkshop1
+Introduction to DEAP pdf
+Theory in Practice: Predictive Modeling in Neuroimaging pdf
+Constructing Model-Based Networks pdf</description>
     </item>
     
   </channel>
