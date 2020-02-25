@@ -1,187 +1,178 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://abcdworkshop.github.io/</loc>
-    <lastmod>2015-10-10T13:07:31+02:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://abcdworkshop.github.io/blog/</loc>
-    <lastmod>2015-10-10T13:07:31+02:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://abcdworkshop.github.io/categories/</loc>
-    <lastmod>2015-10-10T13:07:31+02:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://abcdworkshop.github.io/blog/2015/10/10/migrate-from-jekyll/</loc>
+    <loc>/</loc>
     <lastmod>2015-10-10T13:07:31+02:00</lastmod>
   </url>
   
   <url>
-    <loc>https://abcdworkshop.github.io/tags/</loc>
+    <loc>/blog/</loc>
     <lastmod>2015-10-10T13:07:31+02:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://abcdworkshop.github.io/tags/ipsum/</loc>
+    <loc>/categories/</loc>
     <lastmod>2015-10-10T13:07:31+02:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://abcdworkshop.github.io/categories/lorem/</loc>
+    <loc>/tags/ipsum/</loc>
     <lastmod>2015-10-10T13:07:31+02:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://abcdworkshop.github.io/blog/2015/10/02/linked-post/</loc>
+    <loc>/categories/lorem/</loc>
+    <lastmod>2015-10-10T13:07:31+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/blog/2015/10/10/migrate-from-jekyll/</loc>
+    <lastmod>2015-10-10T13:07:31+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/</loc>
+    <lastmod>2015-10-10T13:07:31+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/golang/</loc>
     <lastmod>2015-10-02T21:49:20+02:00</lastmod>
   </url>
   
   <url>
-    <loc>https://abcdworkshop.github.io/tags/golang/</loc>
+    <loc>/tags/hugo/</loc>
     <lastmod>2015-10-02T21:49:20+02:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://abcdworkshop.github.io/tags/hugo/</loc>
+    <loc>/blog/2015/10/02/linked-post/</loc>
     <lastmod>2015-10-02T21:49:20+02:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://abcdworkshop.github.io/tags/programming/</loc>
+    <loc>/tags/programming/</loc>
     <lastmod>2015-10-02T21:49:20+02:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://abcdworkshop.github.io/categories/programming/</loc>
+    <loc>/categories/programming/</loc>
     <lastmod>2015-10-02T21:49:20+02:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://abcdworkshop.github.io/tags/theme/</loc>
+    <loc>/tags/theme/</loc>
     <lastmod>2015-10-02T21:49:20+02:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://abcdworkshop.github.io/blog/2015/09/17/go-is-for-lovers/</loc>
+    <loc>/tags/go/</loc>
     <lastmod>2015-09-17T13:47:08+02:00</lastmod>
   </url>
   
   <url>
-    <loc>https://abcdworkshop.github.io/tags/go/</loc>
+    <loc>/blog/2015/09/17/go-is-for-lovers/</loc>
     <lastmod>2015-09-17T13:47:08+02:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://abcdworkshop.github.io/blog/2015/08/03/hugo-is-for-lovers/</loc>
+    <loc>/blog/2015/08/03/hugo-is-for-lovers/</loc>
     <lastmod>2015-08-03T13:39:46+02:00</lastmod>
   </url>
   
   <url>
-    <loc>https://abcdworkshop.github.io/categories/pseudo/</loc>
+    <loc>/categories/pseudo/</loc>
     <lastmod>2015-08-03T13:39:46+02:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://abcdworkshop.github.io/blog/2015/07/23/2015-07-23-r-rmarkdown/</loc>
+    <loc>/blog/2015/07/23/2015-07-23-r-rmarkdown/</loc>
     <lastmod>2015-07-23T21:13:14-05:00</lastmod>
   </url>
   
   <url>
-    <loc>https://abcdworkshop.github.io/categories/r/</loc>
+    <loc>/tags/plot/</loc>
     <lastmod>2015-07-23T21:13:14-05:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://abcdworkshop.github.io/tags/r-markdown/</loc>
+    <loc>/categories/r/</loc>
     <lastmod>2015-07-23T21:13:14-05:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://abcdworkshop.github.io/tags/plot/</loc>
+    <loc>/tags/r-markdown/</loc>
     <lastmod>2015-07-23T21:13:14-05:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://abcdworkshop.github.io/tags/regression/</loc>
+    <loc>/tags/regression/</loc>
     <lastmod>2015-07-23T21:13:14-05:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://abcdworkshop.github.io/blog/2015/06/24/creating-a-new-theme/</loc>
+    <loc>/blog/2015/06/24/creating-a-new-theme/</loc>
     <lastmod>2015-06-24T13:50:46+02:00</lastmod>
   </url>
   
   <url>
-    <loc>https://abcdworkshop.github.io/categories/starting/</loc>
+    <loc>/categories/starting/</loc>
     <lastmod>2015-06-24T13:50:46+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/resources/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://abcdworkshop.github.io/families/</loc>
+    <loc>/tags/accomodation/</loc>
   </url>
   
   <url>
-    <loc>https://abcdworkshop.github.io/code-of-conduct/</loc>
+    <loc>/families/</loc>
   </url>
   
   <url>
-    <loc>https://abcdworkshop.github.io/contact/</loc>
+    <loc>/code-of-conduct/</loc>
   </url>
   
   <url>
-    <loc>https://abcdworkshop.github.io/faq/</loc>
+    <loc>/tags/code-of-conduct/</loc>
   </url>
   
   <url>
-    <loc>https://abcdworkshop.github.io/access-abcd/</loc>
+    <loc>/contact/</loc>
   </url>
   
   <url>
-    <loc>https://abcdworkshop.github.io/info/</loc>
+    <loc>/faq/</loc>
   </url>
   
   <url>
-    <loc>https://abcdworkshop.github.io/tags/accomodation/</loc>
-    <priority>0</priority>
+    <loc>/access-abcd/</loc>
   </url>
   
   <url>
-    <loc>https://abcdworkshop.github.io/tags/code-of-conduct/</loc>
-    <priority>0</priority>
+    <loc>/tags/info/</loc>
   </url>
   
   <url>
-    <loc>https://abcdworkshop.github.io/tags/info/</loc>
-    <priority>0</priority>
+    <loc>/info/</loc>
   </url>
   
   <url>
-    <loc>https://abcdworkshop.github.io/tags/location/</loc>
-    <priority>0</priority>
+    <loc>/tags/location/</loc>
+  </url>
+  
+  <url>
+    <loc>/gallery/</loc>
+  </url>
+  
+  <url>
+    <loc>/resources/</loc>
   </url>
   
 </urlset>
