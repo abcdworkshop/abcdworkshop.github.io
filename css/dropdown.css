@@ -1,7 +1,5 @@
 /* your styles go here */
 
-/* your styles go here */
-
 a {
   text-decoration: none;
 }
@@ -13,7 +11,7 @@ a {
 }
 
 .navbar-nav li {
-  color: #fff;
+  color: #555555;
   display: block;
   float: left;
   padding: 1rem;
@@ -23,10 +21,11 @@ a {
 }
   
 .navbar-nav li a {
-  color: #fff;
+  color: #555555;
 }
 
  li:hover {
+  background: #cccccc;
   cursor: pointer;
 }
 
