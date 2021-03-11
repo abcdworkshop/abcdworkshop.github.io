@@ -3,22 +3,22 @@
 /* your styles go here */
 
 
-a {
+navbar-affixed-top a {
   text-decoration: none;
 }
 
-nav {
+navbar-affixed-top nav {
   font-family: monospace;
 }
 
-ul {
+navbar-affixed-top ul {
   background: darkorange;
   list-style: none;
   margin: 0;
   padding-left: 0;
 }
 
-li {
+navbar-affixed-top li {
   color: #fff;
   background: darkorange;
   display: block;
@@ -29,16 +29,16 @@ li {
   transition-duration: 0.5s;
 }
   
-li a {
+navbar-affixed-top li a {
   color: #fff;
 }
 
-li:hover {
+navbar-affixed-top li:hover {
   background: red;
   cursor: pointer;
 }
 
-ul li ul {
+navbar-affixed-top ul li ul {
   background: orange;
   visibility: hidden;
   opacity: 0;
@@ -50,14 +50,14 @@ ul li ul {
   display: none;
 }
 
-ul li:hover > ul,
+navbar-affixed-top ul li:hover > ul,
 ul li ul:hover {
   visibility: visible;
   opacity: 1;
   display: block;
 }
 
-ul li ul li {
+navbar-affixed-top ul li ul li {
   clear: both;
   width: 100%;
 }
