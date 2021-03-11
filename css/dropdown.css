@@ -2,12 +2,11 @@
 
 /* your styles go here */
 
-
-.navbar-nav a {
+a {
   text-decoration: none;
 }
 
-.navbar-nav ul {
+ul {
   background: darkorange;
   list-style: none;
   margin: 0;
@@ -25,16 +24,16 @@
   transition-duration: 0.5s;
 }
   
-.navbar-nav li a {
+li a {
   color: #fff;
 }
 
-.navbar-nav li:hover {
+ li:hover {
   background: red;
   cursor: pointer;
 }
 
-.navbar-nav ul li ul {
+ul li ul {
   background: orange;
   visibility: hidden;
   opacity: 0;
@@ -53,7 +52,7 @@ ul li ul:hover {
   display: block;
 }
 
-.navbar-nav ul li ul li {
+ul li ul li {
   clear: both;
   width: 100%;
 }
