@@ -24,7 +24,7 @@ ul {
   transition-duration: 0.5s;
 }
   
-li a {
+.navbar-nav li a {
   color: #fff;
 }
 
