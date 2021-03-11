@@ -3,18 +3,18 @@
 /* your styles go here */
 
 
-.dropdown a {
+.navbar-nav a {
   text-decoration: none;
 }
 
-.dropdown ul {
+.navbar-nav ul {
   background: darkorange;
   list-style: none;
   margin: 0;
   padding-left: 0;
 }
 
-.dropdown li {
+.navbar-nav li {
   color: #fff;
   background: darkorange;
   display: block;
@@ -25,16 +25,16 @@
   transition-duration: 0.5s;
 }
   
-.dropdown li a {
+.navbar-nav li a {
   color: #fff;
 }
 
-.dropdown li:hover {
+.navbar-nav li:hover {
   background: red;
   cursor: pointer;
 }
 
-.dropdown ul li ul {
+.navbar-nav ul li ul {
   background: orange;
   visibility: hidden;
   opacity: 0;
@@ -46,14 +46,14 @@
   display: none;
 }
 
-.dropdown ul li:hover > ul,
-.dropdown ul li ul:hover {
+.navbar-nav ul li:hover > ul,
+.navbar-nav ul li ul:hover {
   visibility: visible;
   opacity: 1;
   display: block;
 }
 
-.dropdown ul li ul li {
+.navbar-nav ul li ul li {
   clear: both;
   width: 100%;
 }
