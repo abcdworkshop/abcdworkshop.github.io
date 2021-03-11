@@ -7,7 +7,6 @@ a {
 }
 
 .navbar-nav ul {
-  background: darkorange;
   list-style: none;
   margin: 0;
   padding-left: 0;
@@ -15,7 +14,6 @@ a {
 
 .navbar-nav li {
   color: #fff;
-  background: darkorange;
   display: block;
   float: left;
   padding: 1rem;
@@ -29,12 +27,10 @@ a {
 }
 
  li:hover {
-  background: red;
   cursor: pointer;
 }
 
 ul li ul {
-  background: orange;
   visibility: hidden;
   opacity: 0;
   min-width: 5rem;
