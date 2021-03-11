@@ -51,7 +51,7 @@ navbar-affixed-top ul li ul {
 }
 
 navbar-affixed-top ul li:hover > ul,
-ul li ul:hover {
+navbar-affixed-top ul li ul:hover {
   visibility: visible;
   opacity: 1;
   display: block;
