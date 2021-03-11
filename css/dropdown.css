@@ -3,22 +3,18 @@
 /* your styles go here */
 
 
-navbar-affixed-top a {
+.dropdown a {
   text-decoration: none;
 }
 
-navbar-affixed-top nav {
-  font-family: monospace;
-}
-
-navbar-affixed-top ul {
+.dropdown ul {
   background: darkorange;
   list-style: none;
   margin: 0;
   padding-left: 0;
 }
 
-navbar-affixed-top li {
+.dropdown li {
   color: #fff;
   background: darkorange;
   display: block;
@@ -29,16 +25,16 @@ navbar-affixed-top li {
   transition-duration: 0.5s;
 }
   
-navbar-affixed-top li a {
+.dropdown li a {
   color: #fff;
 }
 
-navbar-affixed-top li:hover {
+.dropdown li:hover {
   background: red;
   cursor: pointer;
 }
 
-navbar-affixed-top ul li ul {
+.dropdown ul li ul {
   background: orange;
   visibility: hidden;
   opacity: 0;
@@ -50,14 +46,14 @@ navbar-affixed-top ul li ul {
   display: none;
 }
 
-navbar-affixed-top ul li:hover > ul,
-navbar-affixed-top ul li ul:hover {
+.dropdown ul li:hover > ul,
+.dropdown ul li ul:hover {
   visibility: visible;
   opacity: 1;
   display: block;
 }
 
-navbar-affixed-top ul li ul li {
+.dropdown ul li ul li {
   clear: both;
   width: 100%;
 }
