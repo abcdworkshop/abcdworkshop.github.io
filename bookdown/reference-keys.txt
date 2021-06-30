@@ -1,6 +1,4 @@
-fig:nice-fig
-tab:nice-tab
-introduction
+welcome
 purpose
 gs
 download_r

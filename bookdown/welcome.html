@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 4 Features of RStudio | ABCD Workshop Tutorials</title>
+  <title>ABCD Workshop Tutorials</title>
   <meta name="description" content="This is a guide to the resources &amp; tutorials from the 2021 MDC ABCD Workshop." />
   <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 4 Features of RStudio | ABCD Workshop Tutorials" />
+  <meta property="og:title" content="ABCD Workshop Tutorials" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="rstudio/bookdown-demo" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 4 Features of RStudio | ABCD Workshop Tutorials" />
+  <meta name="twitter:title" content="ABCD Workshop Tutorials" />
   
   <meta name="twitter:description" content="This is a guide to the resources &amp; tutorials from the 2021 MDC ABCD Workshop." />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="gs.html"/>
-<link rel="next" href="projects.html"/>
+
+<link rel="next" href="purpose.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -137,7 +137,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><a href="./">A Minimal Book Example</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Welcome</a></li>
+<li class="chapter" data-level="1" data-path="welcome.html"><a href="welcome.html"><i class="fa fa-check"></i><b>1</b> Welcome</a></li>
 <li class="chapter" data-level="2" data-path="purpose.html"><a href="purpose.html"><i class="fa fa-check"></i><b>2</b> Purpose</a></li>
 <li class="chapter" data-level="3" data-path="gs.html"><a href="gs.html"><i class="fa fa-check"></i><b>3</b> Getting Started</a><ul>
 <li class="chapter" data-level="3.1" data-path="gs.html"><a href="gs.html#download_r"><i class="fa fa-check"></i><b>3.1</b> Downloading the R Engine</a></li>
@@ -203,43 +203,45 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="rstudio" class="section level1">
-<h1><span class="header-section-number">Chapter 4</span> Features of RStudio</h1>
-<p>As shown in the image below, an <a href="https://www.rstudio.com">RStudio</a> session is split into four sections called panes: <a href="rstudio.html#rstudio_console">the console</a>, the <a href="rstudio.html#rstudio_source">source pane</a>, the <a href="rstudio.html#rstudio_environment">environment/history pane</a>, and the succinctly named <a href="rstudio.html#rstudio_files">files/plots/packages/help pane</a>.</p>
-<p><img src="markdown_files/rstudio/lab1_rstudio_4panel.jpg" title="Four Panes of RStudio" /></p>
-<div id="rstudio_console" class="section level2">
-<h2><span class="header-section-number">4.1</span> The Console</h2>
-<p>In RStudio, the console is the access point to the underlying R Engine. It evaluates the code you provide it, including code called using the <a href="rstudio.html#rstudio_source">the source pane</a>. You can pass commands to the R Engine by typing them in after the <code>&gt;</code>.</p>
-<p><img src="markdown_files/rstudio/lab1_rstudio_console.png" title="RStudio Console Pane" /></p>
-<p>Think of the Console like a texting app (or for those who grew up in the 90s, AIM). The Console is where you send messages to your friend, R, and they (sometimes) respond. Once you’ve sent a message, you can no longer edit it. And once it’s been said, you can’t take it back.</p>
+<div id="header">
+<h1 class="title">ABCD Workshop Tutorials</h1>
+<p class="author"><em>ABCD Facilitators</em></p>
+<p class="date" style="margin-top: 1.5em;"><em>2021-06-30</em></p>
 </div>
-<div id="rstudio_source" class="section level2">
-<h2><span class="header-section-number">4.2</span> Source</h2>
-<p>The source pane shows you a collection of code called a script. In R, we primarily work with <code>R Script</code> files (files ending in <code>.R</code>) or <code>R Markdown</code> documents (files ending in <code>.Rmd</code>).</p>
-<p><img src="markdown_files/rstudio/lab1_rstudio_source.png" title="RStudio Source Pane" /></p>
-<p>If the Console is your texting app, then the Source pane is where you can draft your message, edit it, make sure it comes across as friendly and not passive-aggressive, etc.</p>
-<p>These files can be saved and restored later. This is really useful if (1) you plan on spreading out your work across more than one day, (2) you want to keep track of what analyses you’ve run and the way you set up those analyses, or (3) you want to share your analysis with collaborators or readers. Perhaps one of these applies to you.</p>
-<p>You can send code from Source to the Console using Command+Enter (Mac) or Ctrl+Enter (PC).</p>
+<div id="welcome" class="section level1">
+<h1><span class="header-section-number">Chapter 1</span> Welcome</h1>
+<p>This is a guide to the resources &amp; tutorials from the 2021 MDC ABCD Workshop. Check back here for updates as the workshop progresses!</p>
+<pre><code>
+&lt;!--chapter:end:index.Rmd--&gt;
+
+
+  
+# Introduction {#intro}
+
+You can label chapter and section titles using `{#label}` after them, e.g., we can reference Chapter \@ref(intro). If you do not manually label them, there will be automatic labels anyway, e.g., Chapter \@ref(methods).
+
+Figures and tables with captions will be placed in `figure` and `table` environments, respectively.
+
+
+```r
+par(mar = c(4, 4, .1, .1))
+plot(pressure, type = &#39;b&#39;, pch = 19)</code></pre>
+<div class="figure" style="text-align: center"><span id="fig:nice-fig"></span>
+<img src="bookdown-demo_files/figure-html/nice-fig-1.png" alt="Here is a nice figure!" width="80%" />
+<p class="caption">
+Figure 1.1: Here is a nice figure!
+</p>
 </div>
-<div id="rstudio_environment" class="section level2">
-<h2><span class="header-section-number">4.3</span> Environment/History</h2>
-<p>The environment/history pane shows, well, your environment and history. Specifically, if you have the “Environment” tab selected, you will see a list of all the variables that exist in your global environment. If you have the “History” tab selected, you will see previous commands that were passed to the R Engine.</p>
-<p><img src="markdown_files/rstudio/lab1_rstudio_environment.png" title="RStudio Environment Pane" /></p>
-</div>
-<div id="rstudio_files" class="section level2">
-<h2><span class="header-section-number">4.4</span> Files/Plots/Packages/Help</h2>
-<p>The final pane—the files/plots/packages/help pane–includes a number of helpful tabs. The “Files” tab shows you the files in your current working directory, the “Plots” tab shows you a preview of any plots you have created, the “Packages” tab shows you a list of the packages currently installed on your computer, and the “Help” tab is where help documentation will appear. We will discuss packages and help documentation later in this lab.</p>
-<p><img src="markdown_files/rstudio/lab1_rstudio_files.png" title="RStudio Files Pane" /></p>
-<hr />
-</div>
+<p>Reference a figure by its code chunk label with the <code>fig:</code> prefix, e.g., see Figure <a href="welcome.html#fig:nice-fig">1.1</a>. Similarly, you can reference tables generated from <code>knitr::kable()</code>, e.g., see Table <a href="#tab:nice-tab"><strong>??</strong></a>.</p>
+
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="gs.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="projects.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+
+<a href="purpose.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -271,7 +273,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/rstudio/bookdown-demo/edit/master/01-datascience1.Rmd",
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/01_introduction.Rmd",
 "text": "Edit"
 },
 "history": {
