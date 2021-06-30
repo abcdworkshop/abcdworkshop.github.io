@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 7 The Basics of Coding in R | ABCD Workshop Tutorials</title>
+  <meta name="description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
+  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 7 The Basics of Coding in R | ABCD Workshop Tutorials" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 7 The Basics of Coding in R | ABCD Workshop Tutorials" />
+  
+  <meta name="twitter:description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
+  
+
+<meta name="author" content="ABCD Facilitators" />
+
+
+<meta name="date" content="2021-06-29" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="rmarkdown.html"/>
+<link rel="next" href="minihacks.html"/>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+
+
+<style type="text/css">
+code.sourceCode > span { display: inline-block; line-height: 1.25; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">A Minimal Book Example</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
+<li class="chapter" data-level="2" data-path="purpose.html"><a href="purpose.html"><i class="fa fa-check"></i><b>2</b> Purpose</a></li>
+<li class="chapter" data-level="3" data-path="gs.html"><a href="gs.html"><i class="fa fa-check"></i><b>3</b> Getting Started</a><ul>
+<li class="chapter" data-level="3.1" data-path="gs.html"><a href="gs.html#download_r"><i class="fa fa-check"></i><b>3.1</b> Downloading the R Engine</a></li>
+<li class="chapter" data-level="3.2" data-path="gs.html"><a href="gs.html#download_rstudio"><i class="fa fa-check"></i><b>3.2</b> Downloading RStudio</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="rstudio.html"><a href="rstudio.html"><i class="fa fa-check"></i><b>4</b> Features of RStudio</a><ul>
+<li class="chapter" data-level="4.1" data-path="rstudio.html"><a href="rstudio.html#rstudio_console"><i class="fa fa-check"></i><b>4.1</b> The Console</a></li>
+<li class="chapter" data-level="4.2" data-path="rstudio.html"><a href="rstudio.html#rstudio_source"><i class="fa fa-check"></i><b>4.2</b> Source</a></li>
+<li class="chapter" data-level="4.3" data-path="rstudio.html"><a href="rstudio.html#rstudio_environment"><i class="fa fa-check"></i><b>4.3</b> Environment/History</a></li>
+<li class="chapter" data-level="4.4" data-path="rstudio.html"><a href="rstudio.html#rstudio_files"><i class="fa fa-check"></i><b>4.4</b> Files/Plots/Packages/Help</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="projects.html"><a href="projects.html"><i class="fa fa-check"></i><b>5</b> Projects</a><ul>
+<li class="chapter" data-level="5.1" data-path="projects.html"><a href="projects.html#create_project"><i class="fa fa-check"></i><b>5.1</b> Creating a new project</a></li>
+<li class="chapter" data-level="5.2" data-path="projects.html"><a href="projects.html#adding-folders-to-a-project"><i class="fa fa-check"></i><b>5.2</b> Adding folders to a project</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="rmarkdown.html"><a href="rmarkdown.html"><i class="fa fa-check"></i><b>6</b> R Markdown</a><ul>
+<li class="chapter" data-level="6.1" data-path="rmarkdown.html"><a href="rmarkdown.html#creating-an-r-markdown-document"><i class="fa fa-check"></i><b>6.1</b> Creating an R Markdown Document</a></li>
+<li class="chapter" data-level="6.2" data-path="rmarkdown.html"><a href="rmarkdown.html#using-an-r-markdown-document"><i class="fa fa-check"></i><b>6.2</b> Using an R Markdown Document</a></li>
+<li class="chapter" data-level="6.3" data-path="rmarkdown.html"><a href="rmarkdown.html#knitting-an-r-markdown-document"><i class="fa fa-check"></i><b>6.3</b> Knitting an R Markdown Document</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="the-basics-of-coding-in-r.html"><a href="the-basics-of-coding-in-r.html"><i class="fa fa-check"></i><b>7</b> The Basics of Coding in R</a><ul>
+<li class="chapter" data-level="7.1" data-path="the-basics-of-coding-in-r.html"><a href="the-basics-of-coding-in-r.html#ac"><i class="fa fa-check"></i><b>7.1</b> Arithmetic commands</a></li>
+<li class="chapter" data-level="7.2" data-path="the-basics-of-coding-in-r.html"><a href="the-basics-of-coding-in-r.html#variables"><i class="fa fa-check"></i><b>7.2</b> Creating Variables</a><ul>
+<li class="chapter" data-level="7.2.1" data-path="the-basics-of-coding-in-r.html"><a href="the-basics-of-coding-in-r.html#types-of-variables"><i class="fa fa-check"></i><b>7.2.1</b> Types of Variables</a></li>
+<li class="chapter" data-level="7.2.2" data-path="the-basics-of-coding-in-r.html"><a href="the-basics-of-coding-in-r.html#vectors"><i class="fa fa-check"></i><b>7.2.2</b> Vectors</a></li>
+<li class="chapter" data-level="7.2.3" data-path="the-basics-of-coding-in-r.html"><a href="the-basics-of-coding-in-r.html#data-frames"><i class="fa fa-check"></i><b>7.2.3</b> Data Frames</a></li>
+</ul></li>
+<li class="chapter" data-level="7.3" data-path="the-basics-of-coding-in-r.html"><a href="the-basics-of-coding-in-r.html#functions"><i class="fa fa-check"></i><b>7.3</b> Functions</a></li>
+<li class="chapter" data-level="7.4" data-path="the-basics-of-coding-in-r.html"><a href="the-basics-of-coding-in-r.html#help-documentation"><i class="fa fa-check"></i><b>7.4</b> Help Documentation</a></li>
+<li class="chapter" data-level="7.5" data-path="the-basics-of-coding-in-r.html"><a href="the-basics-of-coding-in-r.html#googling-your-error-message"><i class="fa fa-check"></i><b>7.5</b> Googling your error message</a></li>
+<li class="chapter" data-level="7.6" data-path="the-basics-of-coding-in-r.html"><a href="the-basics-of-coding-in-r.html#comments"><i class="fa fa-check"></i><b>7.6</b> Comments</a></li>
+<li class="chapter" data-level="7.7" data-path="the-basics-of-coding-in-r.html"><a href="the-basics-of-coding-in-r.html#packages"><i class="fa fa-check"></i><b>7.7</b> Packages</a><ul>
+<li class="chapter" data-level="7.7.1" data-path="the-basics-of-coding-in-r.html"><a href="the-basics-of-coding-in-r.html#installing-packages"><i class="fa fa-check"></i><b>7.7.1</b> Installing packages</a></li>
+<li class="chapter" data-level="7.7.2" data-path="the-basics-of-coding-in-r.html"><a href="the-basics-of-coding-in-r.html#loading-a-package"><i class="fa fa-check"></i><b>7.7.2</b> Loading a package</a></li>
+<li class="chapter" data-level="7.7.3" data-path="the-basics-of-coding-in-r.html"><a href="the-basics-of-coding-in-r.html#try-psych-commands"><i class="fa fa-check"></i><b>7.7.3</b> Try psych commands</a></li>
+</ul></li>
+<li class="chapter" data-level="7.8" data-path="the-basics-of-coding-in-r.html"><a href="the-basics-of-coding-in-r.html#data"><i class="fa fa-check"></i><b>7.8</b> Importing Data into R</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="minihacks.html"><a href="minihacks.html"><i class="fa fa-check"></i><b>8</b> Minihacks</a><ul>
+<li class="chapter" data-level="8.1" data-path="minihacks.html"><a href="minihacks.html#minihack-1-r-markdown"><i class="fa fa-check"></i><b>8.1</b> Minihack 1: R Markdown</a></li>
+<li class="chapter" data-level="8.2" data-path="minihacks.html"><a href="minihacks.html#minihack-2-arithmetic-commands"><i class="fa fa-check"></i><b>8.2</b> Minihack 2: Arithmetic Commands</a></li>
+<li class="chapter" data-level="8.3" data-path="minihacks.html"><a href="minihacks.html#minihack-3-functions"><i class="fa fa-check"></i><b>8.3</b> Minihack 3: Functions</a></li>
+<li class="chapter" data-level="8.4" data-path="minihacks.html"><a href="minihacks.html#minihack-4-help-documentation"><i class="fa fa-check"></i><b>8.4</b> Minihack 4: Help Documentation</a></li>
+<li class="chapter" data-level="8.5" data-path="minihacks.html"><a href="minihacks.html#minihack-5-data-frames"><i class="fa fa-check"></i><b>8.5</b> Minihack 5: Data Frames</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">ABCD Workshop Tutorials</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="the-basics-of-coding-in-r" class="section level1">
+<h1><span class="header-section-number">Chapter 7</span> The Basics of Coding in R</h1>
+<div id="ac" class="section level2">
+<h2><span class="header-section-number">7.1</span> Arithmetic commands</h2>
+<p>As mentioned above, you can pass commands to the R-engine via the console. R has arithmetic commands for doing basic math operations, including addition (<code>+</code>), subtraction (<code>-</code>), multiplication (<code>*</code>), division (<code>/</code>), and exponentiation (<code>^</code>).</p>
+<p><img src="markdown_files/arithmetic/lab1_addition.png" width="175px" /><img src="markdown_files/arithmetic/lab1_subtraction.png" width="175px" /><img src="markdown_files/arithmetic/lab1_multiplication.png" width="175px" /><img src="markdown_files/arithmetic/lab1_division.png" width="175px" /><img src="markdown_files/arithmetic/lab1_exponentiation.png" width="175px" /></p>
+<p>R will automatically follow the PEMDAS order of operations (BEDMAS if you are from Canada or New Zealand). Parentheses can be used to tell R what parts of the equation should be evaluated first. As shown below and as expected, <code>(10 + 5) * 2</code> is not equivalent to <code>10 + 5 * 2</code>.</p>
+<p><img src="markdown_files/arithmetic/lab1_paren.png" width="175px" /><img src="markdown_files/arithmetic/lab1_noparen.png" width="175px" /></p>
+</div>
+<div id="variables" class="section level2">
+<h2><span class="header-section-number">7.2</span> Creating Variables</h2>
+<p>You can create variables using the assignment operator (<code>&lt;-</code>). Whatever is on the left of the assignment operator is saved to name specified on the right of the assignment operator. I like to imagine that there is a box with a name on it and you are placing a value, inside of the box. For example, if we wanted to place <code>10</code> into a variable called <code>my_number</code>, we would write:</p>
+<p><img src="markdown_files/assignment/lab1_assign.png" width="450px" /></p>
+<p>If we want to see what is stored in <code>my_number</code>, we can simply type <code>my_number</code> into the console and press <code>enter</code>. We are essentially asking the computer, “What’s in the box with <code>my_number</code> written on it?”</p>
+<p><img src="markdown_files/assignment/lab1_peek.png" width="450px" /></p>
+<p>If we want to overwrite <code>my_number</code> with a new value, we simply assign a new value to <code>my_number</code>.</p>
+<p><img src="markdown_files/assignment/lab1_reassign.png" width="450px" /></p>
+<p>Looking at <code>my_number</code> again, we can see that it is now <code>20</code>.</p>
+<p><img src="markdown_files/assignment/lab1_peek2.png" width="450px" /></p>
+<p>We can treat variables just like we would the underlying values. For example, we can add <code>5</code> to <code>my_number</code> by using <code>+</code>.</p>
+<p><img src="markdown_files/assignment/lab1_var_add.png" width="450px" /></p>
+<p>Keep in mind, the above operation does not save the result of <code>my_number + 5</code> to <code>my_number</code>. To do that, we would have to assign the result of <code>my_number + 5</code> to <code>my_number</code>.</p>
+<p><img src="markdown_files/assignment/lab1_reassign_add.png" width="450px" /></p>
+<p>If we want to remove a variable from our environment, we can use <code>rm()</code>.</p>
+<p><img src="markdown_files/assignment/lab1_rm.png" width="450px" /></p>
+<div id="types-of-variables" class="section level3">
+<h3><span class="header-section-number">7.2.1</span> Types of Variables</h3>
+<!--If a variable only has one value associated with it, we call it a `scalar`.-->
+<p>In R, there are four basic types of data: (1) <code>logical</code> values (also called <code>booleans</code>), which can either be <code>TRUE</code> or <code>FALSE</code>, (2) <code>integer</code> values, which can be any whole number (i.e.., a number without digits after the decimal place), (3) <code>double</code> values, which can be any number with digits before and after the decimal place, and (4) <code>character</code> values (also called <code>strings</code>), which are pieces of text enclosed in quotation marks (<code>"</code>).</p>
+<table>
+<thead>
+<tr class="header">
+<th>Type</th>
+<th>Examples</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Logical/Boolean</td>
+<td><code>TRUE</code>, <code>FALSE</code></td>
+</tr>
+<tr class="even">
+<td>Integer</td>
+<td><code>10L</code>, <code>-10L</code></td>
+</tr>
+<tr class="odd">
+<td>Double</td>
+<td><code>10.50</code>, <code>-10.50</code></td>
+</tr>
+<tr class="even">
+<td>Character</td>
+<td><code>"Hello"</code>, <code>"World"</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="vectors" class="section level3">
+<h3><span class="header-section-number">7.2.2</span> Vectors</h3>
+<div id="atomic-vectors" class="section level4">
+<h4><span class="header-section-number">7.2.2.1</span> Atomic Vectors</h4>
+<p>A collection of values is called a <code>vector</code>. If they are all of the same type, we call them <code>atomic vectors</code>. In R, we use the <code>c()</code> command to concatenate (or combine) values into an <code>atomic vector</code>.</p>
+<p><img src="markdown_files/vectors/lab1_vector.png" width="350px" /></p>
+<p>Just as we did with the <code>scalar</code> values above, we can assign a vector to a variable.</p>
+<p><img src="markdown_files/vectors/lab1_vec_assign.png" width="350px" /></p>
+<p>To print out the entire vector, we simply type <code>my_vector</code> into the console.</p>
+<p><img src="markdown_files/vectors/lab1_vec_print.png" width="350px" /></p>
+<p>In order to select just one value from the vector, we use square brackets (<code>[]</code>). For example, if we wanted the third value from <code>my_vector</code> we would type <code>my_vector[3]</code><sup><a href="the-basics-of-coding-in-r.html#foot_vector">1</a></sup>.</p>
+<p><img src="markdown_files/vectors/lab1_vec_index.png" width="350px" /></p>
+<p>If we want to replace a specific value in a vector, we use the assignment operator (<code>&lt;-</code>) in conjunction with the square brackets (<code>[]</code>).</p>
+<p><img src="markdown_files/vectors/lab1_vec_index_assign.png" width="350px" /></p>
+<p>As with single-value objects we can perform arithmetic operations on vectors, but the behaviour is not identical. If the vectors are the same length, each value from one vector will be paired with a corresponding value from the other vector. See below for an example of this in action.</p>
+<p><img src="markdown_files/vectors/lab1_vec_add.png" width="350px" /></p>
+<p>If the vectors of different lengths, the shorter vector will be recycled (i.e., repeated) to be the same length as the longer vector.</p>
+<p><img src="markdown_files/vectors/lab1_vec_recycle.png" width="350px" /></p>
+<p>This also works when the longer vector is not a multiple of the shorter vector, but you will get the warning: <code>longer object length is not a multiple of shorter object length</code>.</p>
+<p><img src="markdown_files/vectors/lab1_vec_recycle_odd.png" width="350px" /></p>
+<hr />
+<div id="foot_vector" class="section level6">
+<h6><span class="header-section-number">7.2.2.1.0.1</span> 1. Unlike most other coding languages (e.g., python), indices in R start at <code>1</code> instead of <code>0</code>. For instance, if you want to select the first element of a vector, you would write <code>my_vector[1]</code> instead of <code>my_vector[0]</code>. A second difference to keep in mind is that the <code>-</code> is used in R to remove whichever value is in the spot indicated by the index value. Using <code>vector[-2]</code> on the vector <code>c(10, 20, 30, 40, 50, 60)</code> would return <code>c(10, 30, 40, 50, 60)</code> in R. In python, it would return <code>50</code>.</h6>
+<hr />
+</div>
+</div>
+<div id="lists" class="section level4">
+<h4><span class="header-section-number">7.2.2.2</span> Lists</h4>
+<p>A vector that can accomodate more than one type of value (e.g., a <code>double</code> AND a <code>character</code>) is called a <code>list</code>. To create a <code>list</code>, we use <code>list()</code> instead of <code>c()</code>. If we wanted to create a vector with the values <code>5L</code>, <code>10</code>, <code>"fifteen"</code>, and <code>FALSE</code> we would use <code>list(5L, 10, "fifteen", FALSE)</code>.</p>
+<p><img src="markdown_files/vectors/lab1_lists.png" width="300px" /></p>
+<p>Although <code>lists</code> are an incredibly powerful type of data structure, dealing with them can be quite frustrating (especially for beginning coders). Since you are unlikely to need to know the inner workings of <code>list</code>s for anything we will be doing in this course, I have chosen not to include much about them here. However, as you become a more advanced user, learning to leverage lists will allow you to write code that is far more efficient.</p>
+</div>
+</div>
+<div id="data-frames" class="section level3">
+<h3><span class="header-section-number">7.2.3</span> Data Frames</h3>
+<p>In R you will mostly be working with <code>data frames</code>. A <code>data frame</code> is technically a list of atomic vectors. For our purposes, we can think of a <code>data frame</code> as a spread sheet with columns of variables and rows of observations.</p>
+<p>Let’s look at a <code>data frame</code> that is automatically loaded when you open R, <code>mtcars</code>. Type <code>mtcars</code> to print out the data frame.</p>
+<p><img src="markdown_files/dataframes/lab1_mtcars.png" width="600px" /></p>
+<p>The data frame <code>mtcars</code> has a row for 32 cars featured in the <em>1974 Motor Trend</em> magazine. There is a column for the car’s miles per gallon (<code>mpg</code>), number of cylinders (<code>cyl</code>), engine displacement (<code>disp</code>), horse power (<code>hp</code>), rear axle ratio (<code>drat</code>), weight in thousands of pounds (<code>wt</code>), quarter-mile time (<code>qsec</code>), engine shape (<code>vs</code>), transmission type (<code>am</code>), number of forward gears (<code>gear</code>), and number of carburetors (<code>carb</code>).</p>
+<p>With data frames, you can extract a value by including <code>[row, col]</code> immediately after the object. For example, if we wanted to extract the number of gears in the <code>Datsun 710</code> we could use <code>mtcars[3, 10]</code> to extract the value stored in the third row, tenth column.</p>
+<p><img src="markdown_files/dataframes/lab1_extract.png" width="350px" /></p>
+<p>Since the rows and columns have names, we can also be explicit and use the name of the row (<code>"Datsun  710"</code>) and the name of the column (<code>"gear"</code>) instead of the row and column indices.</p>
+<p><img src="markdown_files/dataframes/lab1_extract_explicit.png" width="350px" /></p>
+<p>We can also extract an entire column by dropping the index value for the row. Since you don’t specify a given row, the computer assumes you want all of the values in the column. For example, to extract all values stored in the gear column, we could use <code>[, 10]</code> or <code>[, "gear"]</code>.</p>
+<p><img src="markdown_files/dataframes/lab1_col_extract.png" width="700px" /></p>
+<p>To extract an entire row, we drop the column index. To extract all of the values associated with the <code>Datsun 710</code>, we would drop the column index (e.g., <code>[3, ]</code> or <code>["Datsun 710", ]</code>)</p>
+<p><img src="markdown_files/dataframes/lab1_row_extract.png" width="700px" /></p>
+<p>You can also extract columns using <code>$</code> followed by the column name without quotes.</p>
+<p><img src="markdown_files/dataframes/lab1_col_dollar.png" width="700px" /></p>
+<p>If we want to extract multiple columns (or multiple rows) we use vectors. For example, if we wanted the number of gears and carburetors in the <code>Datsun 710</code> and the <code>Duster 360</code> we would use <code>[c("Datsun 710", "Duster 360"), c("gear", "carb")]</code> or <code>[c(3, 7), c(10:11)]</code>.</p>
+<p><img src="markdown_files/dataframes/lab1_extract_vector.png" width="550px" /></p>
+</div>
+</div>
+<div id="functions" class="section level2">
+<h2><span class="header-section-number">7.3</span> Functions</h2>
+<p>Up to this point, we have been more-or-less directly telling R what we want it to do. This is great if we want to understand the processes that underlie R, but it can be incredibly time-consuming. Thankfully, we have functions. Functions are essentially pre-packaged snippets of code that take one or more pieces of input (called <code>arguments</code>) and return one or more pieces of output (called <code>values</code>). For example, <code>length()</code> is a function that takes a vector as its sole argument and returns the length of the vector as its sole value.</p>
+<p><img src="markdown_files/functions/lab1_length.png" width="350px" /></p>
+<p>The function <code>unique()</code> also takes a vector as its primary argument, but—instead of returning the length of the vector as its value—it returns only the unique values of that vector.</p>
+<p><img src="markdown_files/functions/lab1_unique.png" width="600px" /></p>
+<p>The <code>mean()</code> function and <code>sd()</code> function are two functions that you will end up using a lot. The former (<code>mean()</code>) takes a numeric vector and returns the average of the vector.</p>
+<p><img src="markdown_files/functions/lab1_mean.png" width="350px" /></p>
+<p>The latter (<code>sd()</code>) also takes a numeric vector, but it returns the standard deviation of the vector instead.</p>
+<p><img src="markdown_files/functions/lab1_sd.png" width="350px" /></p>
+<p>Although it is more conceptual, it is also useful to mention the <code>typeof()</code> function here. The function <code>typeof()</code> takes any object and tells you what type of variable it is.</p>
+<p><img src="markdown_files/functions/lab1_type_int.png" width="225px" /><img src="markdown_files/functions/lab1_type_double.png" width="225px" /><img src="markdown_files/functions/lab1_type_character.png" width="225px" /><img src="markdown_files/functions/lab1_type_logical.png" width="225px" /></p>
+<p>Using the suite of <code>as.*()</code> functions (e.g., <code>as.numeric()</code>, <code>as.character()</code>, <code>as.logical()</code>, <code>as.integer()</code>), we can likewise coerce objects to other types.</p>
+<p><img src="markdown_files/functions/lab1_as_num.png" width="225px" /><img src="markdown_files/functions/lab1_as_char.png" width="225px" /><img src="markdown_files/functions/lab1_as_logical.png" width="225px" /><img src="markdown_files/functions/lab1_as_integer.png" width="225px" /></p>
+</div>
+<div id="help-documentation" class="section level2">
+<h2><span class="header-section-number">7.4</span> Help Documentation</h2>
+<p>Sometimes when working in R you will want to know more about a function. For example, you might want to know what arguments the function <code>sd()</code> takes. You can use <code>?</code> at the beginning of any function call to display the help documentation for that function.</p>
+<p><img src="markdown_files/help_documentation/lab1_help_call.png" width="225px" /></p>
+<p><img src="markdown_files/help_documentation/lab1_help_doc.png" title="Help Documentation" /></p>
+<p>From the help documentation we can see that <code>sd()</code> takes two arguments: (1) An R object and (2) a logical value indicating whether <code>NA</code>s (unknown values) should be removed before the standard deviation is calculated.</p>
+<p>Typically R will infer, based on the order of the arguments, what values correspond to which arguments. For example, since <code>sd()</code> expects that the argument <code>x</code> will be provided first and the argument <code>na.rm</code> will be provided second, the following works:</p>
+<p><img src="markdown_files/help_documentation/lab1_sd.png" width="500px" /></p>
+<p>However, we can also explicitly tell R what values are associated with which arguments.</p>
+<p><img src="markdown_files/help_documentation/lab1_sd_explicit.png" width="500px" /></p>
+<p>The help documentation for a function often also includes an example of how to use the function and details on what the expected output will be.</p>
+</div>
+<div id="googling-your-error-message" class="section level2">
+<h2><span class="header-section-number">7.5</span> Googling your error message</h2>
+<p>You will come across many messages in your time using RStudio. Some messages are error messages and some are warning messages. If a message says <code>warning message</code> then R was able to run the code but not as it was intended. An <code>error message</code> means that R was not able to run the code at all. Here is an example of code that would produce a warning message.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="the-basics-of-coding-in-r.html#cb3-1"></a><span class="kw">mean</span>(<span class="kw">c</span>(<span class="dv">4</span>,<span class="dv">5</span>,<span class="st">&quot;6&quot;</span>,<span class="dv">7</span>,<span class="dv">5</span>))</span></code></pre></div>
+<p><img src="markdown_files/googling_error/error_message_3.JPG" title="Google error message" /></p>
+<p>When you get a warning or error message, and you aren’t sure what it means, you should first try googling the message. Oftentimes, others have encountered your problem and have asked for help deciphering the message.</p>
+<p><img src="markdown_files/googling_error/error_message.JPG" title="Google error message" /></p>
+<p>Scott from Stack overflow suggests converting the character “6” into a numeric variable. Let’s try that.</p>
+<p><img src="markdown_files/googling_error/error_message_2.JPG" title="Google error message" /></p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="the-basics-of-coding-in-r.html#cb4-1"></a><span class="kw">mean</span>(<span class="kw">c</span>(<span class="dv">4</span>,<span class="dv">5</span>,<span class="kw">as.numeric</span>(<span class="st">&quot;6&quot;</span>),<span class="dv">7</span>,<span class="dv">5</span>))</span></code></pre></div>
+<pre><code>## [1] 5.4</code></pre>
+</div>
+<div id="comments" class="section level2">
+<h2><span class="header-section-number">7.6</span> Comments</h2>
+<p>Comments are pieces of code text that are not interpreted by the computer. In R we use the octothorpe/pound sign/hashtag (<code>#</code>) at the beginning of a line to denote a comment. The first and third line of code below are not evaluated, whereas the second and fourth line are.</p>
+<p><img src="markdown_files/comments/lab1_comment.png" width="225px" /></p>
+<p>Comments are mostly used to remind yourself (or other people) <em>what</em> a piece of code does and <em>why</em> the code is written the way that it is. Below is a piece of code that checks if a string is a valid phone number. We can see that the comments explain, not only what each piece of code is doing, but also why the second piece of code was written the way that it was.</p>
+<p><img src="markdown_files/comments/lab1_validate.png" width="900px" /></p>
+<hr />
+</div>
+<div id="packages" class="section level2">
+<h2><span class="header-section-number">7.7</span> Packages</h2>
+<p>A <code>package</code> can include code, documentation for that code, and/or data. A helpful way to think of packages is as a toolbox full of data analysis tools.</p>
+<p><img src="markdown_files/packages/psych_toolbox_2.png" title="RStudio Source Pane" /></p>
+<p>There are general purpose toolboxes that contain tools for running common analyses in psychology (e.g., <code>psych</code>), toolboxes for helping your run advanced statistical models (e.g., <code>lavaan</code>; <code>lmer</code>), toolboxes for text mining (e.g., <code>tidytext</code>), and toolboxes for plotting (e.g., <code>ggplot2</code>, <code>gganimate</code>). If you have a problem that needs to be solved, there will probably be a package for it.</p>
+<div id="installing-packages" class="section level3">
+<h3><span class="header-section-number">7.7.1</span> Installing packages</h3>
+<p>Let’s say you’re gardeniing for the first time, and you need a hoe to clear some weeds. If you’ve never gardenend before, you don’t have a hoe lying around your house. You’ll need to go to your local hardware store and buy one. This is the idea behind “installing” a package – you’ve never used it before, so you’ll need to download it from CRAN (which is analagous to a Home Depot) or maybe a private repo (like going to a local mom ’n pop store). Once you’ve bought your hoe (or downloaded your package), it lives at your house (on your computer) and you don’t need to buy it (download it) again… unless someone builds a better version and you want to upgrade.</p>
+<p>To install a package onto your computer, you simply pass the name of the package to <code>install.packages()</code>. As a demonstration, we install the <code>psych</code> package below. The <code>psych</code> package has several useful data analysis tools for psychologists.</p>
+<p><img src="markdown_files/packages/lab1_install.png" width="300px" /></p>
+<p><em>Note.</em> When installing packages, the package name must be enclosed in quotes: <code>install.packages("psych")</code> <strong>NOT</strong> <code>install.packages(psych)</code>. You generally only need to install a package once.</p>
+</div>
+<div id="loading-a-package" class="section level3">
+<h3><span class="header-section-number">7.7.2</span> Loading a package</h3>
+<p>Your hoe lives in your tool shed most of the time, but you need to get it out when you want to garden. This is like “loading” a package.</p>
+<p>Just because we’ve installed a package to our computer doesn’t mean we have access to its functions. Buying a toolbox doesn’t necessarily give you access to its tools. You also have to open the toolbox. To open <code>psych</code> and load its functions, we use <code>library()</code>.</p>
+<p><img src="markdown_files/packages/lab1_load.png" width="300px" /></p>
+<p><em>Note.</em> A package can be loaded with or without quotes: <code>library("psych")</code> <strong>OR</strong> <code>library(psych)</code>. We have to load a package every time that R is restarted.</p>
+</div>
+<div id="try-psych-commands" class="section level3">
+<h3><span class="header-section-number">7.7.3</span> Try psych commands</h3>
+<p>Now that we have installed and loaded the <code>psych</code> package, let’s try out of some its commands.</p>
+<p>Using <code>corr.test()</code> we can make a correlation matrix of the variables in <code>mtcars</code>.</p>
+<p><img src="markdown_files/packages/lab1_corr_test.png" width="900px" /></p>
+<p>Using <code>skew()</code>, we can look at the skew of all of the columns in <code>mtcars</code>.</p>
+<p><img src="markdown_files/packages/lab1_skew.png" width="900px" /></p>
+<p>We can also use <code>t2d()</code> to calculate the Cohen’s <em>d</em> for a t-value of 3.00 with 300 participants.</p>
+<p><img src="markdown_files/packages/lab1_t2d.png" width="250px" /></p>
+<p>This is only a small subset of the functions available in the <code>psych</code> package, and <code>psych</code> is only one package of over 11,000 on CRAN (as of 2018). This is not to mention the tens of thousands of packages hosted on online repositories like <a href="https://github.com">GitHub</a>. As Cory Costello noted during R Bootcamp, the question with R is never <em>if</em> but <em>how</em>.</p>
+<!--### Try `yarrr` commands-->
+<!--Now that we have installed and loaded the `yarrr` package, let's try out of some its commands (adapted from [__YaRrr: A Pirate's Guide to R__](https://bookdown.org/ndphillips/YaRrr/)).-->
+</div>
+</div>
+<div id="data" class="section level2">
+<h2><span class="header-section-number">7.8</span> Importing Data into R</h2>
+<p>The final topic that we will cover in this lab is how to load data into R. Over the course of your careers (and many times in this workshop) you will need to import data into R to be analyzed.</p>
+<p>For this example, we will be using the planets data set from Star Wars. <a href="https://docs.google.com/spreadsheets/d/1W577PILjAkOSTNw7r85jjHrJaaXuOkiPuQcu2yA6F58/export?format=xlsx">The data can be downloaded here.</a></p>
+<p>You can use file-type-specific functions to load data into R (e.g., <code>read.csv</code>, <code>read_excel</code>). However, the <code>rio</code> package streamlines this process by having a single import function (<code>import()</code>) that infers the file type from its extension (e.g., <code>.csv</code>, <code>.xlsx</code>, <code>.sav</code>). Additionally, the <code>here</code> package makes it very easy to reference folders in your directory.</p>
+<p>As we did for <code>psych</code>, if you don’t have these packages already, you will first need to install <code>rio</code> and <code>here</code>. You can install <code>rio</code> and <code>here</code> with the following code: <code>install.packages(c("rio", "here"))</code>.</p>
+<p>Second, we will need to load <code>rio</code> and <code>here</code> using the library functions. Then, we will import the data by using the <code>import</code> function from the <code>rio</code> package and the <code>here</code> function from the <code>here</code> package. In order to use the <code>here</code> function, we need to know which folder my dataset is saved in. In this case, the <code>sw_planets.xlsx</code> is saved in <code>labs</code> -&gt; <code>data</code>. Finally, we will save the data into a variable, <code>planets_data</code>.</p>
+<p><img src="markdown_files/importing_data/rio_here.png" width="900px" /></p>
+<p>To ensure it was read in properly, we can look at the first six rows of the imported dataset by using the <code>head()</code> function.</p>
+<p><img src="markdown_files/importing_data/lab1_head.png" width="900px" /></p>
+<p>We can also look at the last six rows by using the <code>tail()</code> function.</p>
+<p><img src="markdown_files/importing_data/lab1_tail.png" width="900px" /></p>
+<hr />
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="rmarkdown.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="minihacks.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/02-datascience1.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["bookdown-demo.pdf", "bookdown-demo.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

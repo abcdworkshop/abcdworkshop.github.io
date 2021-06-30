@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 6 R Markdown | ABCD Workshop Tutorials</title>
+  <meta name="description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
+  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 6 R Markdown | ABCD Workshop Tutorials" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 6 R Markdown | ABCD Workshop Tutorials" />
+  
+  <meta name="twitter:description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
+  
+
+<meta name="author" content="ABCD Facilitators" />
+
+
+<meta name="date" content="2021-06-29" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="projects.html"/>
+<link rel="next" href="the-basics-of-coding-in-r.html"/>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+
+
+<style type="text/css">
+code.sourceCode > span { display: inline-block; line-height: 1.25; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">A Minimal Book Example</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
+<li class="chapter" data-level="2" data-path="purpose.html"><a href="purpose.html"><i class="fa fa-check"></i><b>2</b> Purpose</a></li>
+<li class="chapter" data-level="3" data-path="gs.html"><a href="gs.html"><i class="fa fa-check"></i><b>3</b> Getting Started</a><ul>
+<li class="chapter" data-level="3.1" data-path="gs.html"><a href="gs.html#download_r"><i class="fa fa-check"></i><b>3.1</b> Downloading the R Engine</a></li>
+<li class="chapter" data-level="3.2" data-path="gs.html"><a href="gs.html#download_rstudio"><i class="fa fa-check"></i><b>3.2</b> Downloading RStudio</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="rstudio.html"><a href="rstudio.html"><i class="fa fa-check"></i><b>4</b> Features of RStudio</a><ul>
+<li class="chapter" data-level="4.1" data-path="rstudio.html"><a href="rstudio.html#rstudio_console"><i class="fa fa-check"></i><b>4.1</b> The Console</a></li>
+<li class="chapter" data-level="4.2" data-path="rstudio.html"><a href="rstudio.html#rstudio_source"><i class="fa fa-check"></i><b>4.2</b> Source</a></li>
+<li class="chapter" data-level="4.3" data-path="rstudio.html"><a href="rstudio.html#rstudio_environment"><i class="fa fa-check"></i><b>4.3</b> Environment/History</a></li>
+<li class="chapter" data-level="4.4" data-path="rstudio.html"><a href="rstudio.html#rstudio_files"><i class="fa fa-check"></i><b>4.4</b> Files/Plots/Packages/Help</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="projects.html"><a href="projects.html"><i class="fa fa-check"></i><b>5</b> Projects</a><ul>
+<li class="chapter" data-level="5.1" data-path="projects.html"><a href="projects.html#create_project"><i class="fa fa-check"></i><b>5.1</b> Creating a new project</a></li>
+<li class="chapter" data-level="5.2" data-path="projects.html"><a href="projects.html#adding-folders-to-a-project"><i class="fa fa-check"></i><b>5.2</b> Adding folders to a project</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="rmarkdown.html"><a href="rmarkdown.html"><i class="fa fa-check"></i><b>6</b> R Markdown</a><ul>
+<li class="chapter" data-level="6.1" data-path="rmarkdown.html"><a href="rmarkdown.html#creating-an-r-markdown-document"><i class="fa fa-check"></i><b>6.1</b> Creating an R Markdown Document</a></li>
+<li class="chapter" data-level="6.2" data-path="rmarkdown.html"><a href="rmarkdown.html#using-an-r-markdown-document"><i class="fa fa-check"></i><b>6.2</b> Using an R Markdown Document</a></li>
+<li class="chapter" data-level="6.3" data-path="rmarkdown.html"><a href="rmarkdown.html#knitting-an-r-markdown-document"><i class="fa fa-check"></i><b>6.3</b> Knitting an R Markdown Document</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="the-basics-of-coding-in-r.html"><a href="the-basics-of-coding-in-r.html"><i class="fa fa-check"></i><b>7</b> The Basics of Coding in R</a><ul>
+<li class="chapter" data-level="7.1" data-path="the-basics-of-coding-in-r.html"><a href="the-basics-of-coding-in-r.html#ac"><i class="fa fa-check"></i><b>7.1</b> Arithmetic commands</a></li>
+<li class="chapter" data-level="7.2" data-path="the-basics-of-coding-in-r.html"><a href="the-basics-of-coding-in-r.html#variables"><i class="fa fa-check"></i><b>7.2</b> Creating Variables</a><ul>
+<li class="chapter" data-level="7.2.1" data-path="the-basics-of-coding-in-r.html"><a href="the-basics-of-coding-in-r.html#types-of-variables"><i class="fa fa-check"></i><b>7.2.1</b> Types of Variables</a></li>
+<li class="chapter" data-level="7.2.2" data-path="the-basics-of-coding-in-r.html"><a href="the-basics-of-coding-in-r.html#vectors"><i class="fa fa-check"></i><b>7.2.2</b> Vectors</a></li>
+<li class="chapter" data-level="7.2.3" data-path="the-basics-of-coding-in-r.html"><a href="the-basics-of-coding-in-r.html#data-frames"><i class="fa fa-check"></i><b>7.2.3</b> Data Frames</a></li>
+</ul></li>
+<li class="chapter" data-level="7.3" data-path="the-basics-of-coding-in-r.html"><a href="the-basics-of-coding-in-r.html#functions"><i class="fa fa-check"></i><b>7.3</b> Functions</a></li>
+<li class="chapter" data-level="7.4" data-path="the-basics-of-coding-in-r.html"><a href="the-basics-of-coding-in-r.html#help-documentation"><i class="fa fa-check"></i><b>7.4</b> Help Documentation</a></li>
+<li class="chapter" data-level="7.5" data-path="the-basics-of-coding-in-r.html"><a href="the-basics-of-coding-in-r.html#googling-your-error-message"><i class="fa fa-check"></i><b>7.5</b> Googling your error message</a></li>
+<li class="chapter" data-level="7.6" data-path="the-basics-of-coding-in-r.html"><a href="the-basics-of-coding-in-r.html#comments"><i class="fa fa-check"></i><b>7.6</b> Comments</a></li>
+<li class="chapter" data-level="7.7" data-path="the-basics-of-coding-in-r.html"><a href="the-basics-of-coding-in-r.html#packages"><i class="fa fa-check"></i><b>7.7</b> Packages</a><ul>
+<li class="chapter" data-level="7.7.1" data-path="the-basics-of-coding-in-r.html"><a href="the-basics-of-coding-in-r.html#installing-packages"><i class="fa fa-check"></i><b>7.7.1</b> Installing packages</a></li>
+<li class="chapter" data-level="7.7.2" data-path="the-basics-of-coding-in-r.html"><a href="the-basics-of-coding-in-r.html#loading-a-package"><i class="fa fa-check"></i><b>7.7.2</b> Loading a package</a></li>
+<li class="chapter" data-level="7.7.3" data-path="the-basics-of-coding-in-r.html"><a href="the-basics-of-coding-in-r.html#try-psych-commands"><i class="fa fa-check"></i><b>7.7.3</b> Try psych commands</a></li>
+</ul></li>
+<li class="chapter" data-level="7.8" data-path="the-basics-of-coding-in-r.html"><a href="the-basics-of-coding-in-r.html#data"><i class="fa fa-check"></i><b>7.8</b> Importing Data into R</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="minihacks.html"><a href="minihacks.html"><i class="fa fa-check"></i><b>8</b> Minihacks</a><ul>
+<li class="chapter" data-level="8.1" data-path="minihacks.html"><a href="minihacks.html#minihack-1-r-markdown"><i class="fa fa-check"></i><b>8.1</b> Minihack 1: R Markdown</a></li>
+<li class="chapter" data-level="8.2" data-path="minihacks.html"><a href="minihacks.html#minihack-2-arithmetic-commands"><i class="fa fa-check"></i><b>8.2</b> Minihack 2: Arithmetic Commands</a></li>
+<li class="chapter" data-level="8.3" data-path="minihacks.html"><a href="minihacks.html#minihack-3-functions"><i class="fa fa-check"></i><b>8.3</b> Minihack 3: Functions</a></li>
+<li class="chapter" data-level="8.4" data-path="minihacks.html"><a href="minihacks.html#minihack-4-help-documentation"><i class="fa fa-check"></i><b>8.4</b> Minihack 4: Help Documentation</a></li>
+<li class="chapter" data-level="8.5" data-path="minihacks.html"><a href="minihacks.html#minihack-5-data-frames"><i class="fa fa-check"></i><b>8.5</b> Minihack 5: Data Frames</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">ABCD Workshop Tutorials</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="rmarkdown" class="section level1">
+<h1><span class="header-section-number">Chapter 6</span> R Markdown</h1>
+<p><code>R Markdown</code> allows you to integrate formatted text (like in a Word or Google Doc), code, and code output into a single document. These documents can take many forms, including:</p>
+<ul>
+<li>html files (like this one), which allow for some interactive components, like showing/hiding code or interactive figures,</li>
+<li>pdf files,</li>
+<li>word/rich-text-format (rtf) files, for manuscripts</li>
+<li>and <a href="https://bookdown.org/yihui/rmarkdown/">more</a>.</li>
+</ul>
+<p>The following section will guide you the process of creating an <code>R Markdown</code> document.</p>
+<div id="creating-an-r-markdown-document" class="section level2">
+<h2><span class="header-section-number">6.1</span> Creating an R Markdown Document</h2>
+<ol style="list-style-type: decimal">
+<li><p>Click on the blank piece of paper with the plus sign over it in the upper left-hand corner of RStudio.</p></li>
+<li><p>Click on <code>R Markdown...</code>.</p></li>
+</ol>
+<p><img src="markdown_files/rmarkdown/lab1_menu_an.png" width="250px" style="display: block; margin: auto;" /></p>
+<ol start="3" style="list-style-type: decimal">
+<li>Enter the title of document and your name. I have chosen to title the document <code>example</code>.</li>
+</ol>
+<center>
+<img src="markdown_files/rmarkdown/create_rmarkdown.png" title="Create RMarkdown" />
+</center>
+<ol start="4" style="list-style-type: decimal">
+<li>Save your RMarkdown document by clicking on <code>File</code> -&gt; <code>Save</code>. I’ll save this <code>tools</code> -&gt; <code>scripts</code> folder in my <code>ABCD 2021</code> project.</li>
+</ol>
+</div>
+<div id="using-an-r-markdown-document" class="section level2">
+<h2><span class="header-section-number">6.2</span> Using an R Markdown Document</h2>
+<p>The content of <code>R Markdown</code> documents can be split into two main types. I will call the first type <em>simple text</em>. Simple text will not be evaluated by the computer other than to be formatted according to markdown syntax. If you are describing analytic decisions or interpreting the results of an analysis, you will likely be using simple text.</p>
+<p>Note: <em>If a comment takes up more than a line, write it in simple text, not as an <code>R</code> comment.</em> Simple text can help ensure your documents are easily readable. R comments (prefaced using <code>#</code>) are more difficult to read and extend off the page in some Markdown formats.</p>
+<p>Markdown syntax is used to format the simple text, such as italicizing words by enclosing them in asterisks (e.g., <code>*this is italicized*</code> becomes <em>this is italicized</em>) or bolding words by enclosing them in double-asterisks (e.g., <code>**this is bold**</code> becomes <strong>this is bold</strong>). For a quick rundown of what you can do with R Markdown formatting, I suggest you check out the Markdown section of the <a href="https://www.rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf">R Markdown Cheat Sheet</a>.</p>
+<p>In addition to simple text, <code>R Markdown</code> documents support R code using “chunks”. A chunk is a section of text that the document recognizes as code, rather than simple text. It will be set off in the final version of the document through different formatting. In contrast to simple text, the R code chunks <strong>are</strong> evaluated by the computer. The chunks are surrounded by <code>```{r}</code> and <code>```</code>. In the example image below, the <code>1 + 2</code> in the R Code chunk will be evaluated when the document is “knitted” (rendered).</p>
+<center>
+<img src="markdown_files/rmarkdown/lab1_raw.png" title="R Markdown Document Preferences" />
+</center>
+</div>
+<div id="knitting-an-r-markdown-document" class="section level2">
+<h2><span class="header-section-number">6.3</span> Knitting an R Markdown Document</h2>
+<p>In order to knit an R Markdown document, you can either use the shortcut <code>command + shift + k</code> or click the button at the top of the R Markdown document that says <code>Knit</code>. The computer will take several seconds (or, depending on the length of the R Markdown document, several minutes) to knit the document. Once the computer has finished knitting the document, a new document will appear in the same location that the <code>R Markdown</code> document is saved. In this example, the new document will end with a <code>.html</code> extension.</p>
+<center>
+<img src="markdown_files/rmarkdown/lab1_knit.png" title="R Markdown Document Preferences" />
+</center>
+<p>As shown in the above image, the simple text in the <code>R Markdown</code> document on the left was rendered into a formatted in the knitted document on the right. The equation in the code chunk was also evaluated in the knitted document, returning the value <code>3</code>.</p>
+<hr />
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="projects.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="the-basics-of-coding-in-r.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/02-datascience1.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["bookdown-demo.pdf", "bookdown-demo.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
