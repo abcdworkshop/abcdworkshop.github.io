@@ -1,4 +1,4 @@
-welcome
+introduction
 purpose
 gs
 download_r
@@ -39,3 +39,12 @@ minihack-2-arithmetic-commands
 minihack-3-functions
 minihack-4-help-documentation
 minihack-5-data-frames
+mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial
+load-some-abcd-data
+visualize-longitudinal-study-design
+lets-visualize-some-of-the-abcd-dataset
+lets-dive-into-some-modeling
+modeling-continued-checking-out-non-linear-group-level-trajectories
+lets-try-a-gamm-approach
+looking-at-models-for-different-groups
+graph-models-for-different-groups

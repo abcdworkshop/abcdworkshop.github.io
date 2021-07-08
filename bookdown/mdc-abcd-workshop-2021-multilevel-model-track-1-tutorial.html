@@ -1,0 +1,1587 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 9 MDC ABCD Workshop 2021 Multilevel Model Track 1 Tutorial | ABCD Workshop Tutorials</title>
+  <meta name="description" content="This is a guide to the resources &amp; tutorials from the 2021 MDC ABCD Workshop.." />
+  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 9 MDC ABCD Workshop 2021 Multilevel Model Track 1 Tutorial | ABCD Workshop Tutorials" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="This is a guide to the resources &amp; tutorials from the 2021 MDC ABCD Workshop.." />
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 9 MDC ABCD Workshop 2021 Multilevel Model Track 1 Tutorial | ABCD Workshop Tutorials" />
+  
+  <meta name="twitter:description" content="This is a guide to the resources &amp; tutorials from the 2021 MDC ABCD Workshop.." />
+  
+
+<meta name="author" content="ABCD Facilitators" />
+
+
+<meta name="date" content="2021-07-08" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="minihacks.html"/>
+<link rel="next" href="references.html"/>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+
+
+<style type="text/css">
+code.sourceCode > span { display: inline-block; line-height: 1.25; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">A Minimal Book Example</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
+<li class="chapter" data-level="2" data-path="purpose.html"><a href="purpose.html"><i class="fa fa-check"></i><b>2</b> Purpose</a></li>
+<li class="chapter" data-level="3" data-path="gs.html"><a href="gs.html"><i class="fa fa-check"></i><b>3</b> Getting Started</a><ul>
+<li class="chapter" data-level="3.1" data-path="gs.html"><a href="gs.html#download_r"><i class="fa fa-check"></i><b>3.1</b> Downloading the R Engine</a></li>
+<li class="chapter" data-level="3.2" data-path="gs.html"><a href="gs.html#download_rstudio"><i class="fa fa-check"></i><b>3.2</b> Downloading RStudio</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="rstudio.html"><a href="rstudio.html"><i class="fa fa-check"></i><b>4</b> Features of RStudio</a><ul>
+<li class="chapter" data-level="4.1" data-path="rstudio.html"><a href="rstudio.html#rstudio_console"><i class="fa fa-check"></i><b>4.1</b> The Console</a></li>
+<li class="chapter" data-level="4.2" data-path="rstudio.html"><a href="rstudio.html#rstudio_source"><i class="fa fa-check"></i><b>4.2</b> Source</a></li>
+<li class="chapter" data-level="4.3" data-path="rstudio.html"><a href="rstudio.html#rstudio_environment"><i class="fa fa-check"></i><b>4.3</b> Environment/History</a></li>
+<li class="chapter" data-level="4.4" data-path="rstudio.html"><a href="rstudio.html#rstudio_files"><i class="fa fa-check"></i><b>4.4</b> Files/Plots/Packages/Help</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="projects.html"><a href="projects.html"><i class="fa fa-check"></i><b>5</b> Projects</a><ul>
+<li class="chapter" data-level="5.1" data-path="projects.html"><a href="projects.html#create_project"><i class="fa fa-check"></i><b>5.1</b> Creating a new project</a></li>
+<li class="chapter" data-level="5.2" data-path="projects.html"><a href="projects.html#adding-folders-to-a-project"><i class="fa fa-check"></i><b>5.2</b> Adding folders to a project</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="rmarkdown.html"><a href="rmarkdown.html"><i class="fa fa-check"></i><b>6</b> R Markdown</a><ul>
+<li class="chapter" data-level="6.1" data-path="rmarkdown.html"><a href="rmarkdown.html#creating-an-r-markdown-document"><i class="fa fa-check"></i><b>6.1</b> Creating an R Markdown Document</a></li>
+<li class="chapter" data-level="6.2" data-path="rmarkdown.html"><a href="rmarkdown.html#using-an-r-markdown-document"><i class="fa fa-check"></i><b>6.2</b> Using an R Markdown Document</a></li>
+<li class="chapter" data-level="6.3" data-path="rmarkdown.html"><a href="rmarkdown.html#knitting-an-r-markdown-document"><i class="fa fa-check"></i><b>6.3</b> Knitting an R Markdown Document</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="the-basics-of-coding-in-r.html"><a href="the-basics-of-coding-in-r.html"><i class="fa fa-check"></i><b>7</b> The Basics of Coding in R</a><ul>
+<li class="chapter" data-level="7.1" data-path="the-basics-of-coding-in-r.html"><a href="the-basics-of-coding-in-r.html#ac"><i class="fa fa-check"></i><b>7.1</b> Arithmetic commands</a></li>
+<li class="chapter" data-level="7.2" data-path="the-basics-of-coding-in-r.html"><a href="the-basics-of-coding-in-r.html#variables"><i class="fa fa-check"></i><b>7.2</b> Creating Variables</a><ul>
+<li class="chapter" data-level="7.2.1" data-path="the-basics-of-coding-in-r.html"><a href="the-basics-of-coding-in-r.html#types-of-variables"><i class="fa fa-check"></i><b>7.2.1</b> Types of Variables</a></li>
+<li class="chapter" data-level="7.2.2" data-path="the-basics-of-coding-in-r.html"><a href="the-basics-of-coding-in-r.html#vectors"><i class="fa fa-check"></i><b>7.2.2</b> Vectors</a></li>
+<li class="chapter" data-level="7.2.3" data-path="the-basics-of-coding-in-r.html"><a href="the-basics-of-coding-in-r.html#data-frames"><i class="fa fa-check"></i><b>7.2.3</b> Data Frames</a></li>
+</ul></li>
+<li class="chapter" data-level="7.3" data-path="the-basics-of-coding-in-r.html"><a href="the-basics-of-coding-in-r.html#functions"><i class="fa fa-check"></i><b>7.3</b> Functions</a></li>
+<li class="chapter" data-level="7.4" data-path="the-basics-of-coding-in-r.html"><a href="the-basics-of-coding-in-r.html#help-documentation"><i class="fa fa-check"></i><b>7.4</b> Help Documentation</a></li>
+<li class="chapter" data-level="7.5" data-path="the-basics-of-coding-in-r.html"><a href="the-basics-of-coding-in-r.html#googling-your-error-message"><i class="fa fa-check"></i><b>7.5</b> Googling your error message</a></li>
+<li class="chapter" data-level="7.6" data-path="the-basics-of-coding-in-r.html"><a href="the-basics-of-coding-in-r.html#comments"><i class="fa fa-check"></i><b>7.6</b> Comments</a></li>
+<li class="chapter" data-level="7.7" data-path="the-basics-of-coding-in-r.html"><a href="the-basics-of-coding-in-r.html#packages"><i class="fa fa-check"></i><b>7.7</b> Packages</a><ul>
+<li class="chapter" data-level="7.7.1" data-path="the-basics-of-coding-in-r.html"><a href="the-basics-of-coding-in-r.html#installing-packages"><i class="fa fa-check"></i><b>7.7.1</b> Installing packages</a></li>
+<li class="chapter" data-level="7.7.2" data-path="the-basics-of-coding-in-r.html"><a href="the-basics-of-coding-in-r.html#loading-a-package"><i class="fa fa-check"></i><b>7.7.2</b> Loading a package</a></li>
+<li class="chapter" data-level="7.7.3" data-path="the-basics-of-coding-in-r.html"><a href="the-basics-of-coding-in-r.html#try-psych-commands"><i class="fa fa-check"></i><b>7.7.3</b> Try psych commands</a></li>
+</ul></li>
+<li class="chapter" data-level="7.8" data-path="the-basics-of-coding-in-r.html"><a href="the-basics-of-coding-in-r.html#data"><i class="fa fa-check"></i><b>7.8</b> Importing Data into R</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="minihacks.html"><a href="minihacks.html"><i class="fa fa-check"></i><b>8</b> Minihacks</a><ul>
+<li class="chapter" data-level="8.1" data-path="minihacks.html"><a href="minihacks.html#minihack-1-r-markdown"><i class="fa fa-check"></i><b>8.1</b> Minihack 1: R Markdown</a></li>
+<li class="chapter" data-level="8.2" data-path="minihacks.html"><a href="minihacks.html#minihack-2-arithmetic-commands"><i class="fa fa-check"></i><b>8.2</b> Minihack 2: Arithmetic Commands</a></li>
+<li class="chapter" data-level="8.3" data-path="minihacks.html"><a href="minihacks.html#minihack-3-functions"><i class="fa fa-check"></i><b>8.3</b> Minihack 3: Functions</a></li>
+<li class="chapter" data-level="8.4" data-path="minihacks.html"><a href="minihacks.html#minihack-4-help-documentation"><i class="fa fa-check"></i><b>8.4</b> Minihack 4: Help Documentation</a></li>
+<li class="chapter" data-level="8.5" data-path="minihacks.html"><a href="minihacks.html#minihack-5-data-frames"><i class="fa fa-check"></i><b>8.5</b> Minihack 5: Data Frames</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html"><i class="fa fa-check"></i><b>9</b> MDC ABCD Workshop 2021 Multilevel Model Track 1 Tutorial</a><ul>
+<li class="chapter" data-level="9.0.1" data-path="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#load-some-abcd-data"><i class="fa fa-check"></i><b>9.0.1</b> Load some ABCD data</a></li>
+<li class="chapter" data-level="9.0.2" data-path="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#visualize-longitudinal-study-design"><i class="fa fa-check"></i><b>9.0.2</b> Visualize longitudinal study design</a></li>
+<li class="chapter" data-level="9.0.3" data-path="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#lets-visualize-some-of-the-abcd-dataset"><i class="fa fa-check"></i><b>9.0.3</b> Let’s visualize some of the ABCD dataset</a></li>
+<li class="chapter" data-level="9.0.4" data-path="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#lets-dive-into-some-modeling"><i class="fa fa-check"></i><b>9.0.4</b> Let’s dive into some modeling</a></li>
+<li class="chapter" data-level="9.0.5" data-path="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#modeling-continued-checking-out-non-linear-group-level-trajectories"><i class="fa fa-check"></i><b>9.0.5</b> Modeling continued — checking out non-linear group-level trajectories</a></li>
+<li class="chapter" data-level="9.0.6" data-path="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#lets-try-a-gamm-approach"><i class="fa fa-check"></i><b>9.0.6</b> Let’s try a GAMM approach</a></li>
+<li class="chapter" data-level="9.0.7" data-path="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#looking-at-models-for-different-groups"><i class="fa fa-check"></i><b>9.0.7</b> Looking at models for different groups</a></li>
+<li class="chapter" data-level="9.0.8" data-path="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#graph-models-for-different-groups"><i class="fa fa-check"></i><b>9.0.8</b> Graph models for different groups</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">ABCD Workshop Tutorials</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial" class="section level1">
+<h1><span class="header-section-number">Chapter 9</span> MDC ABCD Workshop 2021 Multilevel Model Track 1 Tutorial</h1>
+<div id="load-some-abcd-data" class="section level3">
+<h3><span class="header-section-number">9.0.1</span> Load some ABCD data</h3>
+</div>
+<div id="visualize-longitudinal-study-design" class="section level3">
+<h3><span class="header-section-number">9.0.2</span> Visualize longitudinal study design</h3>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb7-1"></a><span class="co"># Reclass variables in Demographics datatable, and filter to only relevant variables for this section</span></span>
+<span id="cb7-2"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb7-2"></a>abcddemo_tbl &lt;-<span class="st"> </span>abcddemo <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb7-3"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb7-3"></a><span class="st">  </span><span class="kw">filter</span>(<span class="op">!</span>sex<span class="op">==</span><span class="st">&quot;Sex of the subject&quot;</span>) <span class="op">%&gt;%</span></span>
+<span id="cb7-4"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb7-4"></a><span class="st">  </span><span class="kw">select</span>(interview_age,</span>
+<span id="cb7-5"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb7-5"></a>         src_subject_id,</span>
+<span id="cb7-6"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb7-6"></a>         eventname,</span>
+<span id="cb7-7"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb7-7"></a>         sex,</span>
+<span id="cb7-8"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb7-8"></a>         demo_gender_id_v2_l) <span class="op">%&gt;%</span></span>
+<span id="cb7-9"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb7-9"></a><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">interview_age=</span><span class="kw">as.integer</span>(interview_age),</span>
+<span id="cb7-10"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb7-10"></a>         <span class="dt">src_subject_id=</span><span class="kw">as.factor</span>(src_subject_id),</span>
+<span id="cb7-11"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb7-11"></a>         <span class="dt">eventname=</span><span class="kw">as.factor</span>(eventname),</span>
+<span id="cb7-12"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb7-12"></a>         <span class="dt">sex=</span><span class="kw">as.factor</span>(sex),</span>
+<span id="cb7-13"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb7-13"></a>         <span class="dt">gender=</span><span class="kw">as.factor</span>(demo_gender_id_v2_l)) </span>
+<span id="cb7-14"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb7-14"></a></span>
+<span id="cb7-15"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb7-15"></a><span class="co"># Filter to a subsample for easier visualization</span></span>
+<span id="cb7-16"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb7-16"></a>random_rows &lt;-<span class="st"> </span><span class="kw">sample</span>(<span class="dv">2000</span>)</span>
+<span id="cb7-17"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb7-17"></a>abcddemo_tbl &lt;-<span class="st"> </span>abcddemo_tbl[random_rows, ]</span>
+<span id="cb7-18"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb7-18"></a></span>
+<span id="cb7-19"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb7-19"></a>study_design &lt;-<span class="st"> </span>abcddemo_tbl[<span class="kw">order</span>(abcddemo_tbl<span class="op">$</span>interview_age,</span>
+<span id="cb7-20"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb7-20"></a>                               abcddemo_tbl<span class="op">$</span>src_subject_id,</span>
+<span id="cb7-21"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb7-21"></a>                               abcddemo_tbl<span class="op">$</span>eventname),] <span class="op">%&gt;%</span></span>
+<span id="cb7-22"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb7-22"></a><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">Rank_nr=</span><span class="kw">as.numeric</span>(<span class="kw">factor</span>(src_subject_id,<span class="dt">levels=</span><span class="kw">unique</span>(src_subject_id))))</span>
+<span id="cb7-23"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb7-23"></a></span>
+<span id="cb7-24"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb7-24"></a>study_design_plot&lt;-<span class="st"> </span><span class="kw">ggplot</span>(study_design,</span>
+<span id="cb7-25"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb7-25"></a>                           <span class="kw">aes</span>(<span class="dt">x=</span>(interview_age<span class="op">/</span><span class="dv">12</span>),</span>
+<span id="cb7-26"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb7-26"></a>                               <span class="dt">y=</span>Rank_nr,</span>
+<span id="cb7-27"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb7-27"></a>                               <span class="dt">group=</span>src_subject_id,</span>
+<span id="cb7-28"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb7-28"></a>                               <span class="dt">shape=</span>sex,</span>
+<span id="cb7-29"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb7-29"></a>                               <span class="dt">col=</span>gender)) <span class="op">+</span><span class="st"> </span></span>
+<span id="cb7-30"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb7-30"></a><span class="st">  </span><span class="kw">geom_point</span>(<span class="dt">alpha=</span><span class="dv">1</span>) <span class="op">+</span><span class="st"> </span></span>
+<span id="cb7-31"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb7-31"></a><span class="st">  </span><span class="kw">geom_line</span>(<span class="dt">alpha=</span>.<span class="dv">4</span>) <span class="op">+</span></span>
+<span id="cb7-32"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb7-32"></a><span class="st">  </span><span class="kw">ylab</span>(<span class="st">&quot;&quot;</span>) <span class="op">+</span></span>
+<span id="cb7-33"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb7-33"></a><span class="st">  </span><span class="kw">xlab</span>(<span class="st">&quot;Age (years)&quot;</span>) <span class="op">+</span></span>
+<span id="cb7-34"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb7-34"></a><span class="st">  </span><span class="kw">scale_y_discrete</span>(<span class="dt">breaks=</span><span class="ot">NULL</span>) <span class="op">+</span></span>
+<span id="cb7-35"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb7-35"></a><span class="st">  </span><span class="kw">theme_kate</span>()<span class="op">+</span></span>
+<span id="cb7-36"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb7-36"></a><span class="st">  </span><span class="kw">theme</span>(<span class="dt">axis.text.y =</span> <span class="kw">element_blank</span>())</span>
+<span id="cb7-37"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb7-37"></a>  </span>
+<span id="cb7-38"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb7-38"></a></span>
+<span id="cb7-39"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb7-39"></a><span class="co"># Take a look</span></span>
+<span id="cb7-40"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb7-40"></a><span class="kw">print</span>(study_design_plot)</span></code></pre></div>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-52-1.png" width="672" /></p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb8-1"></a><span class="kw">ggsave</span>(<span class="dt">filename=</span><span class="st">&quot;abcd_study_design.png&quot;</span>,</span>
+<span id="cb8-2"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb8-2"></a>       <span class="dt">plot=</span>study_design_plot, <span class="dt">width=</span><span class="dv">6</span>, <span class="dt">height=</span><span class="dv">5</span>, <span class="dt">units=</span><span class="st">&#39;in&#39;</span>, <span class="dt">dpi=</span><span class="dv">300</span>)</span>
+<span id="cb8-3"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb8-3"></a></span>
+<span id="cb8-4"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb8-4"></a></span>
+<span id="cb8-5"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb8-5"></a><span class="co">#Print biological sex histogram</span></span>
+<span id="cb8-6"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb8-6"></a>sex_histogram &lt;-<span class="st"> </span><span class="kw">ggplot</span>(abcddemo_tbl,<span class="kw">aes</span>(<span class="dt">x=</span>interview_age,<span class="dt">fill=</span>sex))<span class="op">+</span></span>
+<span id="cb8-7"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb8-7"></a><span class="st">  </span><span class="kw">scale_fill_manual</span>(<span class="kw">aes</span>(<span class="dt">fill=</span>sex),</span>
+<span id="cb8-8"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb8-8"></a>                     <span class="dt">labels =</span> <span class="kw">c</span>(<span class="st">&quot;female&quot;</span>, <span class="st">&quot;male&quot;</span>),</span>
+<span id="cb8-9"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb8-9"></a>                     <span class="dt">values =</span> <span class="kw">c</span>(<span class="st">&quot;#FDE74C&quot;</span>, <span class="st">&quot;#56A3A6&quot;</span>)) <span class="op">+</span></span>
+<span id="cb8-10"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb8-10"></a><span class="st">  </span><span class="kw">geom_histogram</span>(<span class="dt">alpha=</span><span class="dv">1</span>, <span class="dt">position=</span><span class="st">&quot;stack&quot;</span>,<span class="dt">binwidth=</span><span class="dv">1</span>) <span class="op">+</span></span>
+<span id="cb8-11"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb8-11"></a><span class="st">  </span><span class="kw">xlim</span>(<span class="kw">min</span>(abcddemo_tbl<span class="op">$</span>interview_age),<span class="kw">max</span>(abcddemo_tbl<span class="op">$</span>interview_age)) <span class="op">+</span></span>
+<span id="cb8-12"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb8-12"></a><span class="st">  </span><span class="kw">ggtitle</span>(<span class="st">&quot;&quot;</span>) <span class="op">+</span></span>
+<span id="cb8-13"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb8-13"></a><span class="st">  </span><span class="kw">guides</span>(<span class="dt">fill=</span><span class="kw">guide_legend</span>(<span class="dt">title=</span><span class="st">&quot;Sex&quot;</span>))<span class="op">+</span></span>
+<span id="cb8-14"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb8-14"></a><span class="st">  </span><span class="kw">ylab</span>(<span class="st">&quot;N&quot;</span>) <span class="op">+</span></span>
+<span id="cb8-15"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb8-15"></a><span class="st">  </span><span class="kw">xlab</span>(<span class="st">&quot;Interview age in months&quot;</span>)<span class="op">+</span></span>
+<span id="cb8-16"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb8-16"></a><span class="st">  </span><span class="kw">theme_kate</span>()</span>
+<span id="cb8-17"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb8-17"></a>sex_histogram</span></code></pre></div>
+<pre><code>## Warning: Removed 4 rows containing missing values (geom_bar).</code></pre>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-52-2.png" width="672" /></p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb10-1"></a><span class="kw">ggsave</span>(<span class="dt">filename=</span><span class="st">&quot;abcd_sex_histogram.png&quot;</span>,</span>
+<span id="cb10-2"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb10-2"></a>       <span class="dt">plot=</span>sex_histogram, <span class="dt">width=</span><span class="dv">6</span>, <span class="dt">height=</span><span class="dv">5</span>, <span class="dt">units=</span><span class="st">&#39;in&#39;</span>, <span class="dt">dpi=</span><span class="dv">300</span>)</span></code></pre></div>
+<pre><code>## Warning: Removed 4 rows containing missing values (geom_bar).</code></pre>
+</div>
+<div id="lets-visualize-some-of-the-abcd-dataset" class="section level3">
+<h3><span class="header-section-number">9.0.3</span> Let’s visualize some of the ABCD dataset</h3>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb12-1"></a><span class="co"># Take a look at the variables—rio didn&#39;t do a good job classifying them correctly.</span></span>
+<span id="cb12-2"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb12-2"></a><span class="kw">str</span>(abcdbrief)</span></code></pre></div>
+<pre><code>## &#39;data.frame&#39;:    31319 obs. of  42 variables:
+##  $ collection_id          : chr  &quot;collection_id&quot; &quot;2573&quot; &quot;2573&quot; &quot;2573&quot; ...
+##  $ abcd_yssbpm01_id       : chr  &quot;abcd_yssbpm01_id&quot; &quot;15499&quot; &quot;15504&quot; &quot;15522&quot; ...
+##  $ dataset_id             : chr  &quot;dataset_id&quot; &quot;34403&quot; &quot;34403&quot; &quot;34403&quot; ...
+##  $ subjectkey             : chr  &quot;The NDAR Global Unique Identifier (GUID) for research subject&quot; &quot;NDAR_INV00BD7VDC&quot; &quot;NDAR_INV00CY2MDM&quot; &quot;NDAR_INV00UMK5VC&quot; ...
+##  $ src_subject_id         : chr  &quot;Subject ID how it&#39;s defined in lab/project&quot; &quot;NDAR_INV00BD7VDC&quot; &quot;NDAR_INV00CY2MDM&quot; &quot;NDAR_INV00UMK5VC&quot; ...
+##  $ interview_date         : chr  &quot;Date on which the interview/genetic test/sampling/imaging/biospecimen was completed. MM/DD/YYYY&quot; &quot;04/24/2019&quot; &quot;01/13/2020&quot; &quot;09/25/2019&quot; ...
+##  $ interview_age          : chr  &quot;Age in months at the time of the interview/test/sampling/imaging.&quot; &quot;123&quot; &quot;158&quot; &quot;132&quot; ...
+##  $ sex                    : chr  &quot;Sex of the subject&quot; &quot;M&quot; &quot;M&quot; &quot;F&quot; ...
+##  $ eventname              : chr  &quot;The event name for which the data was collected&quot; &quot;1_year_follow_up_y_arm_1&quot; &quot;30_month_follow_up_arm_1&quot; &quot;1_year_follow_up_y_arm_1&quot; ...
+##  $ bpm_y_scr_attention_r  : chr  &quot;Raw Score: bpm_1_y plus bpm_3_y plus bpm_4_y plus bpm_5_y plus bpm_10_y plus bpm_14_y; Validation: All items must be answered&quot; &quot;3.0&quot; &quot;0.0&quot; &quot;7.0&quot; ...
+##  $ bpm_y_scr_attention_t  : chr  &quot;T-Score&quot; &quot;53.0&quot; &quot;50.0&quot; &quot;68.0&quot; ...
+##  $ bpm_y_scr_attention_nm : chr  &quot;Number Missing Answers&quot; &quot;0.0&quot; &quot;0.0&quot; &quot;0.0&quot; ...
+##  $ bpm_y_scr_attention_nt : chr  &quot;Number Total Questions&quot; &quot;6.0&quot; &quot;6.0&quot; &quot;6.0&quot; ...
+##  $ bpm_y_ss_attention_mean: chr  &quot;Mean Score: Mean(bpm_1_y plus bpm_3_y plus bpm_4_y plus bpm_5_y plus bpm_10_y plus bpm_14_y); Validation: All i&quot;| __truncated__ &quot;0.5&quot; &quot;0.0&quot; &quot;1.1666666666666667&quot; ...
+##  $ bpm_y_ss_attention_nm  : chr  &quot;Number Missing Answers&quot; &quot;0.0&quot; &quot;0.0&quot; &quot;0.0&quot; ...
+##  $ bpm_y_ss_attention_nt  : chr  &quot;Number Total Questions&quot; &quot;6.0&quot; &quot;6.0&quot; &quot;6.0&quot; ...
+##  $ bpm_y_scr_internal_r   : chr  &quot;Raw Score: bpm_2_y plus bpm_6_y plus bpm_7_y plus bpm_8_y plus bpm_15_y plus bpm_16_y plus bpm_17_y; Validation&quot;| __truncated__ &quot;4.0&quot; &quot;0.0&quot; &quot;8.0&quot; ...
+##  $ bpm_y_scr_internal_t   : chr  &quot;T-Score&quot; &quot;62.0&quot; &quot;50.0&quot; &quot;68.0&quot; ...
+##  $ bpm_y_scr_internal_nm  : chr  &quot;Number Missing Answers&quot; &quot;0.0&quot; &quot;0.0&quot; &quot;0.0&quot; ...
+##  $ bpm_y_scr_internal_nt  : chr  &quot;Number Total Questions&quot; &quot;6.0&quot; &quot;6.0&quot; &quot;6.0&quot; ...
+##  $ bpm_y_ss_internal_mean : chr  &quot;Mean Score: Mean(bpm_2_y plus bpm_6_y plus bpm_7_y plus bpm_8_y plus bpm_15_y plus bpm_16_y plus bpm_17_y); Val&quot;| __truncated__ &quot;0.6666666666666666&quot; &quot;0.0&quot; &quot;1.3333333333333333&quot; ...
+##  $ bpm_y_ss_internal_nm   : chr  &quot;Number Missing Answers&quot; &quot;0.0&quot; &quot;0.0&quot; &quot;0.0&quot; ...
+##  $ bpm_y_ss_internal_nt   : chr  &quot;Number Total Questions&quot; &quot;6.0&quot; &quot;6.0&quot; &quot;6.0&quot; ...
+##  $ bpm_y_scr_external_r   : chr  &quot;Raw Score: bpm_9_y plus bpm_11_y plus bpm_12_y plus bpm_13_y plus bpm_18_y plus bpm_19_y; Validation: All items&quot;| __truncated__ &quot;3.0&quot; &quot;0.0&quot; &quot;3.0&quot; ...
+##  $ bpm_y_scr_external_t   : chr  &quot;T-Score&quot; &quot;51.0&quot; &quot;50.0&quot; &quot;51.0&quot; ...
+##  $ bpm_y_scr_external_nm  : chr  &quot;Number Missing Answers&quot; &quot;0.0&quot; &quot;0.0&quot; &quot;0.0&quot; ...
+##  $ bpm_y_scr_external_nt  : chr  &quot;Number Total Questions&quot; &quot;7.0&quot; &quot;7.0&quot; &quot;7.0&quot; ...
+##  $ bpm_y_ss_external_mean : chr  &quot;Mean Score: Mean(bpm_9_y plus bpm_11_y plus bpm_12_y plus bpm_13_y plus bpm_18_y plus bpm_19_y); Validation: Al&quot;| __truncated__ &quot;0.42857142857142855&quot; &quot;0.0&quot; &quot;0.42857142857142855&quot; ...
+##  $ bpm_y_ss_external_nm   : chr  &quot;Number Missing Answers&quot; &quot;0.0&quot; &quot;0.0&quot; &quot;0.0&quot; ...
+##  $ bpm_y_ss_external_nt   : chr  &quot;Number Total Questions&quot; &quot;7.0&quot; &quot;7.0&quot; &quot;7.0&quot; ...
+##  $ bpm_y_scr_totalprob_r  : chr  &quot;Raw Score: bpm_1_y plus bpm_2_y plus bpm_3_y plus bpm_4_y plus bpm_5_y plus bpm_6_y plus bpm_7_y plus bpm_8_y p&quot;| __truncated__ &quot;10.0&quot; &quot;0.0&quot; &quot;18.0&quot; ...
+##  $ bpm_y_scr_totalprob_t  : chr  &quot;T-Score&quot; &quot;57.0&quot; &quot;50.0&quot; &quot;66.0&quot; ...
+##  $ bpm_y_scr_totalprob_nm : chr  &quot;Number Missing Answers&quot; &quot;0.0&quot; &quot;0.0&quot; &quot;0.0&quot; ...
+##  $ bpm_y_scr_totalprob_nt : chr  &quot;Number Total Questions&quot; &quot;19.0&quot; &quot;19.0&quot; &quot;19.0&quot; ...
+##  $ bpm_y_ss_totalprob_mean: chr  &quot;Mean: Mean(bpm_1_y plus bpm_2_y plus bpm_3_y plus bpm_4_y plus bpm_5_y plus bpm_6_y plus bpm_7_y plus bpm_8_y p&quot;| __truncated__ &quot;0.5263157894736842&quot; &quot;0.0&quot; &quot;0.9473684210526316&quot; ...
+##  $ bpm_y_ss_totalprob_nm  : chr  &quot;Number Missing Answers&quot; &quot;0.0&quot; &quot;0.0&quot; &quot;0.0&quot; ...
+##  $ bpm_y_ss_totalprob_nt  : chr  &quot;Number Total Questions&quot; &quot;19.0&quot; &quot;19.0&quot; &quot;19.0&quot; ...
+##  $ poa_y_ss_sum           : chr  &quot;NIH Toolbox Positive Affect; Sum(poa_nihtb_1_y plus poa_nihtb_2_yplus  poa_nihtb_3_y plus poa_nihtb_4_y plus po&quot;| __truncated__ &quot;23.0&quot; &quot;24.0&quot; &quot;15.0&quot; ...
+##  $ poa_y_ss_sum_nm        : chr  &quot;Number Missing Answers&quot; &quot;0.0&quot; &quot;0.0&quot; &quot;0.0&quot; ...
+##  $ poa_y_ss_sum_nt        : chr  &quot;Number Total Questions&quot; &quot;9.0&quot; &quot;9.0&quot; &quot;9.0&quot; ...
+##  $ collection_title       : chr  &quot;collection_title&quot; &quot;Adolescent Brain Cognitive Development Study (ABCD)&quot; &quot;Adolescent Brain Cognitive Development Study (ABCD)&quot; &quot;Adolescent Brain Cognitive Development Study (ABCD)&quot; ...
+##  $ study_cohort_name      : chr  &quot;study_cohort_name&quot; &quot;ABCD 3.0 Data Release&quot; &quot;ABCD 3.0 Data Release&quot; &quot;ABCD 3.0 Data Release&quot; ...</code></pre>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb14-1"></a><span class="co"># Reclassify relevant variables</span></span>
+<span id="cb14-2"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb14-2"></a>abcdbrief &lt;-<span class="st"> </span>abcdbrief <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb14-3"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb14-3"></a><span class="st">  </span><span class="kw">filter</span>(<span class="op">!</span>sex<span class="op">==</span><span class="st">&quot;Sex of the subject&quot;</span>) <span class="op">%&gt;%</span></span>
+<span id="cb14-4"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb14-4"></a><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">interview_age=</span><span class="kw">as.integer</span>(interview_age),</span>
+<span id="cb14-5"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb14-5"></a>         <span class="dt">src_subject_id=</span><span class="kw">as.factor</span>(src_subject_id),</span>
+<span id="cb14-6"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb14-6"></a>         <span class="dt">eventname=</span><span class="kw">as.factor</span>(eventname),</span>
+<span id="cb14-7"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb14-7"></a>         <span class="dt">sex=</span><span class="kw">as.factor</span>(sex),</span>
+<span id="cb14-8"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb14-8"></a>         <span class="dt">bpm_internal=</span><span class="kw">as.numeric</span>(bpm_y_ss_internal_mean),</span>
+<span id="cb14-9"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb14-9"></a>         <span class="dt">bpm_exteral=</span><span class="kw">as.numeric</span>(bpm_y_ss_external_mean)</span>
+<span id="cb14-10"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb14-10"></a>         ) </span>
+<span id="cb14-11"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb14-11"></a></span>
+<span id="cb14-12"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb14-12"></a><span class="co"># Filter to a subsample for easier visualization</span></span>
+<span id="cb14-13"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb14-13"></a>random_rows &lt;-<span class="st"> </span><span class="kw">sample</span>(<span class="dv">2000</span>)</span>
+<span id="cb14-14"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb14-14"></a>abcdbrief_short &lt;-<span class="st"> </span>abcdbrief[random_rows, ]</span>
+<span id="cb14-15"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb14-15"></a></span>
+<span id="cb14-16"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb14-16"></a><span class="co"># Let&#39;s just take a look at this variable over time</span></span>
+<span id="cb14-17"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb14-17"></a>abcdbrief_plot&lt;-<span class="kw">ggplot</span>(<span class="dt">data=</span>abcdbrief_short,</span>
+<span id="cb14-18"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb14-18"></a>                       <span class="kw">aes</span>(<span class="dt">x=</span>interview_age<span class="op">/</span><span class="dv">12</span>,</span>
+<span id="cb14-19"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb14-19"></a>                           <span class="dt">y=</span>bpm_internal))<span class="op">+</span></span>
+<span id="cb14-20"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb14-20"></a><span class="st">  </span><span class="kw">xlim</span>(<span class="kw">min</span>(abcdbrief<span class="op">$</span>interview_age<span class="op">/</span><span class="dv">12</span>),<span class="kw">max</span>(abcdbrief<span class="op">$</span>interview_age<span class="op">/</span><span class="dv">12</span>))<span class="op">+</span></span>
+<span id="cb14-21"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb14-21"></a><span class="st">  </span><span class="kw">ylim</span>(<span class="kw">min</span>(abcdbrief<span class="op">$</span>bpm_internal),<span class="kw">max</span>(abcdbrief<span class="op">$</span>bpm_internal))<span class="op">+</span></span>
+<span id="cb14-22"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb14-22"></a><span class="st">  </span><span class="kw">xlab</span>(<span class="st">&quot;Age (years)&quot;</span>)<span class="op">+</span></span>
+<span id="cb14-23"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb14-23"></a><span class="st">  </span><span class="kw">ylab</span>(<span class="st">&quot;Brief Internalizing (mean)&quot;</span>)<span class="op">+</span></span>
+<span id="cb14-24"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb14-24"></a><span class="st">  </span><span class="kw">ggtitle</span>(<span class="st">&quot;Brief Internalizing by Age&quot;</span>)<span class="op">+</span></span>
+<span id="cb14-25"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb14-25"></a><span class="st">  </span><span class="kw">geom_line</span>(<span class="kw">aes</span>(<span class="dt">colour=</span>sex,</span>
+<span id="cb14-26"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb14-26"></a>                <span class="dt">group=</span>src_subject_id),</span>
+<span id="cb14-27"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb14-27"></a>            <span class="dt">size=</span>.<span class="dv">6</span>,</span>
+<span id="cb14-28"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb14-28"></a>            <span class="dt">alpha=</span><span class="fl">0.4</span>)<span class="op">+</span></span>
+<span id="cb14-29"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb14-29"></a><span class="st">  </span><span class="kw">geom_point</span>(<span class="kw">aes</span>(<span class="dt">colour=</span>sex,</span>
+<span id="cb14-30"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb14-30"></a>                 <span class="dt">group=</span>src_subject_id),</span>
+<span id="cb14-31"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb14-31"></a>             <span class="dt">size=</span><span class="fl">1.5</span>,</span>
+<span id="cb14-32"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb14-32"></a>             <span class="dt">alpha=</span><span class="fl">0.5</span>)<span class="op">+</span></span>
+<span id="cb14-33"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb14-33"></a><span class="st">  </span><span class="kw">scale_color_manual</span>(<span class="dt">name=</span> <span class="st">&quot;sex&quot;</span>,</span>
+<span id="cb14-34"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb14-34"></a>                     <span class="dt">labels =</span> <span class="kw">c</span>(<span class="st">&quot;female&quot;</span>, <span class="st">&quot;male&quot;</span>),</span>
+<span id="cb14-35"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb14-35"></a>                     <span class="dt">values =</span> <span class="kw">c</span>(<span class="st">&quot;#FDE74C&quot;</span>, <span class="st">&quot;#56A3A6&quot;</span>))<span class="op">+</span></span>
+<span id="cb14-36"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb14-36"></a><span class="st">  </span><span class="kw">theme_kate</span>()<span class="op">+</span></span>
+<span id="cb14-37"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb14-37"></a><span class="st">  </span><span class="kw">theme</span>(<span class="dt">legend.position=</span><span class="st">&quot;none&quot;</span>)</span>
+<span id="cb14-38"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb14-38"></a></span>
+<span id="cb14-39"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb14-39"></a><span class="co"># Take a look</span></span>
+<span id="cb14-40"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb14-40"></a><span class="kw">print</span>(abcdbrief_plot)</span></code></pre></div>
+<pre><code>## Warning: Removed 15 row(s) containing missing values (geom_path).</code></pre>
+<pre><code>## Warning: Removed 15 rows containing missing values (geom_point).</code></pre>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-53-1.png" width="672" /></p>
+</div>
+<div id="lets-dive-into-some-modeling" class="section level3">
+<h3><span class="header-section-number">9.0.4</span> Let’s dive into some modeling</h3>
+<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb17-1"></a><span class="co"># Load the dataset in the tutorial</span></span>
+<span id="cb17-2"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb17-2"></a><span class="kw">load</span>(<span class="st">&quot;braindata.Rdata&quot;</span>)</span>
+<span id="cb17-3"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb17-3"></a></span>
+<span id="cb17-4"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb17-4"></a><span class="co"># Check out variable classifications</span></span>
+<span id="cb17-5"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb17-5"></a><span class="kw">str</span>(braindata)</span></code></pre></div>
+<pre><code>## &#39;data.frame&#39;:    274 obs. of  20 variables:
+##  $ subid                : num  84292 84292 84292 85244 85244 ...
+##  $ scanid               : num  19660681 19680105 19690701 19670303 19690383 ...
+##  $ scannum              : Factor w/ 3 levels &quot;1&quot;,&quot;2&quot;,&quot;3&quot;: 1 2 3 1 2 1 2 1 2 3 ...
+##  $ age                  : num  18 20 21 18 20 18 21 18 20 21 ...
+##  $ sex                  : Factor w/ 2 levels &quot;F&quot;,&quot;M&quot;: 1 1 1 1 1 1 1 2 2 2 ...
+##  $ prefrontal_vol_long  : num  163943 163082 159252 146655 142802 ...
+##  $ prefrontal_vol_cross : num  161681 161585 160965 140177 141758 ...
+##  $ amygdala_vol_long    : num  3611 3682 3560 3572 3604 ...
+##  $ amygdala_vol_cross   : num  3648 3812 3569 3489 3379 ...
+##  $ caudate_vol_long     : num  8756 8540 8407 7934 7917 ...
+##  $ caudate_vol_cross    : num  7895 7968 7945 7322 7367 ...
+##  $ hippocampus_vol_long : num  9345 9120 9079 7892 7631 ...
+##  $ hippocampus_vol_cross: num  8905 9021 8799 7864 7350 ...
+##  $ nacc_vol_long        : num  1396 1445 1442 1417 1462 ...
+##  $ nacc_vol_cross       : num  1204 1256 1239 1168 1187 ...
+##  $ thalamus_vol_long    : num  15948 15783 15876 15864 15822 ...
+##  $ thalamus_vol_cross   : num  15234 15083 15777 15258 15460 ...
+##  $ putamen_vol_long     : num  12182 11873 11808 12021 11591 ...
+##  $ putamen_vol_cross    : num  11310 11030 11249 10908 10797 ...
+##  $ motion               : int  1 1 1 1 1 1 1 1 1 1 ...</code></pre>
+<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb19-1"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb19-1"></a><span class="co"># Fix a variable classification</span></span>
+<span id="cb19-2"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb19-2"></a>braindata&lt;-braindata <span class="op">%&gt;%</span></span>
+<span id="cb19-3"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb19-3"></a><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">subid=</span><span class="kw">as.factor</span>(subid))</span>
+<span id="cb19-4"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb19-4"></a></span>
+<span id="cb19-5"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb19-5"></a><span class="co"># Create age-centered variable to reduce correlations between age and polynomial terms</span></span>
+<span id="cb19-6"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb19-6"></a>braindata&lt;-braindata <span class="op">%&gt;%</span></span>
+<span id="cb19-7"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb19-7"></a><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">agecent=</span>age<span class="op">-</span>(<span class="kw">mean</span>(age)))</span>
+<span id="cb19-8"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb19-8"></a></span>
+<span id="cb19-9"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb19-9"></a><span class="co"># Create polynomial terms to examine non-linear group models</span></span>
+<span id="cb19-10"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb19-10"></a>braindata&lt;-braindata <span class="op">%&gt;%</span></span>
+<span id="cb19-11"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb19-11"></a><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">agecentsq=</span>agecent<span class="op">*</span>agecent,</span>
+<span id="cb19-12"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb19-12"></a>         <span class="dt">agecentcu=</span>agecent<span class="op">*</span>agecent<span class="op">*</span>agecent)</span>
+<span id="cb19-13"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb19-13"></a></span>
+<span id="cb19-14"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb19-14"></a><span class="co"># Create unconditional model using nlme package (lme function)</span></span>
+<span id="cb19-15"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb19-15"></a>uncond_PFCmodel=<span class="kw">lme</span>(prefrontal_vol_long <span class="op">~</span><span class="st"> </span><span class="dv">1</span>,</span>
+<span id="cb19-16"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb19-16"></a>                   <span class="dt">method=</span><span class="st">&quot;ML&quot;</span>,</span>
+<span id="cb19-17"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb19-17"></a>                   <span class="dt">random =</span> <span class="op">~</span><span class="dv">1</span><span class="op">|</span>subid,</span>
+<span id="cb19-18"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb19-18"></a>                   <span class="dt">data=</span>braindata)</span>
+<span id="cb19-19"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb19-19"></a></span>
+<span id="cb19-20"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb19-20"></a><span class="co"># Create unconditional model using lme4 package (lmer function)</span></span>
+<span id="cb19-21"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb19-21"></a>uncond_PFCmodel_lmer=<span class="kw">lmer</span>(prefrontal_vol_long <span class="op">~</span><span class="st"> </span><span class="dv">1</span> <span class="op">+</span><span class="st"> </span></span>
+<span id="cb19-22"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb19-22"></a><span class="st">                            </span>(<span class="dv">1</span> <span class="op">|</span><span class="st"> </span>subid),</span>
+<span id="cb19-23"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb19-23"></a>                          <span class="dt">REML =</span> <span class="ot">FALSE</span>,</span>
+<span id="cb19-24"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb19-24"></a>                          <span class="dt">data=</span>braindata)</span>
+<span id="cb19-25"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb19-25"></a></span>
+<span id="cb19-26"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb19-26"></a></span>
+<span id="cb19-27"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb19-27"></a><span class="co">## Linear age model (nlme)</span></span>
+<span id="cb19-28"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb19-28"></a>lin_PFCmodel=<span class="kw">lme</span>(prefrontal_vol_long <span class="op">~</span><span class="st"> </span>agecent,</span>
+<span id="cb19-29"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb19-29"></a>                 <span class="dt">method=</span><span class="st">&quot;ML&quot;</span>,</span>
+<span id="cb19-30"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb19-30"></a>                 <span class="dt">random =</span> <span class="op">~</span><span class="dv">1</span><span class="op">|</span>subid,</span>
+<span id="cb19-31"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb19-31"></a>                 <span class="dt">data=</span>braindata)</span>
+<span id="cb19-32"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb19-32"></a></span>
+<span id="cb19-33"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb19-33"></a><span class="co">## Linear age model (lme4)</span></span>
+<span id="cb19-34"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb19-34"></a>lin_PFCmodel_lmer=<span class="kw">lmer</span>(prefrontal_vol_long <span class="op">~</span><span class="st"> </span>agecent <span class="op">+</span><span class="st"> </span></span>
+<span id="cb19-35"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb19-35"></a><span class="st">                         </span>(<span class="dv">1</span> <span class="op">|</span><span class="st"> </span>subid),</span>
+<span id="cb19-36"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb19-36"></a>                       <span class="dt">REML =</span> <span class="ot">FALSE</span>,</span>
+<span id="cb19-37"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb19-37"></a>                       <span class="dt">data=</span>braindata)</span>
+<span id="cb19-38"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb19-38"></a></span>
+<span id="cb19-39"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb19-39"></a><span class="co"># Take a look at the fixed effects coefficient</span></span>
+<span id="cb19-40"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb19-40"></a><span class="kw">fixef</span>(lin_PFCmodel)</span></code></pre></div>
+<pre><code>## (Intercept)     agecent 
+##  167750.369   -2323.406</code></pre>
+<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb21-1"></a><span class="kw">fixef</span>(lin_PFCmodel_lmer)</span></code></pre></div>
+<pre><code>## (Intercept)     agecent 
+##  167750.369   -2323.406</code></pre>
+<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb23-1"></a><span class="co"># Now take a look at the random effects coefficients </span></span>
+<span id="cb23-2"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb23-2"></a><span class="kw">coef</span>(lin_PFCmodel)</span></code></pre></div>
+<pre><code>##       (Intercept)   agecent
+## 80796    155714.7 -2323.406
+## 80804    152915.0 -2323.406
+## 80828    181501.5 -2323.406
+## 80964    154999.6 -2323.406
+## 81028    173129.6 -2323.406
+## 81980    192268.0 -2323.406
+## 82828    158364.2 -2323.406
+## 83308    171642.2 -2323.406
+## 84100    177579.3 -2323.406
+## 84116    183780.2 -2323.406
+## 84124    176993.8 -2323.406
+## 84156    187290.7 -2323.406
+## 84260    181683.0 -2323.406
+## 84292    169548.4 -2323.406
+## 84372    159533.7 -2323.406
+## 84412    139096.2 -2323.406
+## 84444    177101.8 -2323.406
+## 84508    142623.5 -2323.406
+## 84564    169383.9 -2323.406
+## 84588    157338.4 -2323.406
+## 84596    149221.3 -2323.406
+## 84612    176743.7 -2323.406
+## 84668    172685.2 -2323.406
+## 84676    181819.9 -2323.406
+## 84684    174647.4 -2323.406
+## 84732    146216.6 -2323.406
+## 84796    151139.1 -2323.406
+## 84804    163450.4 -2323.406
+## 84812    184301.8 -2323.406
+## 84868    200256.2 -2323.406
+## 84876    195899.0 -2323.406
+## 84900    177357.3 -2323.406
+## 84908    207327.3 -2323.406
+## 84916    188703.3 -2323.406
+## 84948    143658.9 -2323.406
+## 84956    167123.4 -2323.406
+## 84964    180644.1 -2323.406
+## 84996    161255.2 -2323.406
+## 85004    173915.9 -2323.406
+## 85020    140818.0 -2323.406
+## 85092    161158.5 -2323.406
+## 85172    152332.5 -2323.406
+## 85180    156115.3 -2323.406
+## 85204    165541.3 -2323.406
+## 85244    150937.7 -2323.406
+## 85252    160302.7 -2323.406
+## 85284    182671.9 -2323.406
+## 85316    149586.0 -2323.406
+## 85556    190716.0 -2323.406
+## 85572    169434.3 -2323.406
+## 85636    152704.5 -2323.406
+## 85644    150847.9 -2323.406
+## 85660    149879.9 -2323.406
+## 85668    148180.3 -2323.406
+## 85676    159704.4 -2323.406
+## 85700    140191.7 -2323.406
+## 85708    162332.5 -2323.406
+## 85724    143842.9 -2323.406
+## 85756    194529.2 -2323.406
+## 85764    160492.2 -2323.406
+## 85772    179342.8 -2323.406
+## 85820    200818.8 -2323.406
+## 85868    163833.2 -2323.406
+## 85884    169087.5 -2323.406
+## 85900    147774.8 -2323.406
+## 85948    149199.8 -2323.406
+## 85956    154255.4 -2323.406
+## 85964    142429.3 -2323.406
+## 85996    181676.3 -2323.406
+## 86012    141919.7 -2323.406
+## 86020    183444.9 -2323.406
+## 86028    170891.8 -2323.406
+## 86044    152281.7 -2323.406
+## 86052    198136.2 -2323.406
+## 86068    186011.3 -2323.406
+## 86076    179367.1 -2323.406
+## 86084    176666.9 -2323.406
+## 86092    147098.0 -2323.406
+## 86116    181259.8 -2323.406
+## 86124    154543.4 -2323.406
+## 86140    176715.2 -2323.406
+## 86148    155906.1 -2323.406
+## 86156    167181.9 -2323.406
+## 86172    184302.3 -2323.406
+## 86188    147502.7 -2323.406
+## 86292    179197.6 -2323.406
+## 86300    192151.2 -2323.406
+## 86308    178068.4 -2323.406
+## 86324    151649.0 -2323.406
+## 86340    182247.4 -2323.406
+## 86356    145823.0 -2323.406
+## 86372    154547.7 -2323.406
+## 86380    176326.6 -2323.406
+## 86388    158167.3 -2323.406
+## 86396    170707.2 -2323.406
+## 86532    183811.3 -2323.406
+## 86548    187074.7 -2323.406
+## 86556    188814.7 -2323.406
+## 86564    176288.1 -2323.406
+## 86612    174468.7 -2323.406
+## 86620    184098.6 -2323.406
+## 86628    141290.9 -2323.406
+## 86676    160735.2 -2323.406</code></pre>
+<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb25-1"></a><span class="kw">coef</span>(lin_PFCmodel_lmer)</span></code></pre></div>
+<pre><code>## $subid
+##       (Intercept)   agecent
+## 80796    155714.7 -2323.406
+## 80804    152915.0 -2323.406
+## 80828    181501.5 -2323.406
+## 80964    154999.6 -2323.406
+## 81028    173129.6 -2323.406
+## 81980    192268.0 -2323.406
+## 82828    158364.2 -2323.406
+## 83308    171642.2 -2323.406
+## 84100    177579.3 -2323.406
+## 84116    183780.2 -2323.406
+## 84124    176993.8 -2323.406
+## 84156    187290.7 -2323.406
+## 84260    181683.0 -2323.406
+## 84292    169548.4 -2323.406
+## 84372    159533.7 -2323.406
+## 84412    139096.2 -2323.406
+## 84444    177101.8 -2323.406
+## 84508    142623.5 -2323.406
+## 84564    169383.9 -2323.406
+## 84588    157338.4 -2323.406
+## 84596    149221.3 -2323.406
+## 84612    176743.7 -2323.406
+## 84668    172685.2 -2323.406
+## 84676    181819.9 -2323.406
+## 84684    174647.4 -2323.406
+## 84732    146216.6 -2323.406
+## 84796    151139.1 -2323.406
+## 84804    163450.4 -2323.406
+## 84812    184301.8 -2323.406
+## 84868    200256.2 -2323.406
+## 84876    195899.0 -2323.406
+## 84900    177357.3 -2323.406
+## 84908    207327.3 -2323.406
+## 84916    188703.3 -2323.406
+## 84948    143658.9 -2323.406
+## 84956    167123.4 -2323.406
+## 84964    180644.1 -2323.406
+## 84996    161255.2 -2323.406
+## 85004    173915.9 -2323.406
+## 85020    140818.0 -2323.406
+## 85092    161158.5 -2323.406
+## 85172    152332.5 -2323.406
+## 85180    156115.3 -2323.406
+## 85204    165541.3 -2323.406
+## 85244    150937.7 -2323.406
+## 85252    160302.7 -2323.406
+## 85284    182671.9 -2323.406
+## 85316    149586.0 -2323.406
+## 85556    190716.0 -2323.406
+## 85572    169434.3 -2323.406
+## 85636    152704.5 -2323.406
+## 85644    150847.9 -2323.406
+## 85660    149879.9 -2323.406
+## 85668    148180.3 -2323.406
+## 85676    159704.4 -2323.406
+## 85700    140191.7 -2323.406
+## 85708    162332.5 -2323.406
+## 85724    143842.9 -2323.406
+## 85756    194529.2 -2323.406
+## 85764    160492.2 -2323.406
+## 85772    179342.8 -2323.406
+## 85820    200818.8 -2323.406
+## 85868    163833.2 -2323.406
+## 85884    169087.5 -2323.406
+## 85900    147774.8 -2323.406
+## 85948    149199.8 -2323.406
+## 85956    154255.4 -2323.406
+## 85964    142429.3 -2323.406
+## 85996    181676.3 -2323.406
+## 86012    141919.7 -2323.406
+## 86020    183444.9 -2323.406
+## 86028    170891.8 -2323.406
+## 86044    152281.7 -2323.406
+## 86052    198136.2 -2323.406
+## 86068    186011.3 -2323.406
+## 86076    179367.1 -2323.406
+## 86084    176666.9 -2323.406
+## 86092    147098.0 -2323.406
+## 86116    181259.8 -2323.406
+## 86124    154543.4 -2323.406
+## 86140    176715.2 -2323.406
+## 86148    155906.1 -2323.406
+## 86156    167181.9 -2323.406
+## 86172    184302.3 -2323.406
+## 86188    147502.7 -2323.406
+## 86292    179197.6 -2323.406
+## 86300    192151.2 -2323.406
+## 86308    178068.4 -2323.406
+## 86324    151649.0 -2323.406
+## 86340    182247.4 -2323.406
+## 86356    145823.0 -2323.406
+## 86372    154547.7 -2323.406
+## 86380    176326.6 -2323.406
+## 86388    158167.3 -2323.406
+## 86396    170707.2 -2323.406
+## 86532    183811.3 -2323.406
+## 86548    187074.7 -2323.406
+## 86556    188814.7 -2323.406
+## 86564    176288.1 -2323.406
+## 86612    174468.7 -2323.406
+## 86620    184098.6 -2323.406
+## 86628    141290.9 -2323.406
+## 86676    160735.2 -2323.406
+## 
+## attr(,&quot;class&quot;)
+## [1] &quot;coef.mer&quot;</code></pre>
+<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb27-1"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb27-1"></a><span class="co">#Slightly different</span></span>
+<span id="cb27-2"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb27-2"></a><span class="kw">print</span>(<span class="kw">coef</span>(lin_PFCmodel)<span class="op">-</span><span class="kw">coef</span>(lin_PFCmodel_lmer))</span></code></pre></div>
+<pre><code>##       (Intercept).(Intercept) (Intercept).agecent agecent.(Intercept)
+## 80796        0.00000077174627            158038.1           -158038.1
+## 80804        0.00000130629633            155238.4           -155238.4
+## 80828       -0.00000083274790            183824.9           -183824.9
+## 80964        0.00000083839404            157323.0           -157323.0
+## 81028       -0.00000045265188            175453.0           -175453.0
+## 81980       -0.00000159442425            194591.4           -194591.4
+## 82828        0.00000061682658            160687.6           -160687.6
+## 83308       -0.00000038955477            173965.6           -173965.6
+## 84100       -0.00000080341124            179902.7           -179902.7
+## 84116       -0.00000135030132            186103.6           -186103.6
+## 84124       -0.00000047401409            179317.2           -179317.2
+## 84156       -0.00000108632958            189614.1           -189614.1
+## 84260       -0.00000080050086            184006.4           -184006.4
+## 84292       -0.00000000759610            171871.8           -171871.8
+## 84372        0.00000062270556            161857.1           -161857.1
+## 84412        0.00000186747639            141419.6           -141419.6
+## 84444       -0.00000049159280            179425.2           -179425.2
+## 84508        0.00000157015165            144946.9           -144946.9
+## 84564       -0.00000002124580            171707.3           -171707.3
+## 84588        0.00000058294972            159661.8           -159661.8
+## 84596        0.00000171657302            151544.7           -151544.7
+## 84612       -0.00000042558531            179067.1           -179067.1
+## 84668       -0.00000032398384            175008.6           -175008.6
+## 84676       -0.00000098347664            184143.3           -184143.3
+## 84684       -0.00000056691351            176970.8           -176970.8
+## 84732        0.00000121421181            148540.1           -148540.1
+## 84796        0.00000145597733            153462.5           -153462.5
+## 84804        0.00000025442569            165773.8           -165773.8
+## 84812       -0.00000100815669            186625.2           -186625.2
+## 84868       -0.00000205123797            202579.6           -202579.6
+## 84876       -0.00000187652768            198222.4           -198222.4
+## 84900       -0.00000063853804            179680.7           -179680.7
+## 84908       -0.00000374621595            209650.7           -209650.7
+## 84916       -0.00000122937490            191026.7           -191026.7
+## 84948        0.00000213881140            145982.3           -145982.3
+## 84956        0.00000007616472            169446.8           -169446.8
+## 84964       -0.00000072453986            182967.5           -182967.5
+## 84996        0.00000041382737            163578.7           -163578.7
+## 85004       -0.00000033568358            176239.3           -176239.3
+## 85020        0.00000171599095            143141.5           -143141.5
+## 85092        0.00000051804818            163481.9           -163481.9
+## 85172        0.00000098365126            154655.9           -154655.9
+## 85180        0.00000072491821            158438.7           -158438.7
+## 85204        0.00000014534453            167864.7           -167864.7
+## 85244        0.00000165379606            153261.1           -153261.1
+## 85252        0.00000077864388            162626.1           -162626.1
+## 85284       -0.00000139322947            184995.3           -184995.3
+## 85316        0.00000100306352            151909.4           -151909.4
+## 85556       -0.00000149721745            193039.4           -193039.4
+## 85572       -0.00000021851156            171757.7           -171757.7
+## 85636        0.00000073501724            155027.9           -155027.9
+## 85644        0.00000091266702            153171.3           -153171.3
+## 85660        0.00000102823833            152203.3           -152203.3
+## 85668        0.00000133112189            150503.7           -150503.7
+## 85676        0.00000085082138            162027.8           -162027.8
+## 85700        0.00000183153315            142515.1           -142515.1
+## 85708        0.00000047721551            164655.9           -164655.9
+## 85724        0.00000233307946            146166.3           -146166.3
+## 85756       -0.00000264769187            196852.6           -196852.6
+## 85764        0.00000038527651            162815.6           -162815.6
+## 85772       -0.00000076292781            181666.2           -181666.2
+## 85820       -0.00000215196633            203142.2           -203142.2
+## 85868        0.00000039412407            166156.6           -166156.6
+## 85884       -0.00000002607703            171410.9           -171410.9
+## 85900        0.00000175414607            150098.3           -150098.3
+## 85948        0.00000120181357            151523.2           -151523.2
+## 85956        0.00000084153726            156578.8           -156578.8
+## 85964        0.00000150597771            144752.7           -144752.7
+## 85996       -0.00000117000309            183999.7           -183999.7
+## 86012        0.00000235013431            144243.1           -144243.1
+## 86020       -0.00000085635111            185768.3           -185768.3
+## 86028       -0.00000047130743            173215.2           -173215.2
+## 86044        0.00000104145147            154605.1           -154605.1
+## 86052       -0.00000202757656            200459.6           -200459.6
+## 86068       -0.00000183546217            188334.7           -188334.7
+## 86076       -0.00000074267155            181690.5           -181690.5
+## 86084       -0.00000092966366            178990.3           -178990.3
+## 86092        0.00000120259938            149421.4           -149421.4
+## 86116       -0.00000124494545            183583.2           -183583.2
+## 86124        0.00000108900713            156866.8           -156866.8
+## 86140       -0.00000088542583            179038.6           -179038.6
+## 86148        0.00000092916889            158229.6           -158229.6
+## 86156       -0.00000012107193            169505.3           -169505.3
+## 86172       -0.00000112812268            186625.7           -186625.7
+## 86188        0.00000122078927            149826.1           -149826.1
+## 86292       -0.00000065576751            181521.0           -181521.0
+## 86300       -0.00000229536090            194474.6           -194474.6
+## 86308       -0.00000086537329            180391.8           -180391.8
+## 86324        0.00000135952723            153972.4           -153972.4
+## 86340       -0.00000140236807            184570.8           -184570.8
+## 86356        0.00000136974268            148146.4           -148146.4
+## 86372        0.00000089945388            156871.1           -156871.1
+## 86380       -0.00000056304270            178650.0           -178650.0
+## 86388        0.00000070541864            160490.7           -160490.7
+## 86396       -0.00000004746835            173030.6           -173030.6
+## 86532       -0.00000149969128            186134.7           -186134.7
+## 86548       -0.00000191852450            189398.1           -189398.1
+## 86556       -0.00000118179014            191138.1           -191138.1
+## 86564       -0.00000056062709            178611.5           -178611.5
+## 86612       -0.00000061030732            176792.1           -176792.1
+## 86620       -0.00000117000309            186422.0           -186422.0
+## 86628        0.00000250650919            143614.3           -143614.3
+## 86676        0.00000064057531            163058.6           -163058.6
+##         agecent.agecent
+## 80796 -0.00000003308605
+## 80804 -0.00000003308605
+## 80828 -0.00000003308605
+## 80964 -0.00000003308605
+## 81028 -0.00000003308605
+## 81980 -0.00000003308605
+## 82828 -0.00000003308605
+## 83308 -0.00000003308605
+## 84100 -0.00000003308605
+## 84116 -0.00000003308605
+## 84124 -0.00000003308605
+## 84156 -0.00000003308605
+## 84260 -0.00000003308605
+## 84292 -0.00000003308605
+## 84372 -0.00000003308605
+## 84412 -0.00000003308605
+## 84444 -0.00000003308605
+## 84508 -0.00000003308605
+## 84564 -0.00000003308605
+## 84588 -0.00000003308605
+## 84596 -0.00000003308605
+## 84612 -0.00000003308605
+## 84668 -0.00000003308605
+## 84676 -0.00000003308605
+## 84684 -0.00000003308605
+## 84732 -0.00000003308605
+## 84796 -0.00000003308605
+## 84804 -0.00000003308605
+## 84812 -0.00000003308605
+## 84868 -0.00000003308605
+## 84876 -0.00000003308605
+## 84900 -0.00000003308605
+## 84908 -0.00000003308605
+## 84916 -0.00000003308605
+## 84948 -0.00000003308605
+## 84956 -0.00000003308605
+## 84964 -0.00000003308605
+## 84996 -0.00000003308605
+## 85004 -0.00000003308605
+## 85020 -0.00000003308605
+## 85092 -0.00000003308605
+## 85172 -0.00000003308605
+## 85180 -0.00000003308605
+## 85204 -0.00000003308605
+## 85244 -0.00000003308605
+## 85252 -0.00000003308605
+## 85284 -0.00000003308605
+## 85316 -0.00000003308605
+## 85556 -0.00000003308605
+## 85572 -0.00000003308605
+## 85636 -0.00000003308605
+## 85644 -0.00000003308605
+## 85660 -0.00000003308605
+## 85668 -0.00000003308605
+## 85676 -0.00000003308605
+## 85700 -0.00000003308605
+## 85708 -0.00000003308605
+## 85724 -0.00000003308605
+## 85756 -0.00000003308605
+## 85764 -0.00000003308605
+## 85772 -0.00000003308605
+## 85820 -0.00000003308605
+## 85868 -0.00000003308605
+## 85884 -0.00000003308605
+## 85900 -0.00000003308605
+## 85948 -0.00000003308605
+## 85956 -0.00000003308605
+## 85964 -0.00000003308605
+## 85996 -0.00000003308605
+## 86012 -0.00000003308605
+## 86020 -0.00000003308605
+## 86028 -0.00000003308605
+## 86044 -0.00000003308605
+## 86052 -0.00000003308605
+## 86068 -0.00000003308605
+## 86076 -0.00000003308605
+## 86084 -0.00000003308605
+## 86092 -0.00000003308605
+## 86116 -0.00000003308605
+## 86124 -0.00000003308605
+## 86140 -0.00000003308605
+## 86148 -0.00000003308605
+## 86156 -0.00000003308605
+## 86172 -0.00000003308605
+## 86188 -0.00000003308605
+## 86292 -0.00000003308605
+## 86300 -0.00000003308605
+## 86308 -0.00000003308605
+## 86324 -0.00000003308605
+## 86340 -0.00000003308605
+## 86356 -0.00000003308605
+## 86372 -0.00000003308605
+## 86380 -0.00000003308605
+## 86388 -0.00000003308605
+## 86396 -0.00000003308605
+## 86532 -0.00000003308605
+## 86548 -0.00000003308605
+## 86556 -0.00000003308605
+## 86564 -0.00000003308605
+## 86612 -0.00000003308605
+## 86620 -0.00000003308605
+## 86628 -0.00000003308605
+## 86676 -0.00000003308605</code></pre>
+<div class="sourceCode" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb29-1"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb29-1"></a><span class="co"># Summary of models</span></span>
+<span id="cb29-2"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb29-2"></a><span class="kw">summary</span>(lin_PFCmodel)</span></code></pre></div>
+<pre><code>## Linear mixed-effects model fit by maximum likelihood
+##  Data: braindata 
+##        AIC      BIC    logLik
+##   5633.229 5647.682 -2812.615
+## 
+## Random effects:
+##  Formula: ~1 | subid
+##         (Intercept) Residual
+## StdDev:    16693.86 3057.588
+## 
+## Fixed effects: prefrontal_vol_long ~ agecent 
+##                 Value Std.Error  DF   t-value p-value
+## (Intercept) 167750.37 1661.7734 170 100.94659       0
+## agecent      -2323.41  141.3133 170 -16.44153       0
+##  Correlation: 
+##         (Intr)
+## agecent 0.007 
+## 
+## Standardized Within-Group Residuals:
+##         Min          Q1         Med          Q3         Max 
+## -3.01902160 -0.48365525  0.01745049  0.49701984  2.37181597 
+## 
+## Number of Observations: 274
+## Number of Groups: 103</code></pre>
+<div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb31-1"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb31-1"></a><span class="kw">summary</span>(lin_PFCmodel_lmer)</span></code></pre></div>
+<pre><code>## Linear mixed model fit by maximum likelihood  [&#39;lmerMod&#39;]
+## Formula: prefrontal_vol_long ~ agecent + (1 | subid)
+##    Data: braindata
+## 
+##      AIC      BIC   logLik deviance df.resid 
+##   5633.2   5647.7  -2812.6   5625.2      270 
+## 
+## Scaled residuals: 
+##      Min       1Q   Median       3Q      Max 
+## -3.01902 -0.48366  0.01745  0.49702  2.37182 
+## 
+## Random effects:
+##  Groups   Name        Variance  Std.Dev.
+##  subid    (Intercept) 278685115 16694   
+##  Residual               9348845  3058   
+## Number of obs: 274, groups:  subid, 103
+## 
+## Fixed effects:
+##             Estimate Std. Error t value
+## (Intercept) 167750.4     1655.7   101.3
+## agecent      -2323.4      140.8   -16.5
+## 
+## Correlation of Fixed Effects:
+##         (Intr)
+## agecent 0.007</code></pre>
+<div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb33-1"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb33-1"></a><span class="co">## Let&#39;s add a random slope to the model to make it an unconditional growth model</span></span>
+<span id="cb33-2"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb33-2"></a>lin_PFCmodel_rs=<span class="kw">lme</span>(prefrontal_vol_long <span class="op">~</span><span class="st"> </span>agecent,</span>
+<span id="cb33-3"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb33-3"></a>                  <span class="dt">method=</span><span class="st">&quot;ML&quot;</span>,</span>
+<span id="cb33-4"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb33-4"></a>                  <span class="dt">random =</span> <span class="op">~</span><span class="dv">1</span><span class="op">+</span>agecent<span class="op">|</span>subid,</span>
+<span id="cb33-5"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb33-5"></a>                  <span class="dt">data=</span>braindata)</span>
+<span id="cb33-6"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb33-6"></a></span>
+<span id="cb33-7"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb33-7"></a>lin_PFCmodel_rs_lmer=<span class="kw">lmer</span>(prefrontal_vol_long <span class="op">~</span><span class="st"> </span>agecent <span class="op">+</span><span class="st"> </span></span>
+<span id="cb33-8"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb33-8"></a><span class="st">                           </span>(agecent <span class="op">|</span><span class="st"> </span>subid),</span>
+<span id="cb33-9"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb33-9"></a>                         <span class="dt">REML =</span> <span class="ot">FALSE</span>,</span>
+<span id="cb33-10"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb33-10"></a>                         <span class="dt">data=</span>braindata)</span>
+<span id="cb33-11"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb33-11"></a></span>
+<span id="cb33-12"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb33-12"></a><span class="co"># Summary of models</span></span>
+<span id="cb33-13"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb33-13"></a><span class="kw">summary</span>(lin_PFCmodel_rs)</span></code></pre></div>
+<pre><code>## Linear mixed-effects model fit by maximum likelihood
+##  Data: braindata 
+##        AIC      BIC   logLik
+##   5633.539 5655.218 -2810.77
+## 
+## Random effects:
+##  Formula: ~1 + agecent | subid
+##  Structure: General positive-definite, Log-Cholesky parametrization
+##             StdDev     Corr  
+## (Intercept) 16670.9877 (Intr)
+## agecent       786.1584 -0.054
+## Residual     2766.3925       
+## 
+## Fixed effects: prefrontal_vol_long ~ agecent 
+##                 Value Std.Error  DF   t-value p-value
+## (Intercept) 167758.95 1668.4400 170 100.54838       0
+## agecent      -2328.61  154.4948 170 -15.07245       0
+##  Correlation: 
+##         (Intr)
+## agecent -0.018
+## 
+## Standardized Within-Group Residuals:
+##          Min           Q1          Med           Q3          Max 
+## -2.831741446 -0.471641155  0.009997165  0.456398316  2.400944924 
+## 
+## Number of Observations: 274
+## Number of Groups: 103</code></pre>
+<div class="sourceCode" id="cb35"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb35-1"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb35-1"></a><span class="kw">summary</span>(lin_PFCmodel_rs_lmer)</span></code></pre></div>
+<pre><code>## Linear mixed model fit by maximum likelihood  [&#39;lmerMod&#39;]
+## Formula: prefrontal_vol_long ~ agecent + (agecent | subid)
+##    Data: braindata
+## 
+##      AIC      BIC   logLik deviance df.resid 
+##   5633.5   5655.2  -2810.8   5621.5      268 
+## 
+## Scaled residuals: 
+##      Min       1Q   Median       3Q      Max 
+## -2.83176 -0.47164  0.00999  0.45640  2.40097 
+## 
+## Random effects:
+##  Groups   Name        Variance  Std.Dev. Corr 
+##  subid    (Intercept) 277920576 16671.0       
+##           agecent        618133   786.2  -0.05
+##  Residual               7652752  2766.4       
+## Number of obs: 274, groups:  subid, 103
+## 
+## Fixed effects:
+##             Estimate Std. Error t value
+## (Intercept) 167759.0     1662.3  100.92
+## agecent      -2328.6      153.9  -15.13
+## 
+## Correlation of Fixed Effects:
+##         (Intr)
+## agecent -0.018</code></pre>
+<div class="sourceCode" id="cb37"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb37-1"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb37-1"></a><span class="co"># Compare models with and without random slopes included</span></span>
+<span id="cb37-2"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb37-2"></a><span class="kw">anova</span>(lin_PFCmodel,lin_PFCmodel_rs)</span></code></pre></div>
+<pre><code>##                 Model df      AIC      BIC    logLik   Test  L.Ratio p-value
+## lin_PFCmodel        1  4 5633.229 5647.682 -2812.615                        
+## lin_PFCmodel_rs     2  6 5633.539 5655.218 -2810.770 1 vs 2 3.689881   0.158</code></pre>
+<div class="sourceCode" id="cb39"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb39-1"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb39-1"></a><span class="kw">anova</span>(lin_PFCmodel_lmer,lin_PFCmodel_rs_lmer)</span></code></pre></div>
+<pre><code>## Data: braindata
+## Models:
+## lin_PFCmodel_lmer: prefrontal_vol_long ~ agecent + (1 | subid)
+## lin_PFCmodel_rs_lmer: prefrontal_vol_long ~ agecent + (agecent | subid)
+##                      npar    AIC    BIC  logLik deviance  Chisq Df Pr(&gt;Chisq)
+## lin_PFCmodel_lmer       4 5633.2 5647.7 -2812.6   5625.2                     
+## lin_PFCmodel_rs_lmer    6 5633.5 5655.2 -2810.8   5621.5 3.6899  2      0.158</code></pre>
+</div>
+<div id="modeling-continued-checking-out-non-linear-group-level-trajectories" class="section level3">
+<h3><span class="header-section-number">9.0.5</span> Modeling continued — checking out non-linear group-level trajectories</h3>
+<div class="sourceCode" id="cb41"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb41-1"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb41-1"></a><span class="co">## Quadratic age model (nlme)</span></span>
+<span id="cb41-2"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb41-2"></a>quad_PFCmodel=<span class="kw">lme</span>(prefrontal_vol_long <span class="op">~</span><span class="st"> </span>agecent<span class="op">+</span>agecentsq,</span>
+<span id="cb41-3"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb41-3"></a>                   <span class="dt">method=</span><span class="st">&quot;ML&quot;</span>,</span>
+<span id="cb41-4"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb41-4"></a>                   <span class="dt">random =</span> <span class="op">~</span><span class="dv">1</span><span class="op">|</span>subid,</span>
+<span id="cb41-5"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb41-5"></a>                   <span class="dt">data=</span>braindata)</span>
+<span id="cb41-6"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb41-6"></a></span>
+<span id="cb41-7"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb41-7"></a><span class="co">## Quadratic age model (lme4)</span></span>
+<span id="cb41-8"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb41-8"></a>quad_PFCmodel_lmer=<span class="kw">lmer</span>(prefrontal_vol_long <span class="op">~</span><span class="st"> </span>agecent<span class="op">+</span>agecentsq<span class="op">+</span><span class="st"> </span></span>
+<span id="cb41-9"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb41-9"></a><span class="st">                         </span>(<span class="dv">1</span> <span class="op">|</span><span class="st"> </span>subid),</span>
+<span id="cb41-10"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb41-10"></a>                       <span class="dt">REML =</span> <span class="ot">FALSE</span>,</span>
+<span id="cb41-11"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb41-11"></a>                       <span class="dt">data=</span>braindata)</span>
+<span id="cb41-12"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb41-12"></a></span>
+<span id="cb41-13"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb41-13"></a><span class="co">## Cubic age model</span></span>
+<span id="cb41-14"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb41-14"></a>cub_PFCmodel=<span class="kw">lme</span>(prefrontal_vol_long <span class="op">~</span><span class="st"> </span>agecent<span class="op">+</span>agecentsq<span class="op">+</span>agecentcu,</span>
+<span id="cb41-15"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb41-15"></a>                  <span class="dt">method=</span><span class="st">&quot;ML&quot;</span>,</span>
+<span id="cb41-16"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb41-16"></a>                  <span class="dt">random =</span> <span class="op">~</span><span class="dv">1</span><span class="op">|</span>subid,</span>
+<span id="cb41-17"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb41-17"></a>                  <span class="dt">data=</span>braindata)</span>
+<span id="cb41-18"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb41-18"></a></span>
+<span id="cb41-19"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb41-19"></a><span class="co">## Cubic age model (lme4()</span></span>
+<span id="cb41-20"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb41-20"></a>cub_PFCmodel_lmer=<span class="kw">lmer</span>(prefrontal_vol_long <span class="op">~</span><span class="st"> </span>agecent<span class="op">+</span>agecentsq<span class="op">+</span>agecentcu<span class="op">+</span><span class="st"> </span></span>
+<span id="cb41-21"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb41-21"></a><span class="st">                         </span>(<span class="dv">1</span> <span class="op">|</span><span class="st"> </span>subid),</span>
+<span id="cb41-22"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb41-22"></a>                       <span class="dt">REML =</span> <span class="ot">FALSE</span>,</span>
+<span id="cb41-23"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb41-23"></a>                       <span class="dt">data=</span>braindata)</span>
+<span id="cb41-24"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb41-24"></a></span>
+<span id="cb41-25"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb41-25"></a></span>
+<span id="cb41-26"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb41-26"></a><span class="co">## Using a model fit approach</span></span>
+<span id="cb41-27"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb41-27"></a><span class="co"># Compare model fit using anova</span></span>
+<span id="cb41-28"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb41-28"></a>age_predict_PFC_table&lt;-<span class="kw">anova</span>(uncond_PFCmodel,</span>
+<span id="cb41-29"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb41-29"></a>                          lin_PFCmodel,</span>
+<span id="cb41-30"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb41-30"></a>                          quad_PFCmodel,</span>
+<span id="cb41-31"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb41-31"></a>                          cub_PFCmodel)</span>
+<span id="cb41-32"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb41-32"></a><span class="co"># take a look</span></span>
+<span id="cb41-33"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb41-33"></a>age_predict_PFC_table</span></code></pre></div>
+<pre><code>##                 Model df      AIC      BIC    logLik   Test   L.Ratio p-value
+## uncond_PFCmodel     1  3 5803.174 5814.014 -2898.587                         
+## lin_PFCmodel        2  4 5633.229 5647.682 -2812.615 1 vs 2 171.94548  &lt;.0001
+## quad_PFCmodel       3  5 5635.092 5653.157 -2812.546 2 vs 3   0.13714  0.7111
+## cub_PFCmodel        4  6 5627.968 5649.647 -2807.984 3 vs 4   9.12345  0.0025</code></pre>
+<div class="sourceCode" id="cb43"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb43-1"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb43-1"></a><span class="co"># The lme4 output should look the same</span></span>
+<span id="cb43-2"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb43-2"></a><span class="kw">anova</span>(uncond_PFCmodel_lmer,</span>
+<span id="cb43-3"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb43-3"></a>      lin_PFCmodel_lmer,</span>
+<span id="cb43-4"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb43-4"></a>      quad_PFCmodel_lmer,</span>
+<span id="cb43-5"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb43-5"></a>      cub_PFCmodel_lmer)</span></code></pre></div>
+<pre><code>## Data: braindata
+## Models:
+## uncond_PFCmodel_lmer: prefrontal_vol_long ~ 1 + (1 | subid)
+## lin_PFCmodel_lmer: prefrontal_vol_long ~ agecent + (1 | subid)
+## quad_PFCmodel_lmer: prefrontal_vol_long ~ agecent + agecentsq + (1 | subid)
+## cub_PFCmodel_lmer: prefrontal_vol_long ~ agecent + agecentsq + agecentcu + (1 | 
+## cub_PFCmodel_lmer:     subid)
+##                      npar    AIC    BIC  logLik deviance    Chisq Df
+## uncond_PFCmodel_lmer    3 5803.2 5814.0 -2898.6   5797.2            
+## lin_PFCmodel_lmer       4 5633.2 5647.7 -2812.6   5625.2 171.9455  1
+## quad_PFCmodel_lmer      5 5635.1 5653.2 -2812.6   5625.1   0.1371  1
+## cub_PFCmodel_lmer       6 5628.0 5649.6 -2808.0   5616.0   9.1235  1
+##                                 Pr(&gt;Chisq)    
+## uncond_PFCmodel_lmer                          
+## lin_PFCmodel_lmer    &lt; 0.00000000000000022 ***
+## quad_PFCmodel_lmer                0.711136    
+## cub_PFCmodel_lmer                 0.002524 ** 
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1</code></pre>
+<div class="sourceCode" id="cb45"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb45-1"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb45-1"></a><span class="co">#compare cubic model and linear model</span></span>
+<span id="cb45-2"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb45-2"></a>age_predict_PFC_linvscub_table&lt;-<span class="kw">anova</span>(lin_PFCmodel,cub_PFCmodel)</span>
+<span id="cb45-3"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb45-3"></a>age_predict_PFC_linvscub_table</span></code></pre></div>
+<pre><code>##              Model df      AIC      BIC    logLik   Test  L.Ratio p-value
+## lin_PFCmodel     1  4 5633.229 5647.682 -2812.615                        
+## cub_PFCmodel     2  6 5627.968 5649.647 -2807.984 1 vs 2 9.260595  0.0098</code></pre>
+<div class="sourceCode" id="cb47"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb47-1"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb47-1"></a><span class="co"># Looks like the cubic model is the best fit</span></span>
+<span id="cb47-2"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb47-2"></a>bestagemodel_PFC&lt;-cub_PFCmodel</span>
+<span id="cb47-3"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb47-3"></a></span>
+<span id="cb47-4"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb47-4"></a></span>
+<span id="cb47-5"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb47-5"></a><span class="co"># Graph PFC group-level polynomial model</span></span>
+<span id="cb47-6"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb47-6"></a></span>
+<span id="cb47-7"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb47-7"></a><span class="co"># Need to create a dataframe of predicted values for ages contained within the sample</span></span>
+<span id="cb47-8"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb47-8"></a>agecent&lt;-<span class="kw">round</span>(<span class="kw">seq</span>(<span class="kw">min</span>(braindata<span class="op">$</span>agecent,<span class="dt">na.rm =</span> <span class="ot">TRUE</span>),</span>
+<span id="cb47-9"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb47-9"></a>                   <span class="kw">max</span>(braindata<span class="op">$</span>agecent,<span class="dt">na.rm =</span> <span class="ot">TRUE</span>),<span class="dt">by=</span><span class="dv">1</span>),</span>
+<span id="cb47-10"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb47-10"></a>               <span class="dv">2</span>)</span>
+<span id="cb47-11"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb47-11"></a>agecentsq=agecent<span class="op">*</span>agecent</span>
+<span id="cb47-12"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb47-12"></a>agecentcu=agecent<span class="op">*</span>agecent<span class="op">*</span>agecent</span>
+<span id="cb47-13"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb47-13"></a>data.pred =<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">agecent=</span>agecent,</span>
+<span id="cb47-14"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb47-14"></a>                       <span class="dt">agecentsq=</span>agecentsq,</span>
+<span id="cb47-15"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb47-15"></a>                       <span class="dt">agecentcu=</span>agecentcu)</span>
+<span id="cb47-16"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb47-16"></a>data.pred<span class="op">$</span>age&lt;-(data.pred<span class="op">$</span>agecent<span class="op">+</span><span class="kw">mean</span>(braindata<span class="op">$</span>age))</span>
+<span id="cb47-17"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb47-17"></a>y.pred =<span class="st"> </span><span class="kw">predict</span>(bestagemodel_PFC,</span>
+<span id="cb47-18"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb47-18"></a>                 data.pred,</span>
+<span id="cb47-19"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb47-19"></a>                 <span class="dt">level=</span><span class="dv">0</span>)</span>
+<span id="cb47-20"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb47-20"></a>data.pred =<span class="st"> </span><span class="kw">cbind.data.frame</span>(data.pred,</span>
+<span id="cb47-21"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb47-21"></a>                             y.pred)</span>
+<span id="cb47-22"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb47-22"></a>scale =<span class="st"> </span><span class="fl">1.96</span></span>
+<span id="cb47-23"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb47-23"></a>designmat&lt;-<span class="kw">model.matrix</span>(<span class="kw">eval</span>(<span class="kw">eval</span>(bestagemodel_PFC<span class="op">$</span>call<span class="op">$</span>fixed)[<span class="op">-</span><span class="dv">2</span>]),</span>
+<span id="cb47-24"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb47-24"></a>                        data.pred[<span class="op">-</span><span class="dv">3</span>]) <span class="co">#make design matrix</span></span>
+<span id="cb47-25"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb47-25"></a>SDvalue&lt;-<span class="kw">sqrt</span>(<span class="kw">diag</span>(designmat <span class="op">%*%</span><span class="st"> </span>bestagemodel_PFC<span class="op">$</span>varFix <span class="op">%*%</span><span class="st"> </span><span class="kw">t</span>(designmat))) <span class="co">#calculate standard deviation for each point for each model</span></span>
+<span id="cb47-26"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb47-26"></a>y.lower&lt;-y.pred<span class="op">-</span>(scale<span class="op">*</span>SDvalue) <span class="co">#calculate confidence intervals - lower</span></span>
+<span id="cb47-27"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb47-27"></a>y.upper&lt;-y.pred<span class="op">+</span>(scale<span class="op">*</span>SDvalue) <span class="co">#calculate confidence intervals - upper</span></span>
+<span id="cb47-28"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb47-28"></a>data.pred =<span class="st"> </span><span class="kw">cbind.data.frame</span>(data.pred,</span>
+<span id="cb47-29"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb47-29"></a>                             y.lower,</span>
+<span id="cb47-30"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb47-30"></a>                             y.upper)</span>
+<span id="cb47-31"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb47-31"></a>data.pred<span class="op">$</span>prefrontal_vol_long&lt;-data.pred<span class="op">$</span>y.pred</span>
+<span id="cb47-32"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb47-32"></a></span>
+<span id="cb47-33"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb47-33"></a></span>
+<span id="cb47-34"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb47-34"></a><span class="co"># Graph it</span></span>
+<span id="cb47-35"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb47-35"></a>PFC_Age&lt;-<span class="kw">ggplot</span>(<span class="dt">data=</span>braindata,</span>
+<span id="cb47-36"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb47-36"></a>                <span class="kw">aes</span>(<span class="dt">x=</span>age,</span>
+<span id="cb47-37"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb47-37"></a>                    <span class="dt">y=</span>prefrontal_vol_long))<span class="op">+</span></span>
+<span id="cb47-38"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb47-38"></a><span class="st">  </span><span class="kw">xlim</span>(<span class="dv">9</span>,<span class="dv">23</span>)<span class="op">+</span></span>
+<span id="cb47-39"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb47-39"></a><span class="st">  </span><span class="kw">ylim</span>(<span class="dv">125000</span>,<span class="dv">225000</span>)<span class="op">+</span></span>
+<span id="cb47-40"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb47-40"></a><span class="st">  </span><span class="kw">xlab</span>(<span class="st">&quot;Age (years)&quot;</span>)<span class="op">+</span></span>
+<span id="cb47-41"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb47-41"></a><span class="st">  </span><span class="kw">ylab</span>(<span class="st">&quot;PFC volume (longitudinal)&quot;</span>)<span class="op">+</span></span>
+<span id="cb47-42"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb47-42"></a><span class="st">  </span><span class="kw">geom_line</span>(<span class="dt">data=</span>data.pred,</span>
+<span id="cb47-43"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb47-43"></a>            <span class="kw">aes</span>(<span class="dt">x=</span>age, <span class="dt">y=</span>prefrontal_vol_long), <span class="dt">size=</span>.<span class="dv">7</span>, <span class="dt">colour=</span><span class="st">&quot;deeppink&quot;</span>)<span class="op">+</span></span>
+<span id="cb47-44"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb47-44"></a><span class="st">  </span><span class="kw">geom_ribbon</span>(<span class="dt">data=</span>data.pred,</span>
+<span id="cb47-45"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb47-45"></a>              <span class="kw">aes</span>(<span class="dt">ymin=</span>y.lower, <span class="dt">ymax=</span>y.upper), <span class="dt">alpha=</span><span class="fl">0.2</span>, <span class="dt">fill=</span><span class="st">&quot;deeppink&quot;</span>)<span class="op">+</span></span>
+<span id="cb47-46"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb47-46"></a><span class="st">  </span><span class="kw">geom_line</span>(<span class="kw">aes</span>(<span class="dt">colour=</span>subid, <span class="dt">group=</span>subid),<span class="dt">size=</span>.<span class="dv">3</span>,<span class="dt">alpha=</span><span class="fl">0.3</span>)<span class="op">+</span></span>
+<span id="cb47-47"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb47-47"></a><span class="st">  </span><span class="kw">geom_point</span>(<span class="kw">aes</span>(<span class="dt">colour=</span>subid, <span class="dt">group=</span>subid),<span class="dt">size=</span><span class="dv">2</span>,<span class="dt">alpha=</span><span class="fl">0.3</span>)<span class="op">+</span></span>
+<span id="cb47-48"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb47-48"></a><span class="st">  </span><span class="kw">theme_kate</span>() <span class="op">+</span></span>
+<span id="cb47-49"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb47-49"></a><span class="st">  </span><span class="kw">theme</span>(<span class="dt">legend.position=</span><span class="st">&quot;none&quot;</span>)</span>
+<span id="cb47-50"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb47-50"></a></span>
+<span id="cb47-51"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb47-51"></a><span class="kw">print</span>(PFC_Age)</span></code></pre></div>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-55-1.png" width="672" /></p>
+</div>
+<div id="lets-try-a-gamm-approach" class="section level3">
+<h3><span class="header-section-number">9.0.6</span> Let’s try a GAMM approach</h3>
+<div class="sourceCode" id="cb48"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb48-1"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb48-1"></a><span class="co"># Model a penalized cubic regression spline of with 4 knots</span></span>
+<span id="cb48-2"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb48-2"></a>gamm4_pfc&lt;-<span class="kw">gamm</span>(prefrontal_vol_long <span class="op">~</span><span class="st"> </span><span class="kw">s</span>(age,<span class="dt">bs =</span> <span class="st">&quot;cs&quot;</span>,<span class="dt">k=</span><span class="dv">4</span>),</span>
+<span id="cb48-3"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb48-3"></a>                            <span class="dt">random=</span><span class="kw">list</span>(<span class="dt">subid=</span><span class="op">~</span><span class="dv">1</span>),</span>
+<span id="cb48-4"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb48-4"></a>                            <span class="dt">data=</span>(braindata))</span>
+<span id="cb48-5"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb48-5"></a></span>
+<span id="cb48-6"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb48-6"></a><span class="kw">summary</span>(gamm4_pfc<span class="op">$</span>gam)</span></code></pre></div>
+<pre><code>## 
+## Family: gaussian 
+## Link function: identity 
+## 
+## Formula:
+## prefrontal_vol_long ~ s(age, bs = &quot;cs&quot;, k = 4)
+## 
+## Parametric coefficients:
+##             Estimate Std. Error t value            Pr(&gt;|t|)    
+## (Intercept)   167748       1653   101.5 &lt;0.0000000000000002 ***
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## Approximate significance of smooth terms:
+##        edf Ref.df     F             p-value    
+## s(age) 2.8      3 96.32 &lt;0.0000000000000002 ***
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## R-sq.(adj) =  0.169   
+##   Scale est. = 9.0152e+06  n = 274</code></pre>
+<div class="sourceCode" id="cb50"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb50-1"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb50-1"></a><span class="co"># Create a predicted age data frame for graphing</span></span>
+<span id="cb50-2"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb50-2"></a>age&lt;-<span class="kw">round</span>(<span class="kw">seq</span>(<span class="kw">min</span>(braindata<span class="op">$</span>age,<span class="dt">na.rm =</span> <span class="ot">TRUE</span>),</span>
+<span id="cb50-3"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb50-3"></a>                  <span class="kw">max</span>(braindata<span class="op">$</span>age,<span class="dt">na.rm =</span> <span class="ot">TRUE</span>),<span class="dt">by=</span><span class="dv">1</span>),<span class="dv">2</span>)</span>
+<span id="cb50-4"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb50-4"></a></span>
+<span id="cb50-5"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb50-5"></a>data.pred =<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">age=</span>age)</span>
+<span id="cb50-6"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb50-6"></a>y.pred =<span class="st"> </span><span class="kw">predict</span>(gamm4_pfc<span class="op">$</span>gam,</span>
+<span id="cb50-7"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb50-7"></a>                 <span class="dt">newdata=</span>data.pred,<span class="dt">se=</span>T)</span>
+<span id="cb50-8"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb50-8"></a>data.pred =<span class="st"> </span><span class="kw">cbind.data.frame</span>(data.pred,</span>
+<span id="cb50-9"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb50-9"></a>                             y.pred)</span>
+<span id="cb50-10"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb50-10"></a>scale =<span class="st"> </span><span class="fl">1.96</span></span>
+<span id="cb50-11"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb50-11"></a>y.upper =<span class="st"> </span>y.pred<span class="op">$</span>fit <span class="op">+</span><span class="st"> </span>(scale<span class="op">*</span>y.pred<span class="op">$</span>se.fit)</span>
+<span id="cb50-12"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb50-12"></a>y.lower =<span class="st"> </span>y.pred<span class="op">$</span>fit <span class="op">-</span><span class="st"> </span>(scale<span class="op">*</span>y.pred<span class="op">$</span>se.fit)</span>
+<span id="cb50-13"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb50-13"></a>prefrontal_vol_long&lt;-data.pred<span class="op">$</span>fit</span>
+<span id="cb50-14"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb50-14"></a><span class="kw">assign</span>(<span class="st">&quot;gamm4_pfc_pred&quot;</span>,<span class="kw">cbind.data.frame</span>(data.pred,</span>
+<span id="cb50-15"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb50-15"></a>                                         y.lower,</span>
+<span id="cb50-16"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb50-16"></a>                                         y.upper,</span>
+<span id="cb50-17"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb50-17"></a>                                         prefrontal_vol_long))</span>
+<span id="cb50-18"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb50-18"></a><span class="kw">rm</span>(avgage,data.pred,y.pred,y.upper,y.lower)</span></code></pre></div>
+<pre><code>## Warning in rm(avgage, data.pred, y.pred, y.upper, y.lower): object &#39;avgage&#39; not
+## found</code></pre>
+<div class="sourceCode" id="cb52"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb52-1"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb52-1"></a><span class="co"># Graph it</span></span>
+<span id="cb52-2"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb52-2"></a>gamm4_pfc_plot&lt;-<span class="kw">ggplot</span>(<span class="dt">data=</span><span class="ot">NULL</span>,</span>
+<span id="cb52-3"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb52-3"></a>                       <span class="kw">aes</span>(<span class="dt">x=</span>age,</span>
+<span id="cb52-4"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb52-4"></a>                           <span class="dt">y=</span>prefrontal_vol_long))<span class="op">+</span></span>
+<span id="cb52-5"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb52-5"></a><span class="st">  </span><span class="kw">ylab</span>(<span class="st">&quot;Prefrontal Volume&quot;</span>)<span class="op">+</span></span>
+<span id="cb52-6"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb52-6"></a><span class="st">  </span><span class="kw">xlab</span>(<span class="st">&quot;Age (years)&quot;</span>)<span class="op">+</span></span>
+<span id="cb52-7"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb52-7"></a><span class="st">  </span><span class="kw">geom_line</span>(<span class="dt">data=</span>braindata,</span>
+<span id="cb52-8"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb52-8"></a>            <span class="kw">aes</span>(<span class="dt">group=</span>subid,</span>
+<span id="cb52-9"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb52-9"></a>                <span class="dt">colour=</span>subid),</span>
+<span id="cb52-10"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb52-10"></a>            <span class="dt">alpha=</span><span class="fl">0.4</span>,</span>
+<span id="cb52-11"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb52-11"></a>            <span class="dt">size=</span>.<span class="dv">6</span>) <span class="op">+</span></span>
+<span id="cb52-12"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb52-12"></a><span class="st">  </span><span class="kw">geom_point</span>(<span class="dt">data=</span>braindata,</span>
+<span id="cb52-13"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb52-13"></a>             <span class="kw">aes</span>(<span class="dt">colour=</span>sex),</span>
+<span id="cb52-14"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb52-14"></a>             <span class="dt">size=</span><span class="fl">1.5</span>,</span>
+<span id="cb52-15"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb52-15"></a>             <span class="dt">alpha=</span><span class="fl">0.5</span>) <span class="op">+</span></span>
+<span id="cb52-16"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb52-16"></a><span class="st">  </span><span class="kw">geom_line</span>(<span class="dt">data=</span>gamm4_pfc_pred,</span>
+<span id="cb52-17"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb52-17"></a>            <span class="kw">aes</span>(<span class="dt">x=</span>age,</span>
+<span id="cb52-18"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb52-18"></a>                <span class="dt">y=</span>prefrontal_vol_long),</span>
+<span id="cb52-19"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb52-19"></a>            <span class="dt">size=</span><span class="dv">1</span>,</span>
+<span id="cb52-20"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb52-20"></a>            <span class="dt">colour=</span><span class="st">&quot;purple2&quot;</span>)<span class="op">+</span></span>
+<span id="cb52-21"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb52-21"></a><span class="st">  </span><span class="kw">geom_ribbon</span>(<span class="dt">data=</span>gamm4_pfc_pred,</span>
+<span id="cb52-22"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb52-22"></a>              <span class="kw">aes</span>(<span class="dt">ymin=</span>y.lower,</span>
+<span id="cb52-23"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb52-23"></a>                  <span class="dt">ymax=</span>y.upper),</span>
+<span id="cb52-24"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb52-24"></a>              <span class="dt">alpha=</span><span class="fl">0.4</span>,</span>
+<span id="cb52-25"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb52-25"></a>              <span class="dt">fill=</span><span class="st">&quot;purple2&quot;</span>)<span class="op">+</span></span>
+<span id="cb52-26"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb52-26"></a><span class="st">  </span><span class="kw">theme_kate</span>()<span class="op">+</span></span>
+<span id="cb52-27"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb52-27"></a><span class="st">  </span><span class="kw">theme</span>(<span class="dt">legend.position=</span><span class="st">&quot;none&quot;</span>)</span>
+<span id="cb52-28"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb52-28"></a></span>
+<span id="cb52-29"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb52-29"></a><span class="kw">print</span>(gamm4_pfc_plot)             </span></code></pre></div>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-56-1.png" width="672" /></p>
+</div>
+<div id="looking-at-models-for-different-groups" class="section level3">
+<h3><span class="header-section-number">9.0.7</span> Looking at models for different groups</h3>
+<div class="sourceCode" id="cb53"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb53-1"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb53-1"></a><span class="co"># Create a gamm with sex interacting on age</span></span>
+<span id="cb53-2"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb53-2"></a>gamm_fullsexint_pfc&lt;-</span>
+<span id="cb53-3"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb53-3"></a><span class="st">  </span><span class="kw">gamm</span>(prefrontal_vol_long <span class="op">~</span><span class="st"> </span>sex <span class="op">+</span></span>
+<span id="cb53-4"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb53-4"></a><span class="st">         </span><span class="kw">s</span>(age,<span class="dt">bs =</span> <span class="st">&quot;cs&quot;</span>,<span class="dt">k=</span><span class="dv">4</span>) <span class="op">+</span><span class="st"> </span></span>
+<span id="cb53-5"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb53-5"></a><span class="st">         </span><span class="kw">s</span>(age,<span class="dt">by=</span>sex,<span class="dt">k=</span><span class="dv">4</span>),</span>
+<span id="cb53-6"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb53-6"></a>       <span class="dt">random=</span><span class="kw">list</span>(<span class="dt">subid=</span><span class="op">~</span><span class="dv">1</span>),</span>
+<span id="cb53-7"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb53-7"></a>       <span class="dt">data=</span>(braindata))</span>
+<span id="cb53-8"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb53-8"></a></span>
+<span id="cb53-9"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb53-9"></a><span class="co"># Just main effects of sex</span></span>
+<span id="cb53-10"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb53-10"></a>gamm_mainsexint_pfc&lt;-</span>
+<span id="cb53-11"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb53-11"></a><span class="st">  </span><span class="kw">gamm</span>(prefrontal_vol_long <span class="op">~</span><span class="st"> </span>sex <span class="op">+</span><span class="st"> </span></span>
+<span id="cb53-12"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb53-12"></a><span class="st">         </span><span class="kw">s</span>(age,<span class="dt">bs =</span> <span class="st">&quot;cs&quot;</span>,<span class="dt">k=</span><span class="dv">4</span>),</span>
+<span id="cb53-13"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb53-13"></a>       <span class="dt">random=</span><span class="kw">list</span>(<span class="dt">subid=</span><span class="op">~</span><span class="dv">1</span>),</span>
+<span id="cb53-14"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb53-14"></a>       <span class="dt">data=</span>(braindata))</span>
+<span id="cb53-15"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb53-15"></a></span>
+<span id="cb53-16"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb53-16"></a><span class="co"># Age only model</span></span>
+<span id="cb53-17"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb53-17"></a>gamm_ageonly_pfc&lt;-</span>
+<span id="cb53-18"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb53-18"></a><span class="st">  </span><span class="kw">gamm</span>(prefrontal_vol_long <span class="op">~</span><span class="st"> </span><span class="kw">s</span>(age,<span class="dt">bs =</span> <span class="st">&quot;cs&quot;</span>,<span class="dt">k=</span><span class="dv">4</span>),</span>
+<span id="cb53-19"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb53-19"></a>       <span class="dt">random=</span><span class="kw">list</span>(<span class="dt">subid=</span><span class="op">~</span><span class="dv">1</span>),</span>
+<span id="cb53-20"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb53-20"></a>       <span class="dt">data=</span>(braindata))</span>
+<span id="cb53-21"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb53-21"></a></span>
+<span id="cb53-22"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb53-22"></a><span class="co"># Compare the models</span></span>
+<span id="cb53-23"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb53-23"></a>modcompare&lt;-<span class="kw">anova</span>(gamm_ageonly_pfc<span class="op">$</span>lme,</span>
+<span id="cb53-24"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb53-24"></a>             gamm_mainsexint_pfc<span class="op">$</span>lme,</span>
+<span id="cb53-25"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb53-25"></a>             gamm_fullsexint_pfc<span class="op">$</span>lme)</span>
+<span id="cb53-26"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb53-26"></a></span>
+<span id="cb53-27"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb53-27"></a><span class="kw">print</span>(modcompare)</span></code></pre></div>
+<pre><code>##                         Model df      AIC      BIC    logLik   Test  L.Ratio
+## gamm_ageonly_pfc$lme        1  4 5636.487 5650.940 -2814.244                
+## gamm_mainsexint_pfc$lme     2  5 5565.088 5583.154 -2777.544 1 vs 2 73.39918
+## gamm_fullsexint_pfc$lme     3  9 5556.884 5589.402 -2769.442 2 vs 3 16.20391
+##                         p-value
+## gamm_ageonly_pfc$lme           
+## gamm_mainsexint_pfc$lme  &lt;.0001
+## gamm_fullsexint_pfc$lme  0.0028</code></pre>
+<div class="sourceCode" id="cb55"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb55-1"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb55-1"></a><span class="kw">summary</span>(gamm_fullsexint_pfc<span class="op">$</span>gam)</span></code></pre></div>
+<pre><code>## 
+## Family: gaussian 
+## Link function: identity 
+## 
+## Formula:
+## prefrontal_vol_long ~ sex + s(age, bs = &quot;cs&quot;, k = 4) + s(age, 
+##     by = sex, k = 4)
+## 
+## Parametric coefficients:
+##             Estimate Std. Error t value            Pr(&gt;|t|)    
+## (Intercept)   154939       1692   91.57 &lt;0.0000000000000002 ***
+## sexM           23969       2316   10.35 &lt;0.0000000000000002 ***
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## Approximate significance of smooth terms:
+##                       edf Ref.df      F             p-value    
+## s(age)      0.00000001813  2.000   0.00               0.298    
+## s(age):sexF 1.00000047193  1.000 143.06 &lt;0.0000000000000002 ***
+## s(age):sexM 2.88801786929  2.888  69.44 &lt;0.0000000000000002 ***
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## R-sq.(adj) =  0.606   
+##   Scale est. = 8.3408e+06  n = 274</code></pre>
+<div class="sourceCode" id="cb57"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb57-1"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb57-1"></a><span class="co"># And with the lme/lmer polynomial approach</span></span>
+<span id="cb57-2"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb57-2"></a><span class="co">## Cubic age model with sex as an interaction (nlme)</span></span>
+<span id="cb57-3"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb57-3"></a>sexint_PFCmodel=<span class="kw">lme</span>(prefrontal_vol_long <span class="op">~</span><span class="st"> </span>agecent<span class="op">*</span>sex<span class="op">+</span>agecentsq<span class="op">*</span>sex<span class="op">+</span>agecentcu<span class="op">*</span>sex,</span>
+<span id="cb57-4"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb57-4"></a>                 <span class="dt">method=</span><span class="st">&quot;ML&quot;</span>,</span>
+<span id="cb57-5"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb57-5"></a>                 <span class="dt">random =</span> <span class="op">~</span><span class="dv">1</span><span class="op">|</span>subid,</span>
+<span id="cb57-6"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb57-6"></a>                 <span class="dt">data=</span>braindata)</span>
+<span id="cb57-7"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb57-7"></a></span>
+<span id="cb57-8"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb57-8"></a><span class="co">## Cubic age model with sex as an interaction (lme4)</span></span>
+<span id="cb57-9"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb57-9"></a>sexint_PFCmodel_lmer=<span class="kw">lmer</span>(prefrontal_vol_long <span class="op">~</span><span class="st"> </span>agecent<span class="op">*</span>sex<span class="op">+</span>agecentsq<span class="op">*</span>sex<span class="op">+</span>agecentcu<span class="op">*</span>sex <span class="op">+</span><span class="st"> </span></span>
+<span id="cb57-10"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb57-10"></a><span class="st">                         </span>(<span class="dv">1</span> <span class="op">|</span><span class="st"> </span>subid),</span>
+<span id="cb57-11"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb57-11"></a>                       <span class="dt">REML =</span> <span class="ot">FALSE</span>,</span>
+<span id="cb57-12"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb57-12"></a>                       <span class="dt">data=</span>braindata)</span>
+<span id="cb57-13"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb57-13"></a></span>
+<span id="cb57-14"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb57-14"></a><span class="kw">summary</span>(sexint_PFCmodel)</span></code></pre></div>
+<pre><code>## Linear mixed-effects model fit by maximum likelihood
+##  Data: braindata 
+##        AIC      BIC    logLik
+##   5550.953 5587.084 -2765.476
+## 
+## Random effects:
+##  Formula: ~1 | subid
+##         (Intercept) Residual
+## StdDev:    11521.95 2891.856
+## 
+## Fixed effects: prefrontal_vol_long ~ agecent * sex + agecentsq * sex + agecentcu *      sex 
+##                    Value Std.Error  DF  t-value p-value
+## (Intercept)    154509.41 1746.2265 165 88.48188  0.0000
+## agecent         -2382.25  291.3240 165 -8.17732  0.0000
+## sexM            24984.57 2388.1770 101 10.46177  0.0000
+## agecentsq          49.67   41.1480 165  1.20708  0.2291
+## agecentcu           3.97   10.2486 165  0.38708  0.6992
+## agecent:sexM     -887.75  406.9756 165 -2.18134  0.0306
+## sexM:agecentsq   -107.20   52.5106 165 -2.04149  0.0428
+## sexM:agecentcu     31.31   13.1850 165  2.37456  0.0187
+##  Correlation: 
+##                (Intr) agecnt sexM   agcnts agcntc agcn:M sxM:gcnts
+## agecent         0.032                                             
+## sexM           -0.731 -0.023                                      
+## agecentsq      -0.205 -0.181  0.150                               
+## agecentcu      -0.032 -0.744  0.023  0.249                        
+## agecent:sexM   -0.023 -0.716  0.020  0.129  0.533                 
+## sexM:agecentsq  0.161  0.142 -0.202 -0.784 -0.195 -0.107          
+## sexM:agecentcu  0.025  0.578 -0.013 -0.194 -0.777 -0.753  0.125   
+## 
+## Standardized Within-Group Residuals:
+##          Min           Q1          Med           Q3          Max 
+## -2.919346794 -0.441999400 -0.003820263  0.504183581  2.575966492 
+## 
+## Number of Observations: 274
+## Number of Groups: 103</code></pre>
+<div class="sourceCode" id="cb59"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb59-1"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb59-1"></a><span class="kw">summary</span>(sexint_PFCmodel_lmer)</span></code></pre></div>
+<pre><code>## Linear mixed model fit by maximum likelihood  [&#39;lmerMod&#39;]
+## Formula: prefrontal_vol_long ~ agecent * sex + agecentsq * sex + agecentcu *  
+##     sex + (1 | subid)
+##    Data: braindata
+## 
+##      AIC      BIC   logLik deviance df.resid 
+##   5551.0   5587.1  -2765.5   5531.0      264 
+## 
+## Scaled residuals: 
+##      Min       1Q   Median       3Q      Max 
+## -2.91935 -0.44200 -0.00382  0.50418  2.57597 
+## 
+## Random effects:
+##  Groups   Name        Variance  Std.Dev.
+##  subid    (Intercept) 132755265 11522   
+##  Residual               8362833  2892   
+## Number of obs: 274, groups:  subid, 103
+## 
+## Fixed effects:
+##                  Estimate Std. Error t value
+## (Intercept)    154509.414   1720.545  89.803
+## agecent         -2382.249    287.040  -8.299
+## sexM            24984.569   2353.055  10.618
+## agecentsq          49.669     40.543   1.225
+## agecentcu           3.967     10.098   0.393
+## agecent:sexM     -887.753    400.990  -2.214
+## sexM:agecentsq   -107.200     51.738  -2.072
+## sexM:agecentcu     31.308     12.991   2.410
+## 
+## Correlation of Fixed Effects:
+##             (Intr) agecnt sexM   agcnts agcntc agcn:M sxM:gcnts
+## agecent      0.032                                             
+## sexM        -0.731 -0.023                                      
+## agecentsq   -0.205 -0.181  0.150                               
+## agecentcu   -0.032 -0.744  0.023  0.249                        
+## agecent:sxM -0.023 -0.716  0.020  0.129  0.533                 
+## sexM:gcntsq  0.161  0.142 -0.202 -0.784 -0.195 -0.107          
+## sexM:agcntc  0.025  0.578 -0.013 -0.194 -0.777 -0.753  0.125</code></pre>
+<div class="sourceCode" id="cb61"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb61-1"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb61-1"></a><span class="co">## Cubic age model with sex as a main effect (nlme)</span></span>
+<span id="cb61-2"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb61-2"></a>sexmain_PFCmodel=<span class="kw">lme</span>(prefrontal_vol_long <span class="op">~</span><span class="st"> </span>agecent<span class="op">+</span>agecentsq<span class="op">+</span>agecentcu<span class="op">+</span>sex,</span>
+<span id="cb61-3"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb61-3"></a>                 <span class="dt">method=</span><span class="st">&quot;ML&quot;</span>,</span>
+<span id="cb61-4"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb61-4"></a>                 <span class="dt">random =</span> <span class="op">~</span><span class="dv">1</span><span class="op">|</span>subid,</span>
+<span id="cb61-5"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb61-5"></a>                 <span class="dt">data=</span>braindata)</span>
+<span id="cb61-6"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb61-6"></a></span>
+<span id="cb61-7"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb61-7"></a><span class="co">## Cubic age model with sex as a main effect (lme4)</span></span>
+<span id="cb61-8"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb61-8"></a>sexmain_PFCmodel_lmer=<span class="kw">lmer</span>(prefrontal_vol_long <span class="op">~</span><span class="st"> </span>agecent<span class="op">+</span>agecentsq<span class="op">+</span>agecentcu<span class="op">+</span>sex <span class="op">+</span><span class="st"> </span></span>
+<span id="cb61-9"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb61-9"></a><span class="st">                         </span>(<span class="dv">1</span> <span class="op">|</span><span class="st"> </span>subid),</span>
+<span id="cb61-10"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb61-10"></a>                       <span class="dt">REML =</span> <span class="ot">FALSE</span>,</span>
+<span id="cb61-11"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb61-11"></a>                       <span class="dt">data=</span>braindata)</span>
+<span id="cb61-12"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb61-12"></a></span>
+<span id="cb61-13"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb61-13"></a></span>
+<span id="cb61-14"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb61-14"></a><span class="co"># Compare the models as well as to the age-only model</span></span>
+<span id="cb61-15"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb61-15"></a><span class="kw">anova</span>(cub_PFCmodel,sexmain_PFCmodel,sexint_PFCmodel)</span></code></pre></div>
+<pre><code>##                  Model df      AIC      BIC    logLik   Test  L.Ratio p-value
+## cub_PFCmodel         1  6 5627.968 5649.647 -2807.984                        
+## sexmain_PFCmodel     2  7 5556.557 5581.849 -2771.279 1 vs 2 73.41100  &lt;.0001
+## sexint_PFCmodel      3 10 5550.953 5587.084 -2765.476 2 vs 3 11.60476  0.0089</code></pre>
+</div>
+<div id="graph-models-for-different-groups" class="section level3">
+<h3><span class="header-section-number">9.0.8</span> Graph models for different groups</h3>
+<div class="sourceCode" id="cb63"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb63-1"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb63-1"></a>females&lt;-braindata <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">filter</span>(sex<span class="op">==</span><span class="st">&quot;F&quot;</span>)</span>
+<span id="cb63-2"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb63-2"></a><span class="kw">assign</span>(<span class="kw">paste0</span>(<span class="st">&quot;gammmod_female_pfc&quot;</span>),</span>
+<span id="cb63-3"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb63-3"></a>       <span class="kw">gamm</span>(prefrontal_vol_long <span class="op">~</span><span class="st"> </span><span class="kw">s</span>(age,<span class="dt">bs =</span> <span class="st">&quot;cs&quot;</span>,<span class="dt">k=</span><span class="dv">4</span>),</span>
+<span id="cb63-4"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb63-4"></a>            <span class="dt">random=</span><span class="kw">list</span>(<span class="dt">subid=</span><span class="op">~</span><span class="dv">1</span>),</span>
+<span id="cb63-5"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb63-5"></a>            <span class="dt">data=</span>(females)))</span>
+<span id="cb63-6"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb63-6"></a><span class="kw">summary</span>(<span class="kw">get</span>(<span class="kw">paste0</span>(<span class="st">&quot;gammmod_female_pfc&quot;</span>))<span class="op">$</span>gam)</span></code></pre></div>
+<pre><code>## 
+## Family: gaussian 
+## Link function: identity 
+## 
+## Formula:
+## prefrontal_vol_long ~ s(age, bs = &quot;cs&quot;, k = 4)
+## 
+## Parametric coefficients:
+##             Estimate Std. Error t value            Pr(&gt;|t|)    
+## (Intercept)   154907       1650   93.88 &lt;0.0000000000000002 ***
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## Approximate significance of smooth terms:
+##         edf Ref.df     F             p-value    
+## s(age) 2.41      3 60.98 &lt;0.0000000000000002 ***
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## R-sq.(adj) =  0.231   
+##   Scale est. = 6.4612e+06  n = 128</code></pre>
+<div class="sourceCode" id="cb65"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb65-1"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb65-1"></a>age&lt;-<span class="kw">round</span>(<span class="kw">seq</span>(<span class="kw">min</span>(females<span class="op">$</span>age,<span class="dt">na.rm =</span> <span class="ot">TRUE</span>),</span>
+<span id="cb65-2"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb65-2"></a>                  <span class="kw">max</span>(females<span class="op">$</span>age,<span class="dt">na.rm =</span> <span class="ot">TRUE</span>),<span class="dt">by=</span><span class="dv">1</span>),<span class="dv">2</span>)</span>
+<span id="cb65-3"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb65-3"></a>data.pred =<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">age=</span>age)</span>
+<span id="cb65-4"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb65-4"></a>y.pred =<span class="st"> </span><span class="kw">predict</span>(<span class="kw">get</span>(<span class="kw">paste0</span>(<span class="st">&quot;gammmod_female_pfc&quot;</span>))<span class="op">$</span>gam,</span>
+<span id="cb65-5"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb65-5"></a>                 <span class="dt">newdata=</span>data.pred,<span class="dt">se=</span>T)</span>
+<span id="cb65-6"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb65-6"></a>data.pred =<span class="st"> </span><span class="kw">cbind.data.frame</span>(data.pred,</span>
+<span id="cb65-7"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb65-7"></a>                             y.pred)</span>
+<span id="cb65-8"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb65-8"></a>scale =<span class="st"> </span><span class="fl">1.96</span></span>
+<span id="cb65-9"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb65-9"></a>y.upper =<span class="st"> </span>y.pred<span class="op">$</span>fit <span class="op">+</span><span class="st"> </span>(scale<span class="op">*</span>y.pred<span class="op">$</span>se.fit)</span>
+<span id="cb65-10"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb65-10"></a>y.lower =<span class="st"> </span>y.pred<span class="op">$</span>fit <span class="op">-</span><span class="st"> </span>(scale<span class="op">*</span>y.pred<span class="op">$</span>se.fit)</span>
+<span id="cb65-11"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb65-11"></a>prefrontal_vol_long&lt;-data.pred<span class="op">$</span>fit</span>
+<span id="cb65-12"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb65-12"></a><span class="kw">assign</span>(<span class="kw">paste0</span>(<span class="st">&quot;pred_females_pfc&quot;</span>),<span class="kw">cbind.data.frame</span>(data.pred,</span>
+<span id="cb65-13"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb65-13"></a>                                                     y.lower,</span>
+<span id="cb65-14"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb65-14"></a>                                                     y.upper,</span>
+<span id="cb65-15"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb65-15"></a>                                                     prefrontal_vol_long))</span>
+<span id="cb65-16"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb65-16"></a><span class="kw">rm</span>(avgage,data.pred,y.pred,y.upper,y.lower)</span></code></pre></div>
+<pre><code>## Warning in rm(avgage, data.pred, y.pred, y.upper, y.lower): object &#39;avgage&#39; not
+## found</code></pre>
+<div class="sourceCode" id="cb67"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb67-1"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb67-1"></a>males&lt;-braindata <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">filter</span>(sex<span class="op">==</span><span class="st">&quot;M&quot;</span>)</span>
+<span id="cb67-2"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb67-2"></a><span class="kw">assign</span>(<span class="kw">paste0</span>(<span class="st">&quot;gammmod_male_pfc&quot;</span>),</span>
+<span id="cb67-3"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb67-3"></a>       <span class="kw">gamm</span>(prefrontal_vol_long <span class="op">~</span><span class="st"> </span><span class="kw">s</span>(age,<span class="dt">bs =</span> <span class="st">&quot;cs&quot;</span>,<span class="dt">k=</span><span class="dv">4</span>),</span>
+<span id="cb67-4"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb67-4"></a>            <span class="dt">random=</span><span class="kw">list</span>(<span class="dt">subid=</span><span class="op">~</span><span class="dv">1</span>),</span>
+<span id="cb67-5"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb67-5"></a>            <span class="dt">data=</span>(males)))</span>
+<span id="cb67-6"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb67-6"></a><span class="kw">summary</span>(<span class="kw">get</span>(<span class="kw">paste0</span>(<span class="st">&quot;gammmod_male_pfc&quot;</span>))<span class="op">$</span>gam)</span></code></pre></div>
+<pre><code>## 
+## Family: gaussian 
+## Link function: identity 
+## 
+## Formula:
+## prefrontal_vol_long ~ s(age, bs = &quot;cs&quot;, k = 4)
+## 
+## Parametric coefficients:
+##             Estimate Std. Error t value            Pr(&gt;|t|)    
+## (Intercept)   178967       1616   110.8 &lt;0.0000000000000002 ***
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## Approximate significance of smooth terms:
+##          edf Ref.df     F             p-value    
+## s(age) 2.832      3 56.33 &lt;0.0000000000000002 ***
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## R-sq.(adj) =  0.347   
+##   Scale est. = 1.0114e+07  n = 146</code></pre>
+<div class="sourceCode" id="cb69"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb69-1"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb69-1"></a>avgage&lt;-<span class="kw">round</span>(<span class="kw">seq</span>(<span class="kw">min</span>(males<span class="op">$</span>age,<span class="dt">na.rm =</span> <span class="ot">TRUE</span>),</span>
+<span id="cb69-2"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb69-2"></a>                  <span class="kw">max</span>(males<span class="op">$</span>age,<span class="dt">na.rm =</span> <span class="ot">TRUE</span>),<span class="dt">by=</span><span class="dv">1</span>),<span class="dv">2</span>)</span>
+<span id="cb69-3"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb69-3"></a>data.pred =<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">age=</span>age)</span>
+<span id="cb69-4"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb69-4"></a>y.pred =<span class="st"> </span><span class="kw">predict</span>(<span class="kw">get</span>(<span class="kw">paste0</span>(<span class="st">&quot;gammmod_male_pfc&quot;</span>))<span class="op">$</span>gam,</span>
+<span id="cb69-5"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb69-5"></a>                 <span class="dt">newdata=</span>data.pred,<span class="dt">se=</span>T)</span>
+<span id="cb69-6"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb69-6"></a>data.pred =<span class="st"> </span><span class="kw">cbind.data.frame</span>(data.pred,</span>
+<span id="cb69-7"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb69-7"></a>                             y.pred)</span>
+<span id="cb69-8"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb69-8"></a>scale =<span class="st"> </span><span class="fl">1.96</span></span>
+<span id="cb69-9"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb69-9"></a>y.upper =<span class="st"> </span>y.pred<span class="op">$</span>fit <span class="op">+</span><span class="st"> </span>(scale<span class="op">*</span>y.pred<span class="op">$</span>se.fit)</span>
+<span id="cb69-10"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb69-10"></a>y.lower =<span class="st"> </span>y.pred<span class="op">$</span>fit <span class="op">-</span><span class="st"> </span>(scale<span class="op">*</span>y.pred<span class="op">$</span>se.fit)</span>
+<span id="cb69-11"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb69-11"></a>prefrontal_vol_long&lt;-data.pred<span class="op">$</span>fit</span>
+<span id="cb69-12"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb69-12"></a><span class="kw">assign</span>(<span class="kw">paste0</span>(<span class="st">&quot;pred_males_pfc&quot;</span>),<span class="kw">cbind.data.frame</span>(data.pred,</span>
+<span id="cb69-13"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb69-13"></a>                                                   y.lower,</span>
+<span id="cb69-14"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb69-14"></a>                                                   y.upper,prefrontal_vol_long))</span>
+<span id="cb69-15"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb69-15"></a></span>
+<span id="cb69-16"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb69-16"></a></span>
+<span id="cb69-17"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb69-17"></a><span class="co"># Graph it</span></span>
+<span id="cb69-18"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb69-18"></a>pfcbysex&lt;-<span class="kw">ggplot</span>(<span class="dt">data=</span><span class="ot">NULL</span>,</span>
+<span id="cb69-19"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb69-19"></a>              <span class="kw">aes</span>(<span class="dt">x=</span>age,</span>
+<span id="cb69-20"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb69-20"></a>                  <span class="dt">y=</span>prefrontal_vol_long))<span class="op">+</span></span>
+<span id="cb69-21"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb69-21"></a><span class="st">         </span><span class="kw">ylab</span>(<span class="st">&quot;Prefrontal Cortex Volume&quot;</span>)<span class="op">+</span></span>
+<span id="cb69-22"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb69-22"></a><span class="st">         </span><span class="kw">xlab</span>(<span class="st">&quot;Age (years)&quot;</span>)<span class="op">+</span></span>
+<span id="cb69-23"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb69-23"></a><span class="st">         </span><span class="kw">scale_color_manual</span>(<span class="dt">name=</span> <span class="st">&quot;Sex&quot;</span>,</span>
+<span id="cb69-24"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb69-24"></a>                            <span class="dt">labels =</span> <span class="kw">c</span>(<span class="st">&quot;female&quot;</span>, <span class="st">&quot;male&quot;</span>),</span>
+<span id="cb69-25"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb69-25"></a>                            <span class="dt">values =</span> <span class="kw">c</span>(<span class="st">&quot;#FDE74C&quot;</span>, <span class="st">&quot;#56A3A6&quot;</span>)) <span class="op">+</span></span>
+<span id="cb69-26"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb69-26"></a><span class="st">         </span><span class="kw">geom_point</span>(<span class="dt">data=</span>braindata,</span>
+<span id="cb69-27"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb69-27"></a>                    <span class="kw">aes</span>(<span class="dt">colour=</span>sex),</span>
+<span id="cb69-28"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb69-28"></a>                    <span class="dt">size=</span><span class="fl">1.5</span>,</span>
+<span id="cb69-29"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb69-29"></a>                    <span class="dt">alpha=</span><span class="fl">0.6</span>) <span class="op">+</span></span>
+<span id="cb69-30"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb69-30"></a><span class="st">         </span><span class="kw">geom_line</span>(<span class="dt">data=</span><span class="kw">get</span>(<span class="kw">paste0</span>(<span class="st">&quot;pred_males_pfc&quot;</span>)),</span>
+<span id="cb69-31"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb69-31"></a>                   <span class="kw">aes</span>(<span class="dt">x=</span>age, <span class="dt">y=</span>prefrontal_vol_long),</span>
+<span id="cb69-32"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb69-32"></a>                   <span class="dt">size=</span><span class="dv">1</span>,</span>
+<span id="cb69-33"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb69-33"></a>                   <span class="dt">colour=</span><span class="st">&quot;#56A3A6&quot;</span>)<span class="op">+</span></span>
+<span id="cb69-34"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb69-34"></a><span class="st">         </span><span class="kw">geom_ribbon</span>(<span class="dt">data=</span><span class="kw">get</span>(<span class="kw">paste0</span>(<span class="st">&quot;pred_males_pfc&quot;</span>)),</span>
+<span id="cb69-35"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb69-35"></a>                     <span class="kw">aes</span>(<span class="dt">ymin=</span>y.lower,</span>
+<span id="cb69-36"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb69-36"></a>                         <span class="dt">ymax=</span>y.upper),</span>
+<span id="cb69-37"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb69-37"></a>                     <span class="dt">alpha=</span><span class="fl">0.4</span>,</span>
+<span id="cb69-38"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb69-38"></a>                     <span class="dt">fill=</span><span class="st">&quot;#56A3A6&quot;</span>)<span class="op">+</span></span>
+<span id="cb69-39"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb69-39"></a><span class="st">         </span><span class="kw">geom_line</span>(<span class="dt">data=</span><span class="kw">get</span>(<span class="kw">paste0</span>(<span class="st">&quot;pred_females_pfc&quot;</span>)),</span>
+<span id="cb69-40"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb69-40"></a>                   <span class="kw">aes</span>(<span class="dt">x=</span>age, <span class="dt">y=</span>prefrontal_vol_long),</span>
+<span id="cb69-41"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb69-41"></a>                   <span class="dt">size=</span><span class="dv">1</span>,</span>
+<span id="cb69-42"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb69-42"></a>                   <span class="dt">colour=</span><span class="st">&quot;#FDE74C&quot;</span>)<span class="op">+</span></span>
+<span id="cb69-43"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb69-43"></a><span class="st">         </span><span class="kw">geom_ribbon</span>(<span class="dt">data=</span><span class="kw">get</span>(<span class="kw">paste0</span>(<span class="st">&quot;pred_females_pfc&quot;</span>)),</span>
+<span id="cb69-44"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb69-44"></a>                     <span class="kw">aes</span>(<span class="dt">ymin=</span>y.lower,</span>
+<span id="cb69-45"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb69-45"></a>                         <span class="dt">ymax=</span>y.upper),</span>
+<span id="cb69-46"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb69-46"></a>                     <span class="dt">alpha=</span><span class="fl">0.4</span>,</span>
+<span id="cb69-47"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb69-47"></a>                     <span class="dt">fill=</span><span class="st">&quot;#FDE74C&quot;</span>)<span class="op">+</span></span>
+<span id="cb69-48"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb69-48"></a><span class="st">         </span><span class="kw">theme_kate</span>()</span>
+<span id="cb69-49"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb69-49"></a></span>
+<span id="cb69-50"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb69-50"></a><span class="kw">ggsave</span>(<span class="dt">filename=</span><span class="st">&quot;pfcbysexgamm.png&quot;</span>,</span>
+<span id="cb69-51"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb69-51"></a>       <span class="dt">plot=</span>pfcbysex,</span>
+<span id="cb69-52"><a href="mdc-abcd-workshop-2021-multilevel-model-track-1-tutorial.html#cb69-52"></a>       <span class="dt">width=</span><span class="dv">6</span>, <span class="dt">height=</span><span class="dv">4</span>, <span class="dt">units=</span><span class="st">&#39;in&#39;</span>, <span class="dt">dpi=</span><span class="dv">300</span>)</span></code></pre></div>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="minihacks.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="references.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/03-track1mlmtutorial.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["bookdown-demo.pdf", "bookdown-demo.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
